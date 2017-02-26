@@ -1,15 +1,18 @@
 package me.ddfw.storyaround;
 
 import android.app.Fragment;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+
+import me.ddfw.storyaround.fragments.DiaryFragment;
+import me.ddfw.storyaround.fragments.LikesFragment;
+import me.ddfw.storyaround.fragments.PostFragment;
+import me.ddfw.storyaround.fragments.ProfileFragment;
+import me.ddfw.storyaround.fragments.MapFragment;
 
 public class MainActivity extends AppCompatActivity {
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         fragments = new ArrayList<Fragment>();
         fragments.add(mapFragment);
         fragments.add(likesFragment);
+        fragments.add(postFragment);
+        fragments.add(diaryFragment);
+        fragments.add(profileFragment);
 
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getFragmentManager(), fragments, this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);

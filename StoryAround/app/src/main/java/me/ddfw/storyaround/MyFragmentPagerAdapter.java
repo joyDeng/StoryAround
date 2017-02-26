@@ -9,9 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
-import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 
 import java.util.ArrayList;
@@ -45,31 +42,30 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                myDrawable = context.getResources().getDrawable(R.drawable.icon);
+                myDrawable = context.getResources().getDrawable(R.drawable.map);
                 title = "Map";
                 break;
             case 1:
-                myDrawable = context.getResources().getDrawable(R.drawable.icon);
+                myDrawable = context.getResources().getDrawable(R.drawable.likes);
                 title = "Likes";
                 break;
             case 2:
-                myDrawable = context.getResources().getDrawable(R.drawable.icon);
+                myDrawable = context.getResources().getDrawable(R.drawable.post);
                 title = "Post";
                 break;
             case 3:
-                myDrawable = context.getResources().getDrawable(R.drawable.icon);
+                myDrawable = context.getResources().getDrawable(R.drawable.book);
                 title = "Diary";
                 break;
             case 4:
-                myDrawable = context.getResources().getDrawable(R.drawable.icon);
+                myDrawable = context.getResources().getDrawable(R.drawable.profile);
                 title = "Profile";
                 break;
             default:
                 break;
         }
-        myDrawable.setBounds(0, 0, 60, 60);
-        myDrawable.setColorFilter(Color.BLACK, PorterDuff.Mode.MULTIPLY);
-        // Replace blank spaces with image icon
+        myDrawable.setBounds(0, 0, 80, 80);
+        myDrawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
         SpannableString sb = new SpannableString(" \n" + title);
         ImageSpan imageSpan = new ImageSpan(myDrawable, ImageSpan.ALIGN_BOTTOM);
         sb.setSpan(imageSpan, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
