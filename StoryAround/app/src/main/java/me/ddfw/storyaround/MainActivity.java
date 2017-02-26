@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         fragments = new ArrayList<Fragment>();
         fragments.add(mapFragment);
         fragments.add(likesFragment);
+        fragments.add(postFragment);
+        fragments.add(diaryFragment);
+        fragments.add(profileFragment);
 
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getFragmentManager(), fragments, this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
