@@ -19,9 +19,6 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 
 import me.ddfw.storyaround.R;
 
-/**
- * Created by apple on 2017/2/25.
- */
 
 public class MapFragment extends Fragment {
     MapView mMapView;
@@ -30,6 +27,7 @@ public class MapFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
+        setRetainInstance(true);
 
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
@@ -47,7 +45,7 @@ public class MapFragment extends Fragment {
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
 
-                // For showing a move to my location button
+                // For showing a move to my map button
                 //googleMap.setMyLocationEnabled(true);
 
                 try {
@@ -70,7 +68,7 @@ public class MapFragment extends Fragment {
                 LatLng sydney = new LatLng(-34, 151);
                 //googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
 
-                // For zooming automatically to the location of the marker
+                // For zooming automatically to the map of the marker
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
