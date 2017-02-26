@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
     // FragmentPost
     // FragmentDiary
     // FragmentUser
+    
+    // lalalalalala
 
 
     @Override
