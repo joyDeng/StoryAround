@@ -1,10 +1,12 @@
-package me.ddfw.storyaround;
+package me.ddfw.storyaround.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import me.ddfw.storyaround.R;
 
 
 public class LikesFragment extends Fragment{
