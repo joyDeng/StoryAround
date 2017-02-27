@@ -1,7 +1,10 @@
 package me.ddfw.storyaround.fragments;
 
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,22 +16,27 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback{
+public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     private View rootView;
     private MapView mMapView;
     private GoogleMap googleMap;
     private List<Marker> markers;
+    private List<LatLng> locations;
+    private List<Story> stories;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,8 +48,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
-        List<Story> stories = Story.getTestStories();
-        
+        stories = Story.getTestStories();
+        locations = new ArrayList<>();
+        markers = new ArrayList<>();
+        for(Story s:stories){
+            locations.add(s.getLocation());
+        }
         return rootView;
     }
 
@@ -164,12 +176,37 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(-34, 151)));
 
         // For dropping a marker at a point on the Map
-        LatLng sydney = new LatLng(-34, 151);
+
         //googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
+        BitmapFactory.Options opt = new BitmapFactory.Options();
+        opt.inMutable = true;
+        Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
+                R.drawable.logo,opt);
+        Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
+        googleMap.setOnMarkerClickListener(this);
+        markers = new ArrayList<>();
+        markers.add(googleMap.addMarker(new MarkerOptions().icon(
+                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(0))));
+        markers.add(googleMap.addMarker(new MarkerOptions().icon(
+                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(1))));
+        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));
+        //start = map.addMarker(new MarkerOptions().position(list.get(0)));
 
         // For zooming automatically to the map of the marker
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(locations.get(1)).zoom(12).build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+    }
+    @Override
+    public boolean onMarkerClick(final Marker marker) {
+
+        if (marker.equals(markers.get(1)))
+        {
+            //handle click here
+            DialogFragment dialog;
+            dialog = StoryDetailFragment.buildDialog(stories.get(1));
+            dialog.show(getFragmentManager(), "");
+        }
+        return true;
     }
 
 
