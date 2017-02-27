@@ -2,13 +2,14 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/color2</item>
         <item name="colorPrimaryDark">@color/color1</item>
         <item name="colorAccent">@color/color3</item>
         <item name="android:textColorPrimary">@color/white</item>
-    </style>
 
+        <item name="android:textColor">@color/color3</item>
+        <item name="android:itemBackground">@color/color6</item>
+    </style>
 
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabGravity">fill</item>
@@ -23,5 +24,12 @@
         <item name="textAllCaps">false</item>
     </style>
 
+
+    <style name="EditorTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/color2</item>
+        <item name="colorPrimaryDark">@color/color1</item>
+        <item name="colorAccent">@color/color3</item>
+        <item name="android:textColorPrimary">@color/color4</item>
+    </style>
 
 </resources>
