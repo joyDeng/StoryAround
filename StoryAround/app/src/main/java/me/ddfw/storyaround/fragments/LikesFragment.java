@@ -1,20 +1,14 @@
 package me.ddfw.storyaround.fragments;
 
-<<<<<<< HEAD
 import android.app.ListFragment;
-=======
 import android.app.DialogFragment;
 import android.app.Fragment;
->>>>>>> 1d28c4e66d9e43abff062f3e4c6063f7f080be4c
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
-=======
 import android.widget.AdapterView;
->>>>>>> 1d28c4e66d9e43abff062f3e4c6063f7f080be4c
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 

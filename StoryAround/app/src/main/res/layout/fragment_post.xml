@@ -10,26 +10,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="5dp"
         android:orientation="vertical"
-        android:layout_gravity="bottom">
+        android:gravity="center">
         <Button
             android:id="@+id/btnStart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/editor_background"
-            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"
             android:onClick="onStartClick"
             android:text="Post your story now" />
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/editor_background"
-            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"
             android:onClick="onSaveClick"
             android:text="Save your location, post story later" />
     </LinearLayout>
