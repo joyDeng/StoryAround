@@ -46,10 +46,6 @@
             android:theme="@style/EditorTheme">
         </activity>
 
-        <activity
-            android:name="com.github.irshulx.MapsActivity"
-            android:label="Map" />
-
     </application>
 
 </manifest>

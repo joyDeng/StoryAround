@@ -127,13 +127,6 @@ public class NewStoryActivity extends Activity {
             }
         });
 
-        findViewById(R.id.action_map).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.InsertMap();
-            }
-        });
-
         findViewById(R.id.action_erase).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

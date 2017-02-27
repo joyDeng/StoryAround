@@ -142,16 +142,6 @@
         android:tint="@color/white"
         android:background="@null"
         android:layout_height="40dp"
-        android:src="@drawable/icon_marker"
-        android:id="@+id/action_map" />
-
-    <ImageButton
-        android:maxHeight="20dp"
-        android:maxWidth="20dp"
-        android:layout_width="40dp"
-        android:tint="@color/white"
-        android:background="@null"
-        android:layout_height="40dp"
         android:src="@drawable/icon_erase"
         android:id="@+id/action_erase" />
 </LinearLayout>
