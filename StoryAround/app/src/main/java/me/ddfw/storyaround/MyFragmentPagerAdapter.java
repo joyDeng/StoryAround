@@ -38,6 +38,8 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         return fragments.size();
     }
 
+
+
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
