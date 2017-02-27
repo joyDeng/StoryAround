@@ -19,7 +19,6 @@
     <permission
         android:name="com.example.gcm.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-
     <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
 
@@ -34,10 +33,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api_key" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

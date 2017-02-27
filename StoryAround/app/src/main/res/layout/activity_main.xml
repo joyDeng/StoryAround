@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/tab"
-            android:background="@color/color5"/>
+            android:background="@color/color6"/>
 
     </RelativeLayout>
 </RelativeLayout>
