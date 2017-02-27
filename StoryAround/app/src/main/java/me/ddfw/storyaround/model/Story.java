@@ -130,7 +130,7 @@ public class Story implements Parcelable {
                 new LatLng(123,231),new Date(),false, "some test content");
         testList.add(s);
         s = new Story(2,"id2","Annie","DEMO TITLE2","historical",
-                new LatLng(-31,151),new Date(),false, "some test content2");
+                new LatLng(51.5033640,-0.1276250),new Date(),false, "some test content2");
         testList.add(s);
         s = new Story(3,"id2","Annie","DEMO TITLE3","historical",
                 new LatLng(-31,151),new Date(),false, "some test content2");
