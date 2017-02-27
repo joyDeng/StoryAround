@@ -6,10 +6,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TableLayout;
 
 import java.util.ArrayList;
 
@@ -53,29 +55,12 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(myFragmentPagerAdapter);
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
-
-        tabLayout.setOnTabSelectedListener(
-                new TabLayout.ViewPagerOnTabSelectedListener(viewPager) {
-                    @Override
-                    public void onTabSelected(TabLayout.Tab tab) {
-                        super.onTabSelected(tab);
-
-                        // close the keyboard when change fragment
-                        View focus = getCurrentFocus();
-                        if (focus != null) {
-                            InputMethodManager keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                            keyboard.hideSoftInputFromWindow(viewPager.getWindowToken(), 0);
-                        }
-                    }
-                });
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         return true;
     }
 

@@ -29,6 +29,10 @@ public class MapFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
         setRetainInstance(true);
 
+
+        Log.d("******","MapFragment onCreateView");
+
+
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
 

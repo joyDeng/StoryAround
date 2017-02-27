@@ -34,12 +34,22 @@
             android:value="@string/google_maps_api_key" />
 
         <activity android:name=".MainActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".NewStoryActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/EditorTheme">
+        </activity>
+
+        <activity
+            android:name="com.github.irshulx.MapsActivity"
+            android:label="Map" />
+
     </application>
 
 </manifest>
