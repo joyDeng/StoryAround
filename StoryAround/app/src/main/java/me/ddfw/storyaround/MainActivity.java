@@ -1,25 +1,19 @@
 package me.ddfw.storyaround;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.TableLayout;
 
 import java.util.ArrayList;
 
 import me.ddfw.storyaround.fragments.DiaryFragment;
 import me.ddfw.storyaround.fragments.LikesFragment;
+import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
-import me.ddfw.storyaround.fragments.MapFragment;
 
 public class MainActivity extends AppCompatActivity {
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
@@ -53,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getFragmentManager(), fragments, this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(myFragmentPagerAdapter);
+        viewPager.setOffscreenPageLimit(5);
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
     }
