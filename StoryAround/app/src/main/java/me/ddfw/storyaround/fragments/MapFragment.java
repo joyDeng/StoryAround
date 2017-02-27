@@ -198,9 +198,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     }
     @Override
     public boolean onMarkerClick(final Marker marker) {
-
-        if (marker.equals(markers.get(1)))
-        {
+        if (marker.equals(markers.get(1))) {
             //handle click here
             DialogFragment dialog;
             dialog = StoryDetailFragment.buildDialog(stories.get(1));
