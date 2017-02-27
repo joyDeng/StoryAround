@@ -10,6 +10,7 @@ import android.support.v13.app.FragmentPagerAdapter;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
+import android.view.inputmethod.InputMethodManager;
 
 import java.util.ArrayList;
 

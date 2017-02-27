@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "me.ddfw.storyaround"
-        minSdkVersion 15
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -35,9 +35,8 @@ dependencies {
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
     compile 'com.google.android.gms:play-services:10.0.1'
-    compile 'jp.wasabeef:richeditor-android:1.2.1' // for text editor
+    compile 'com.github.irshulx:laser-native-editor:0.3.5' // for text editor
     compile 'com.ramotion.foldingcell:folding-cell:1.1.0' //folding cell
-
 
     testCompile 'junit:junit:4.12'
 

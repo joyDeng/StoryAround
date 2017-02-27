@@ -64,6 +64,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
         setRetainInstance(true);
 
+
         mMapView = (MapView) rootView.findViewById(mapView);
         mMapView.onCreate(savedInstanceState);
 
