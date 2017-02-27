@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import jp.wasabeef.richeditor.RichEditor;
@@ -31,6 +33,9 @@ public class PostFragment extends Fragment{
         mEditor.setBackgroundColor(Color.TRANSPARENT);
 
         editorSetListener(rootView);
+
+        TableLayout tabLayout= (TableLayout ) rootView.findViewById(R.id.tab);
+        //tabLayout.setVisibility(View.GONE);
 
         return rootView;
     }
