@@ -26,10 +26,8 @@
 
 
     <style name="EditorTheme" parent="AppTheme">
-        <item name="colorPrimary">@color/color2</item>
-        <item name="colorPrimaryDark">@color/color1</item>
-        <item name="colorAccent">@color/color3</item>
-        <item name="android:textColorPrimary">@color/color4</item>
+        <item name="android:textColorPrimary">@color/darkGray</item>
+        <item name="android:textColorSecondary">@color/color3</item>
     </style>
 
 </resources>

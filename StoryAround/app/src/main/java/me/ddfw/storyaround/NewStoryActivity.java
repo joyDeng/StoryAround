@@ -38,10 +38,6 @@ public class NewStoryActivity extends Activity {
     }
 
 
-
-
-
-
     private void CreateEditor() {
         findViewById(R.id.action_h1).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,13 +130,13 @@ public class NewStoryActivity extends Activity {
             }
         });
 
-        //  mEditor.dividerBackground=R.drawable.divider_background_dark;
-        mEditor.setImageUploaderUri("http://192.168.43.239/Laser-Editor-WebApi/api/ImageUploaderApi/PostImage");
+
+        //mEditor.setImageUploaderUri("http://192.168.43.239/Laser-Editor-WebApi/api/ImageUploaderApi/PostImage");
         mEditor.setFontFace(R.string.fontFamily__serif);
         mEditor.setDividerLayout(R.layout.tmpl_divider_layout);
         mEditor.setEditorImageLayout(R.layout.tmpl_image_view);
         mEditor.setListItemLayout(R.layout.tmpl_list_item);
-        //mEditor.StartEditor();
+
         mEditor.setEditorListener(new BaseClass.EditorListener() {
             @Override
             public void onTextChanged(EditText editText, Editable text) {

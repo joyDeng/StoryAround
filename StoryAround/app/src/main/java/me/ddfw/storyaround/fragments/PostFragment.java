@@ -50,7 +50,7 @@ public class PostFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
-        //setRetainInstance(true);
+        setRetainInstance(true);
         Log.d("******","PostFragment onCreateView");
 
         Button btnStart = (Button) rootView.findViewById(R.id.btnStart);
