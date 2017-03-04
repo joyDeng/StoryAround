@@ -14,4 +14,6 @@
     <string name="login_requet">You need to Login</string>
     <string name="button_login">Sign In</string>
 
+    <!--WebClientId-->
+    <string name="web_client_id">271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com</string>
 </resources>

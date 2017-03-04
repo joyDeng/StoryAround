@@ -3,6 +3,7 @@ package me.ddfw.storyaround;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -51,32 +52,36 @@ public class MainActivity extends AppCompatActivity{
     //set a context
     private Context mcontext = this;
 
+    //declare_login_status
+    private String mLoginMethod = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //initialize_auth
+       mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
+        // initialize_auth
         mAuth = FirebaseAuth.getInstance();
 
-        //START:auth_state_listener
+        if(mLoginMethod == null) startChooser();
+
+        // START:auth_state_listener
         mAuthListener = new FirebaseAuth.AuthStateListener(){
 
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null){
-                    //User signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
+                if(user != null || !mLoginMethod.equals("") ){
+                    // User signed in
+                    //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
                 }else{
                     Log.d(TAG, "onAuthStateChanged:signed_out:");
-                    Intent intent = new Intent(mcontext,ChooserActivity.class);
-                    startActivity(intent);
+                    startChooser();
                 }
             }
         };
-        //END:auth_state_listener
+        // END:auth_state_listener
 
 
         mapFragment = new MapFragment();
@@ -122,7 +127,20 @@ public class MainActivity extends AppCompatActivity{
         return true;
     }
 
+    // START: set_login_method
+    public void setmLoginMethod(String string){
+        mLoginMethod = string;
+    }
+    // END: set_login_method
 
+    // START: Turn to login page
+    public void startChooser(){
+        Intent intent = new Intent(mcontext,ChooserActivity.class);
+        intent.putExtra(Global.LOGIN_METHOD,mLoginMethod);
+        startActivity(intent);
+        finish();
+    }
+    // END: Turn to login page
 }
 
 
