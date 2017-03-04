@@ -68,7 +68,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void onLogin() {
-        // TODO 
+        // TODO
         isLogin = true;
         getFragmentManager().beginTransaction().detach(this).attach(this).commit();
     }
