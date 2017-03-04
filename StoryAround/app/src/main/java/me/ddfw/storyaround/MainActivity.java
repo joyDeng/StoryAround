@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private DiaryFragment diaryFragment;
     private ProfileFragment profileFragment;
 
+    //comments
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
