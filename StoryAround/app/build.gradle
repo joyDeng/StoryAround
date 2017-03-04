@@ -31,14 +31,21 @@ dependencies {
     compile 'com.android.support:design:25.1.0'
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.google.android.gms:play-services-gcm:10.0.1'
+    compile 'com.google.android.gms:play-services-gcm:10.2.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
-    compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.google.android.gms:play-services:10.2.0'
     compile 'com.github.irshulx:laser-native-editor:0.3.5' // for text editor
     compile 'com.ramotion.foldingcell:folding-cell:1.1.0' //folding cell
+
+    //for firebase
+    compile 'com.google.firebase:firebase-core:10.2.0'
+    compile 'com.google.firebase:firebase-auth:10.2.0'
+    compile 'com.google.firebase:firebase-database:10.2.0'
 
     testCompile 'junit:junit:4.12'
 
     compile project(path: ':backend', configuration: 'android-endpoints')
 }
+
+apply plugin: 'com.google.gms.google-services'
