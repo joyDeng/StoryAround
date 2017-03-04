@@ -19,8 +19,8 @@
     <permission
         android:name="com.example.gcm.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,24 +28,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api_key" />
 
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".NewStoryActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            android:theme="@style/EditorTheme">
-        </activity>
-
+        <activity
+            android:name=".NewStoryActivity"
+            android:theme="@style/EditorTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".Authen.ChooserActivity" />
     </application>
 
 </manifest>

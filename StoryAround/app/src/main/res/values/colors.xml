@@ -11,4 +11,6 @@
     <color name="white">#ffffff</color>
     <color name="darkGray">#616161</color>
 
+    <color name="Loginbutton">#edf4b7</color>
+
 </resources>
