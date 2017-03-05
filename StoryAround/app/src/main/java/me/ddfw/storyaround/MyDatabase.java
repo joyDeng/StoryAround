@@ -167,7 +167,7 @@ public class MyDatabase {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 //get the number of story likes
-                int storyLikes = (int) dataSnapshot.child(Story.KEY_STORY_LIKES).getValue();
+                long storyLikes = (long) dataSnapshot.child(Story.KEY_STORY_LIKES).getValue();
 
                 Map<String,Object> map = new HashMap<String,Object>();
 
