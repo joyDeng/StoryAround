@@ -25,11 +25,11 @@ public class Likes {
     private String storyId;
     private Long tabTime;
 
-//    public Likes(Long userId, Long storyId, Calendar tabTime){
-//        this.userId = userId;
-//        this.storyId = storyId;
-//        this.tabTime = tabTime;
-//    }
+    public Likes(String userId, String storyId, Long tabTime){
+        this.userId = userId;
+        this.storyId = storyId;
+        this.tabTime = tabTime;
+    }
 
     public String getLikeId(){return likeId;}
 
