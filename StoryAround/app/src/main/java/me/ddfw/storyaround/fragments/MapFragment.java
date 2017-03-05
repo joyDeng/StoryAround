@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -41,6 +42,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         MapsInitializer.initialize(getActivity());
     }
 
@@ -125,6 +127,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
         return rootView;
     }*/
+
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        menu.add("MapFragment test");
+    }
 
     @Override
     public void onResume() {

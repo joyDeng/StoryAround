@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity{
     private DiaryFragment diaryFragment;
     private ProfileFragment profileFragment;
 
-<<<<<<< HEAD
     //comments
-=======
     //declare_auth
     private FirebaseAuth mAuth;
 
@@ -57,7 +55,6 @@ public class MainActivity extends AppCompatActivity{
 
     //declare_login_status
     private String mLoginMethod = "";
->>>>>>> refs/remotes/origin/xlogin
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +125,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
         return true;
     }
 

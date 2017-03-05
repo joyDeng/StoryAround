@@ -65,18 +65,16 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 onSwitch();
-                Log.d(TAG,"onSwitch");
-                Toast.makeText(getActivity().getApplicationContext(),"onSwitch",Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onSwitch");
+                Toast.makeText(getActivity().getApplicationContext(), "onSwitch", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
-<<<<<<< HEAD
     private void onLogin() {
         // TODO
-        isLogin = true;
+        //isLogin = true;
         getFragmentManager().beginTransaction().detach(this).attach(this).commit();
-=======
->>>>>>> refs/remotes/origin/xlogin
     }
 
 
