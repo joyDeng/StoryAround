@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,10 +29,21 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+<<<<<<< HEAD
     compile 'com.android.support:design:25.1.0'
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+=======
+
+    //google map
+    compile 'com.google.android.gms:play-services:10.2.0'
+
+    //firebase
+    compile 'com.google.firebase:firebase-database:10.2.0'
+    compile 'com.google.firebase:firebase-auth:10.2.0'
+    compile 'com.google.firebase:firebase-storage:10.2.0'
+
+>>>>>>> 8b78227f58763dc067e0fd2ea4da1c8a766b1eb2
     compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.google.android.gms:play-services-gcm:10.0.1'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
     compile 'com.google.android.gms:play-services:10.0.1'
@@ -42,3 +54,6 @@ dependencies {
 
     compile project(path: ':backend', configuration: 'android-endpoints')
 }
+
+apply plugin: 'com.google.gms.google-services'
+
