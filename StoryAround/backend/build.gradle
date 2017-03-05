@@ -28,6 +28,9 @@ dependencies {
     compile 'javax.servlet:servlet-api:2.5'
     compile 'com.googlecode.objectify:objectify:5.1.9'
     compile 'com.google.gcm:gcm-server:1.0.0'
+    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.49'
+    compile 'com.google.firebase:firebase-server-sdk:3.0.3'
+    compile 'org.apache.httpcomponents:httpclient:4.5.3'
 }
 
 appengine {

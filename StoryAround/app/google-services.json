@@ -24,12 +24,14 @@
         },
         {
           "client_id": "271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com",
+
           "client_type": 3
         }
       ],
       "api_key": [
         {
           "current_key": "AIzaSyA4LoBgLyJ8ffBC6Z6G-beqOmtpaNac3Oc"
+
         }
       ],
       "services": {
@@ -41,6 +43,7 @@
           "other_platform_oauth_client": [
             {
               "client_id": "271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com",
+
               "client_type": 3
             }
           ]
