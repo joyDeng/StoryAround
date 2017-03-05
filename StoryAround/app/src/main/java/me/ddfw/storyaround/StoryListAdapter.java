@@ -41,12 +41,12 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
             viewHolder.title = (TextView) convertView.findViewById(R.id.story_title) ;
             viewHolder.location = (TextView) convertView.findViewById(R.id.story_location) ;
             viewHolder.tag = (TextView) convertView.findViewById(R.id.story_tag) ;
-
-            viewHolder.dateText.setText(story.getFormattedDate());
-            viewHolder.user.setText(story.getUserName());
-            viewHolder.title.setText(story.getTitle());
-            viewHolder.location.setText(story.getLocation().toString());
-            viewHolder.tag.setText(story.getTag());
+//
+//            viewHolder.dateText.setText(story.getFormattedDate());
+//            viewHolder.user.setText(story.getUserName());
+//            viewHolder.title.setText(story.getTitle());
+//            viewHolder.location.setText(story.getLocation().toString());
+//            viewHolder.tag.setText(story.getTag());
 
         }
         return convertView;

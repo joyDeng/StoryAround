@@ -24,6 +24,7 @@ public class StoryDetailFragment extends DialogFragment {
     private Story story;
 
 
+    /*
 
     public static StoryDetailFragment buildDialog(Story story){
         StoryDetailFragment dialog = new StoryDetailFragment();
@@ -84,4 +85,5 @@ public class StoryDetailFragment extends DialogFragment {
         TextView tag;
         WebView content;
     }
+    */
 }

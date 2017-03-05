@@ -33,6 +33,8 @@ public class LikesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_likes, container, false);
 
+
+        /*
         ListView list = (ListView) rootView.findViewById(R.id.story_list);
         final List<Story> testData = Story.getTestStories();
         StoryListAdapter storyListAdapter = new StoryListAdapter(getActivity(),testData);
@@ -45,6 +47,7 @@ public class LikesFragment extends Fragment {
                 dialog.show(getFragmentManager(), "");
             }
         });
+        */
 
 
         /*data = new ArrayList<String>();

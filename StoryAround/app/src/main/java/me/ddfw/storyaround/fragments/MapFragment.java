@@ -50,14 +50,17 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
+        /*
         stories = Story.getTestStories();
         locations = new ArrayList<>();
         markers = new ArrayList<>();
         for(Story s:stories){
             locations.add(s.getLocation());
         }
+        */
         return rootView;
     }
+
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -73,6 +76,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
 
     }
+
+
    /* @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
@@ -160,58 +165,60 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
     @Override
     public void onMapReady(GoogleMap mMap) {
-        googleMap = mMap;
-
-        // For showing a move to my map button
-        //googleMap.setMyLocationEnabled(true);
-
-        try {
-            // Customise the styling of the base map using a JSON object defined
-            // in a raw resource file.
-            boolean success = googleMap.setMapStyle(
-                    MapStyleOptions.loadRawResourceStyle(
-                            getActivity(), R.raw.style_json));
-
-
-
-            if (!success) {
-                Log.e("TAG", "Style parsing failed.");
-            }
-        } catch (Resources.NotFoundException e) {
-            Log.e("TAG", "Can't find style. Error: ", e);
-        }
-        // Position the map's camera near Sydney, Australia.
-        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(-34, 151)));
-
-        // For dropping a marker at a point on the Map
-
-        //googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
-        BitmapFactory.Options opt = new BitmapFactory.Options();
-        opt.inMutable = true;
-        Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
-                R.drawable.logo,opt);
-        Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
-        googleMap.setOnMarkerClickListener(this);
-        markers = new ArrayList<>();
-        markers.add(googleMap.addMarker(new MarkerOptions().icon(
-                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(0))));
-        markers.add(googleMap.addMarker(new MarkerOptions().icon(
-                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(1))));
-        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));
-        //start = map.addMarker(new MarkerOptions().position(list.get(0)));
-
-        // For zooming automatically to the map of the marker
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(locations.get(1)).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+//        googleMap = mMap;
+//
+//        // For showing a move to my map button
+//        //googleMap.setMyLocationEnabled(true);
+//
+//        try {
+//            // Customise the styling of the base map using a JSON object defined
+//            // in a raw resource file.
+//            boolean success = googleMap.setMapStyle(
+//                    MapStyleOptions.loadRawResourceStyle(
+//                            getActivity(), R.raw.style_json));
+//
+//
+//
+//            if (!success) {
+//                Log.e("TAG", "Style parsing failed.");
+//            }
+//        } catch (Resources.NotFoundException e) {
+//            Log.e("TAG", "Can't find style. Error: ", e);
+//        }
+//        // Position the map's camera near Sydney, Australia.
+//        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(-34, 151)));
+//
+//        // For dropping a marker at a point on the Map
+//
+//        //googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
+//        BitmapFactory.Options opt = new BitmapFactory.Options();
+//        opt.inMutable = true;
+//        Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
+//                R.drawable.logo,opt);
+//        Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
+//        googleMap.setOnMarkerClickListener(this);
+//        markers = new ArrayList<>();
+//        markers.add(googleMap.addMarker(new MarkerOptions().icon(
+//                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(0))));
+//        markers.add(googleMap.addMarker(new MarkerOptions().icon(
+//                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(1))));
+//        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));
+//        //start = map.addMarker(new MarkerOptions().position(list.get(0)));
+//
+//        // For zooming automatically to the map of the marker
+//        CameraPosition cameraPosition = new CameraPosition.Builder().target(locations.get(1)).zoom(12).build();
+//        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
+
+
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        if (marker.equals(markers.get(1))) {
-            //handle click here
-            DialogFragment dialog;
-            dialog = StoryDetailFragment.buildDialog(stories.get(1));
-            dialog.show(getFragmentManager(), "");
-        }
+//        if (marker.equals(markers.get(1))) {
+//            //handle click here
+//            DialogFragment dialog;
+//            dialog = StoryDetailFragment.buildDialog(stories.get(1));
+//            dialog.show(getFragmentManager(), "");
+//        }
         return true;
     }
 
