@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity{
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
 
-        if(mLoginMethod == null) startChooser();
+        if(mLoginMethod == null) mLoginMethod = "";
 
         // START:auth_state_listener
         mAuthListener = new FirebaseAuth.AuthStateListener(){

@@ -44,6 +44,7 @@
             android:theme="@style/EditorTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".Authen.ChooserActivity" />
+        <activity android:name=".CreateAccountActivity"></activity>
     </application>
 
 </manifest>

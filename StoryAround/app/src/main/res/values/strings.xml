@@ -16,4 +16,10 @@
 
     <!--WebClientId-->
     <string name="web_client_id">271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com</string>
+
+    <!--CreateAccount-->
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_none">None</string>
+
 </resources>
