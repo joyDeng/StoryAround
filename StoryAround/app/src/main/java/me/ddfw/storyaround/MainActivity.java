@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity{
     private DiaryFragment diaryFragment;
     private ProfileFragment profileFragment;
 
+<<<<<<< HEAD
     //comments
     //declare_auth
     private FirebaseAuth mAuth;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity{
     //declare_login_status
     private String mLoginMethod = "";
 
+=======
+>>>>>>> 8b78227f58763dc067e0fd2ea4da1c8a766b1eb2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
