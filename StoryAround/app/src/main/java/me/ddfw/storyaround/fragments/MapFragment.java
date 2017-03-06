@@ -58,7 +58,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private DatabaseReference mDatabase;
     final private List<Story> stories = new ArrayList<>();
     final private HashMap<String, Story> storyMap = new HashMap<>();
-    private ClusterManager<MyItem> mClusterManager;
+//    private ClusterManager<MyItem> mClusterManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
