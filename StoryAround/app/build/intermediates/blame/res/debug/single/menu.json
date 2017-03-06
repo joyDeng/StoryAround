@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_diary.xml",
+        "source": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/src/main/res/menu/menu_diary.xml"
+    },
+    {
+        "merged": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_delete.xml",
+        "source": "/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/src/main/res/menu/menu_delete.xml"
+    }
+]

@@ -1,11 +1,20 @@
 package me.ddfw.storyaround.fragments;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,6 +70,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
+
 //        if (mMapView != null) {
 //            // Initialise the MapView
 //            Log.d("DEBUG", mMapView.toString());
@@ -206,8 +216,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
         return true;
     }
-
-
 
 
 }

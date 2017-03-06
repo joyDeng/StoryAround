@@ -1,9 +1,9 @@
 package me.ddfw.storyaround.fragments;
 
-import android.app.ListFragment;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,18 +12,32 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.StoryListAdapter;
+import me.ddfw.storyaround.model.Likes;
 import me.ddfw.storyaround.model.Story;
 
 
 public class LikesFragment extends Fragment {
 
-    private ArrayAdapter<String> mAdapter; // tester adapter
-    private ArrayList<String> data;
+    private StoryListAdapter storyListAdapter; // tester adapter
+//    private ArrayList<String> data;
+    private ArrayList<Story> stories;
+
+    private ListView list;
+
+    private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
     // private ArrayList<Story> data;
     // private static ArrayAdapter<Story> mAdapter; // TODO
@@ -32,56 +46,80 @@ public class LikesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_likes, container, false);
 
-//        ListView list = (ListView) rootView.findViewById(R.id.story_list);
-//        final List<Story> testData = Story.getTestStories();
-//        StoryListAdapter storyListAdapter = new StoryListAdapter(getActivity(),testData);
-//        list.setAdapter(storyListAdapter);
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                DialogFragment dialog;
-//                dialog = StoryDetailFragment.buildDialog(testData.get(i));
-//                dialog.show(getFragmentManager(), "");
-//            }
-//        });
+
+        //get current user id
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        list = (ListView) rootView.findViewById(R.id.story_list);
+
+        stories = new ArrayList<>();
+
+//        //initialize adapter
+//        storyListAdapter = new StoryListAdapter(getActivity(), stories);
+
+        //query story id
+        database.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_USER_ID).equalTo(userId).
+                addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        //fetch all stories that the user like
+                        for(DataSnapshot child : dataSnapshot.getChildren()){
+
+                            //get story id
+                            String storyId = (String) child.child(Likes.KEY_LIKES_STORY_ID).getValue();
 
 
-        /*data = new ArrayList<String>();
-        mAdapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, data);
-        mAdapter.add("Story 1");
-        mAdapter.add("Story 2");
-        mAdapter.add("Story 3");
-        mAdapter.add("Story 4");
-        mAdapter.add("Story 5");
+                            //pass the story id to fetch the story object
+                            getStory(storyId);
+                        }
 
-        setListAdapter(mAdapter);*/
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
 
 
         return rootView;
     }
 
-    /*@Override
-    public void onListItemClick(ListView parent, View v, int position, long id) {
+    private void getStory(final String storyId){
 
-        // TODO
-        // Story Activity
-        // Story object class
-        *//*
-        Intent intent;
-        Bundle bundle;
-        Story story = data.get(position); // later on when we implement the Story object
-        intent = new Intent(getActivity().getApplicationContext(), StoryActivity.class);
-        bundle = new Bundle();
-        bundle.putLong("id", story.getId());
-        startActivity(intent);
-        *//*
+        //get story whose id is storyId
+        database.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_ID).equalTo(storyId).
+                addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
 
+                for(DataSnapshot child : dataSnapshot.getChildren()){
 
-        Toast.makeText(getActivity().getApplicationContext(),
-                "Story Activity #" + position,
-                Toast.LENGTH_SHORT).show();
+                    Story story = child.getValue(Story.class);
+                    stories.add(story);
 
-    }*/
+                }
+
+                //add to adapter
+                storyListAdapter = new StoryListAdapter(getActivity(), stories);
+
+                list.setAdapter(storyListAdapter);
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        //// TODO: 3/5/17
+                    }
+                });
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 
 
 }

@@ -43,8 +43,8 @@ dependencies {
     compile 'com.google.firebase:firebase-database:10.2.0'
     compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'com.google.firebase:firebase-storage:10.2.0'
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
 
-    compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
     compile 'com.google.android.gms:play-services:10.2.0'

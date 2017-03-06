@@ -51,11 +51,12 @@ public class StoryDetailFragment extends DialogFragment {
         viewHolder.tag = (TextView) v.findViewById(R.id.story_tag) ;
         viewHolder.content = (WebView) v.findViewById(R.id.story_content) ;
 
-//        viewHolder.dateText.setText(story.getFormattedDate());
+        viewHolder.dateText.setText(story.getStoryContent());
 //        viewHolder.user.setText(story.getUserName());
-//        viewHolder.title.setText(story.getTitle());
+        viewHolder.title.setText(story.getStoryTitle());
 //        viewHolder.location.setText(story.getLocation().toString());
-//        viewHolder.tag.setText(story.getTag());
+        viewHolder.tag.setText(story.getStoryType());
+
 
         builder.setView(v);
 

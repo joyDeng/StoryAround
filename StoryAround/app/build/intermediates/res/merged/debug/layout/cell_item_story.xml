@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <com.ramotion.foldingcell.FoldingCell
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#afafaf"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        >
+        ​
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/story_date_unfold"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/staticmap"/>
+        </FrameLayout>
+        ​
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/color2"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/story_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:text="DEC 12th"
+                        android:textSize="22sp"
+                        android:textColor="#ffffff"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/story_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="By Lily"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:weightSum="10">
+                    <TextView
+                        android:id="@+id/story_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:textSize="18sp"
+                        android:text="Demo title"/>
+                    <TextView
+                        android:id="@+id/story_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="Location: 423/342"/>
+                    <TextView
+                        android:id="@+id/story_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="Tag: historical story"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+        ​
+    </com.ramotion.foldingcell.FoldingCell>

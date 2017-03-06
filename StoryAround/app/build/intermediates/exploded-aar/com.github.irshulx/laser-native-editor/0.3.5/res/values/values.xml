@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="android_default_primary" type="color">#009688</item>
+    <item name="blue" type="color">#2b6dad</item>
+    <color name="blue_overlay" type="color">#803b5999</color>
+    <color name="colorAccent">#FFCDD2</color>
+    <color name="colorPrimary">#C62828</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <item name="darkblue" type="color">#005099 </item>
+    <item name="darkertext" type="color">#333</item>
+    <item name="darkgreen" type="color">#2DA44B</item>
+    <item name="darkorange" type="color">#f3761c</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkred" type="color">#B71C1C</item>
+    <item name="darktext" type="color">#5E5E5E</item>
+    <item name="f5f5f5" type="color">#f5f5f5</item>
+    <item name="green" type="color">#99CC00</item>
+    <item name="lightBackground" type="color">#eee</item>
+    <item name="lighttext" type="color">#999</item>
+    <item name="orange" type="color">#FFFF8800</item>
+    <color name="overlay" type="color">#80EE3124</color>
+    <color name="overlay_light" type="color">#80ffffff</color>
+    <color name="petron_primary" type="color">#202b68</color>
+    <color name="petron_secondary" type="color">#218EDD</color>
+    <color name="petron_tertiary" type="color">#EE3124</color>
+    <item name="pink" type="color">#B81365</item>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <color name="white" type="color">#ffffff</color>
+    <color name="yellow" type="color">#FFD72D</color>
+    <declare-styleable name="editor"><attr format="string" name="render_type"/><attr format="string" name="placeholder"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">230dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="body_text">14sp</dimen>
+    <dimen name="extra_large_text">18sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="large_text">13sp</dimen>
+    <dimen name="larger_text">16sp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="small_text">11sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <string name="app_name">Editor</string>
+    <string name="fontFamily__casual">casual</string>
+    <string name="fontFamily__cursive">cursive</string>
+    <string name="fontFamily__monospace">monospace</string>
+    <string name="fontFamily__sans_serif">sans-serif</string>
+    <string name="fontFamily__sans_serif_condensed">sans-serif-condensed</string>
+    <string name="fontFamily__sans_serif_light">sans-serif-light</string>
+    <string name="fontFamily__sans_serif_medium">sans-serif-medium</string>
+    <string name="fontFamily__sans_serif_thin">sans-serif-thin</string>
+    <string name="fontFamily__serif">serif</string>
+    <string name="fontFamily__serif_monospace">serif-monospace</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/petron_secondary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.LoginActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+    <style name="customLayoutStyle">
+        <item name="android:background">#f2f2f2</item>
+    </style>
+</resources>

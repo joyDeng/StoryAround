@@ -1,0 +1,7 @@
+#Sun Mar 05 23:32:31 EST 2017
+base.0=/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e61c633a13a7059a5f694b03c39510094a41e9e7
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08cc84c8b81588f877b00fbf9adb0ac13fe9f644/classes.dex
+base.1=/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08cc84c8b81588f877b00fbf9adb0ac13fe9f644
+file.0=/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e61c633a13a7059a5f694b03c39510094a41e9e7/classes.dex

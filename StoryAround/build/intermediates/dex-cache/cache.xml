@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db48dfabe8ecc46681ceca418d6bd61a5339f818">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-10.2.0_fbdb869513e72c0fe72aca357961292804cbb729/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_a9958abeb08342710ef1cbcf66857560ae3b84ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e01b82d664e1a8253b2b9658e74b5da35c8771d">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.2.0_4fbb30df39a27e18901e39bedcf285138526654a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7157a9577c983651d6c6ee313813424fe2d8ab6">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-10.2.0_72214e6abb15d70c0cd3e550f5ea9b24d9522a78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90270132a5f1a33584f453c571257dd35e728201">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-10.2.0_ac6324ad214e340435a0ea478504402a50fe11dd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48532a016bb0dfbe7970c147ce784598a515406b">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.2.0_c93ed4b8eb63ac0f1cf8ff25afd53bcc3ee7ac3f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.2.0_e48668ab8e729abda681a048dde7a6f16be2d1ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1a598815bf3d49fd6b32ec0d7e5b8b19fb42e935">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_08cc84c8b81588f877b00fbf9adb0ac13fe9f644/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_ebd1819601fb6b52209ea02ca56527e162938c5e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_d15ce60a987110d47914ba5fc277512e67e33cb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-10.2.0_14c3eaebb831498ab44bb396461ab5641e9333ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_32f5f63a880ed5fb4ca53e9f2b358815aaf099fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="444f9de23145e8caba7bf1c1772acad142ea6013">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-10.2.0_8d683838b3eb193023c4fc0436bb96ece6afad54/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3aaf1e7b5fe9f4d3ff22c4edc0ead631f7389d30">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-10.2.0_8b6a3b8fed05737292bb814d879d5590c58ad7a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="68485f21eeb5d6c9ed82c445d520b9fc81c87108">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-10.2.0_e503e044ad9aa30b20c90bd4df4aac428ff7f09a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e006c9b6f0aaed9d8c7934b74039738390fe3468">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-25.1.0_9212aebeb7d74baf31f77acbde47c5a294216bc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-10.2.0_cf7ae61a89fbd343c908e0852d9b1258fcf30370/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74c5a91d6510ad42410e8a047d90d2ea6721a0e0">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-10.2.0_3746c28ab8e0d0cf3c2c9ff759e646e0bbce2a35/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.2.0_827a941d81fd3e0212b6e7022ff614cc6306e084/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_b9177b9b3421538d2ccb12dce9dc9e11ba6f9020/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="654b294d429b56fd18392f2b68ad79954f431f8e">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-10.2.0_f5543abc9e7ebd7cf8328e9169e28eb9cde22f8b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/13.0/381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7/guava-jdk5-13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/guava-jdk5-13.0_ce2e4a3501867035e7ee1abe194441396277991f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab0c7fe28f9506302eb39adf1ebf5858732e18ec">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-10.2.0_166a040721f3128efceccbaa0ce3a18772fcf8b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.2.0_300cf8a9a8abf64915a2beb3c7e8737a2aef26fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_ba65fc1d45dbb05cbedf6108c1af587d3245e02e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="101393e975eaf36e3ff40b277ee9a019e077afef">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-10.2.0_4d714334ee6a9a34523adc3b8aa882a82fef55a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.20.0/d3e66209ae9e749b2d6833761e7885f60f285564/google-api-client-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d3e66209ae9e749b2d6833761e7885f60f285564">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-api-client-1.20.0_361bb3d5ca86f795607ae6c8e983f1aa7b3846cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0/49eb3ad545e7701234e4dd83db8dc1344b577f23/converter-gson-2.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="49eb3ad545e7701234e4dd83db8dc1344b577f23">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.0_5ce63fa9d7be493aa6ba957d53f83372c4a51213/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca82d5800780b1d53f0f9ab43678d8634a34cddc">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-10.2.0_c3397028722603aa102f7b04f6a3905573ecfd50/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_b7ee0b51cdce2b812063670430b50e38d7d979a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/f6c3aed1cdfa21b5c1737c915186ea93a95a58bd/jackson-core-2.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.1.3_dbc8c179cbb2b2325efe6200b55c384a11774806/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.2.0_b042ca4d7bf42cf6cafb139c66f73ac9ecc61fd6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_45178639ffaf34a2eacb2c72331aeb56c3c26053/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="646b2c48e147b943f0a39842457fdc66d501e4b6">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-10.2.0_0b3b6db1cfa01993c20bae6537660354814d0588/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.20.0/313dc99a7963523871495897ca11aa8472b3c6fd/google-http-client-android-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="313dc99a7963523871495897ca11aa8472b3c6fd">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-http-client-android-1.20.0_c026a5e090694275dcd1d2d71c151a8e48d16275/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-10.2.0_d2ffce413f349e0a60b3e7d6afee076989092a0d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_ac9d7089707c5e0eb0f4c9a4b24fdc5af71426e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-appindexing/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1fbf3733f36fea63e70373212796e70f9079981f">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-appindexing-10.2.0_4a0a0ceac90de2cea7c481ee573da4504a74d3a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.github.irshulx/laser-native-editor/0.3.5/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e297cc6a5b2781be1431b274f588159f6a5e8244">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.irshulx-laser-native-editor-0.3.5_a6fff6d48804038e92917d1d46de9cec031d0928/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d08bb32b88df3dbcbe1d498c3c57f020b8c521ec">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-10.2.0_68f666d293549b100bb826b3501ca2c57e8402a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa23e4589287adb431ef59d6c78af79ab8885682">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-10.2.0_c7ab252d4bd3358d8514a7bc016f310f7d2f83e8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db4aca1c1ec60f2c098d3b6c91cedfb7838f83ed">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-10.2.0_738a8fda10cf7d7b01d9b6f79a756823a363a5d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.20.0/93d82db2bca534960253f43424b2ba9d7638b4d2/google-http-client-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93d82db2bca534960253f43424b2ba9d7638b4d2">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-http-client-1.20.0_743d887b60c3f6411775fe58efcf8c74d4c909d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_da038a7685bc031437f0fee7d331f6b3f93c0c82/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_f2e24b7535927da226edf5f414311ca574a050a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.2.0_042c83aa2759af6ca7f8d0a729d0e0fe6d8c89a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9d1d0e1270310e34e2d65afda2bc18605c14cd46">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-10.2.0_fd4f7971058ef5e5b283b37a9484af83588698c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.2.0_d66d3c3b84dbaf2dfa1f26518d0438b2609add51/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_1562e3c2dc34707f6f1b0c7dbf936ce549fa7440/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="423fb69e69759d8b726fa4a4fb6a1ea9fc86d1cd">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-10.2.0_87d559a5f6ec37bc86db98fafc5f70be3444a756/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b831d3902674d096189451d46fce219e2c2904b7">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.2.0_8857b7ed73d31787d22624a8b5bb70c204e5b24f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75575883f0348fc5d2be85f23bd10b050095cf17">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.2.0_ea9abfe9e3f6b4570649f2dac77150eaef01b9e8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.2.0_25751ddee395e0f37a3927f5dc9e25ea7c843c76/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_acb8897fb09fb5e44b34fe6f4613b1d6366a66de/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d14fe9bd2283b2eb7fcab08458aa0357917e138">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.2.0_e238aae9fe1f1ec2049368bf52b404681ec79254/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8438c64f9eb581429dc592f7c9b3156a3d071653">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-v4-impl-10.2.0_19ce1e0c87b84fa4d05364d3040a67efba0e8cac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_1a9218e823c191e6bd902160d27254c17eed9d9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_e60fbf0d3319ee7a82f0c2a80a9ac8dd200463a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_6263bb06ad87c5a279cef404ecee192a460be1d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_78c4ed03068b3130a813cc619c8082c79f402e0a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_20339bbc50a5cbb6b92fe814ca5b92f2c589d752/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1bab75be1918fc9871be4da7afe38d7e4d308303">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.2.0_05b6c321408543f4e7b097e552fc03d8d9b2348d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.0_fd8f8882e6f96bec9a137f97ec7f3db4fea585bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fd2e9eadc9d214966ee7f60d6c5a17a335d7533">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-10.2.0_1407dc117ba071852ef461b224bd90803b1156e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_9518ff79be79a03ae2a557c3bfdfb5a0c8b77e02/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-database/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7e655e4fd5d01177dfec3daadd938ce2d1f9b03">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-database-1.0.0_c7dcac94da5987f5fd48e9a14a3f4efa52c798a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.2.0_fd430ccc062603fba68e1002d1fa33f7460a1b6b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ddb7fed808f4331174b59428ccfc46b3696c9812">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-10.2.0_7976ddee41e9e95438c63be3bb451fb1a82682f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-android/1.20.0/5673179575c32b69a474334255c3044adf18d40/google-api-client-android-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05673179575c32b69a474334255c3044adf18d40">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-api-client-android-1.20.0_c14bd0039d123de42a8c3fb398f0e59b556d4eb0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ef2d91da513c4d7e773ae438fe04d0e4c135957">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-10.2.0_d7904eb3c817ffee9ba11b20434aecd11fcf85c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.8.1/1eb6690b0c629d7000c77a72df5e822fb974f521/jsoup-1.8.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.8.1_d81b13bc46d63b8671e7796436f386b2cd267bf6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3f4483afd050f3be12db7838422309446a45daa1">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-10.2.0_00a1f6b776b9cbe23cf89d07235a728f32d6a44f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aed20c7fb517d6e2298eb26ad3675652c88e1bbd">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e61c633a13a7059a5f694b03c39510094a41e9e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_60b368c983e1d4c2fbcfd41343b365af2fedf5ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-2.0.1_928f9e59f01c7cd6edc22841c9675b19a2062b0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.ramotion.foldingcell/folding-cell/1.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48dbdfcaaa731f11ff6a9fcbee3cc0c96feded6e">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ramotion.foldingcell-folding-cell-1.1.0_5efe5586050bef63ac8b7db3be6ad1bc91237285/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0f58195bee8a08f35e7d4ee7fd4b0479e570e172">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.2.0_ccb7d8ff54888a47c413cefa59968d629742016c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.2.0_431db5da1c548af940d24fd8d8496d1b0fdccc49/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9493f008850469ed3fab9b28658919562882aed">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-10.2.0_2d66839fd589bca7f6fe6b34f242ec91d11192ab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.2.0_a2d19c25b55b430332504464b8edaee1034adc69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="421a5cebe9ff187c98075c59786e9464c5c67d36">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-10.2.0_aa288c9449f0af7ce5c03444c5cea8c1e3869f0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.20.0/1d086ac5756475ddf451af2e2df6e288d18608ca/google-oauth-client-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1d086ac5756475ddf451af2e2df6e288d18608ca">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-oauth-client-1.20.0_cb6a280cca388b1233a56beb4c3b3267be668a2a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea03bbfaed89818f233ee9918fac493f2b63895a">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-10.2.0_4daa54f4096526ecf49ab45fa1707a67b44e6b09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-10.2.0_32f15eafe8fa24b446f925b206cac8993b5b327b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="11a65cf2b30c192b38a881d626fa771a78a2293d">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.soundcloud.android-android-crop-1.0.1_3adb2746cf5c774d6b86c10596977dc2e930f64c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.20.0/2408070b2abec043624d35b35e30450f1b663858/google-http-client-jackson2-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2408070b2abec043624d35b35e30450f1b663858">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/google-http-client-jackson2-1.20.0_5b1b73c8d8a533f43c271f9b8eb9cf15be972746/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/dengxi/Documents/MyProjects/StoryAround/StoryAround/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_eaea1bf72f2dddb4a7278b58c156faef1bec2121/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color6">
+
+    <HorizontalScrollView android:id="@+id/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color3"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+        <include layout="@layout/editor_toolbar_linearlayout_horizontal" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_margin="5dp"
+        android:layout_weight="1">
+        <com.github.irshulx.Editor
+            android:id="@+id/editor"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/editor_background"
+            app:render_type="Editor"
+            app:placeholder="Tell us your story...">
+        </com.github.irshulx.Editor>
+    </ScrollView>
+
+
+
+</LinearLayout>
