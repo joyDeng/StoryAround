@@ -6,13 +6,105 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/color6"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile"/>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello, Profile Fragment" />
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/user_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:textSize="30dp"
+                android:textColor="@color/color2"
+                android:text="Username" />
+
+
+            <EditText
+                android:id="@+id/user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@android:color/transparent"
+                android:textSize="20dp"
+                android:textColor="@color/color4"
+                android:text="userGender" />
+
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                android:layout_weight="0.2"
+                android:text="edit"
+                android:onClick="onEditBtn"/>
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:textSize="15dp"
+            android:textColor="@color/color4"
+            android:text="userEmail@test.com" />
+
+
+        <EditText
+            android:id="@+id/user_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:textSize="15dp"
+            android:textColor="@color/color4"
+            android:text="123 456 7890"/>
+
+
+
+        <EditText
+            android:id="@+id/user_bio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@android:color/transparent"
+            android:textSize="18dp"
+            android:textColor="@color/color3"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+
 
         <Button
             android:id="@+id/btnLogout"
