@@ -1,8 +1,5 @@
 package me.ddfw.storyaround.model;
 
-/**
- * Created by xinbeifu on 3/3/17.
- */
 
 public class User {
 
