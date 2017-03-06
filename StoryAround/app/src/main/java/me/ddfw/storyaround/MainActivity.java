@@ -1,27 +1,26 @@
 package me.ddfw.storyaround;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import me.ddfw.storyaround.Authen.ChooserActivity;
 import me.ddfw.storyaround.fragments.DiaryFragment;
@@ -32,6 +31,7 @@ import me.ddfw.storyaround.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity{
     private static final String TAG = "MainActivity";
+    private static final int PERMISSIONS_REQUEST = 1;
 
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
     private ViewPager viewPager;
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
        mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
@@ -82,9 +83,13 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         };
+
         // END:auth_state_listener
+        checkPermission(this);
+        pageSetup();
+    }
 
-
+    public void pageSetup(){
         mapFragment = new MapFragment();
         likesFragment = new LikesFragment();
         postFragment = new PostFragment();
@@ -147,7 +152,62 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
         finish();
     }
-    // END: Turn to login page
+
+    public void checkPermission(Activity activity){
+        if(Build.VERSION.SDK_INT < 23) return;
+        boolean i,r,w;
+        i = ContextCompat.checkSelfPermission(activity, Manifest.permission.INTERNET) !=
+                PackageManager.PERMISSION_GRANTED;
+        r = ContextCompat.checkSelfPermission(
+                activity, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED;
+        w = ContextCompat.checkSelfPermission(
+                activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED;
+        if(i || r || w ){
+            List<String> s = new ArrayList<String>();
+            if(i)
+                s.add(Manifest.permission.INTERNET);
+            if(r)
+                s.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+            if(w)
+                s.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            String[] permissions = new String[s.size()];
+            s.toArray(permissions);
+            ActivityCompat.requestPermissions(activity, permissions, PERMISSIONS_REQUEST);
+        }
+
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST: {
+                // If request is cancelled, the result arrays are empty.
+                boolean a = false;
+                if (grantResults.length == permissions.length) {
+                    for (int i = 0; i < grantResults.length; i++) {
+                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED)
+                            a = true;
+                    }
+                } else {
+                    a = true;
+                }
+                if (a) {
+                    Toast.makeText(this, "Sorry, but we need these permissions :)",
+                            Toast.LENGTH_SHORT);
+                    checkPermission(this);
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+
+        }
+    }
 }
 
 
