@@ -86,7 +86,7 @@ public class ProfileFragment extends Fragment {
                     });
 
             setProfileBtn(rootView);
-            setProfileContent();
+            //setProfileContent();
         }
         setRetainInstance(true);
 

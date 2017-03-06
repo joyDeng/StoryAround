@@ -205,7 +205,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     }
 
     public LatLng locationToLatLng(Location l){
-        return new LatLng(l.getLatitude(),l.getLongitude());
+        if (l != null) {
+            return new LatLng(l.getLatitude(), l.getLongitude());
+        }
+        else {
+            return new LatLng(0,0);
+        }
     }
 
 

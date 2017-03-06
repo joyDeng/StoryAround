@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7dc077d22e82cb10df9aece0065a4332893b9982">
+        sha1="99b9d9d683acea871d22178ca055ebcc83119d92">
         <dex dex="C:\Users\SAMSUNG\Documents\GitHub\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d54895dec5aa1d4a0fbd1e030f67c9ae654343a8\classes.dex" />
     </item>
     <item
@@ -331,7 +331,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b29d6ff2081a5881b266498bc48d2efb025d9a43">
+        sha1="c85d20706fcd6ce3504ea4e1ed9277079046ea9a">
         <dex dex="C:\Users\SAMSUNG\Documents\GitHub\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9137e57c9f21d6a54601013ce30e04e0687c7a70\classes.dex" />
     </item>
     <item
