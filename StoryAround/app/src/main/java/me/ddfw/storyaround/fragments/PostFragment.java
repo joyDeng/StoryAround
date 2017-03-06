@@ -8,17 +8,30 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import me.ddfw.storyaround.MyDatabase;
+import me.ddfw.storyaround.NewStoryActivity;
+import me.ddfw.storyaround.R;
+import me.ddfw.storyaround.model.Story;
+
+import static me.ddfw.storyaround.fragments.MapFragment.LOCATION_PERMISSION_REQUEST;
+
 public class PostFragment extends Fragment{
+    List<LatLng> stories = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
+
         setRetainInstance(true);
         Log.d("******","PostFragment onCreateView");
 

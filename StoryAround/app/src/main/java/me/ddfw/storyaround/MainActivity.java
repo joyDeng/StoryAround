@@ -3,38 +3,22 @@ package me.ddfw.storyaround;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
-<<<<<<< HEAD
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-=======
-import android.content.Context;
-import android.content.Intent;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
->>>>>>> a182eb14ea2a7a4a9cc0cd07dbae25149e554b89
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-<<<<<<< HEAD
 import android.view.Menu;
-import android.widget.Toast;
-=======
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
->>>>>>> a182eb14ea2a7a4a9cc0cd07dbae25149e554b89
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +30,9 @@ import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
 
-<<<<<<< HEAD
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS_REQUEST = 1;
-=======
-public class MainActivity extends AppCompatActivity{
     private static final String TAG = "MainActivity";
->>>>>>> a182eb14ea2a7a4a9cc0cd07dbae25149e554b89
 
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
     private ViewPager viewPager;
@@ -82,13 +62,12 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkPermission(this);
+        checkUser();
         pageSetup();
     }
 
-<<<<<<< HEAD
-    public void pageSetup(){
-=======
-       mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
+    public void checkUser(){
+        mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
 
@@ -104,15 +83,13 @@ public class MainActivity extends AppCompatActivity{
                     // User signed in
                     //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
                 }else{
-                    Log.d(TAG, "onAuthStateChanged:signed_out:");
+                    //Log.d(TAG, "onAuthStateChanged:signed_out:");
                     startChooser();
                 }
             }
         };
-        // END:auth_state_listener
-
-
->>>>>>> a182eb14ea2a7a4a9cc0cd07dbae25149e554b89
+    }
+    public void pageSetup(){
         mapFragment = new MapFragment();
         likesFragment = new LikesFragment();
         postFragment = new PostFragment();
@@ -155,8 +132,6 @@ public class MainActivity extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-<<<<<<< HEAD
     public void checkPermission(Activity activity){
         if(Build.VERSION.SDK_INT < 23) return;
         boolean i,r,w;
@@ -213,7 +188,6 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
-=======
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.add("test");
@@ -234,7 +208,7 @@ public class MainActivity extends AppCompatActivity{
         finish();
     }
     // END: Turn to login page
->>>>>>> a182eb14ea2a7a4a9cc0cd07dbae25149e554b89
+
 }
 
 
