@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- story type  -->
+    <string-array name="story_type">
+        <item>-- Select your story type --</item>
+        <item>type 0</item>
+        <item>type 1</item>
+        <item>type 2</item>
+        <item>type 3</item>
+        <item>type 4</item>
+    </string-array>
+
+
+
+
+</resources>

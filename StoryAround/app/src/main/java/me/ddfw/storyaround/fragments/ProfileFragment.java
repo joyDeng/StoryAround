@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -31,17 +33,20 @@ import me.ddfw.storyaround.R;
 import static android.R.attr.action;
 import static android.R.attr.start;
 
+
+// TODO
+// user information loaded
+
+
 public class ProfileFragment extends Fragment {
 
     private static final String TAG = "ProfileFragment";
 
-    //Declare firebase user
     private FirebaseUser mUser;
-
     private EditText editUsername;
     private EditText editEmail;
     private EditText editPhone;
-    private EditText editGender;
+    private RadioGroup editGender;
     private EditText editBio;
     private boolean isEditMode;
 
@@ -65,10 +70,11 @@ public class ProfileFragment extends Fragment {
             editUsername = (EditText) rootView.findViewById(R.id.user_username);
             editEmail = (EditText) rootView.findViewById(R.id.user_email);
             editPhone = (EditText) rootView.findViewById(R.id.user_phone);
-            editGender = (EditText) rootView.findViewById(R.id.user_gender);
+            editGender = (RadioGroup) rootView.findViewById(R.id.user_gender);
             editBio = (EditText) rootView.findViewById(R.id.user_bio);
             isEditMode = false;
             setProfileBtn(rootView);
+            // setProfileContent();
         }
         setRetainInstance(true);
 
@@ -117,7 +123,8 @@ public class ProfileFragment extends Fragment {
                     editUsername.setEnabled(true);
                     editEmail.setEnabled(true);
                     editPhone.setEnabled(true);
-                    editGender.setEnabled(true);
+                    for (int i = 0; i < editGender.getChildCount(); i++)
+                        editGender.getChildAt(i).setEnabled(true);
                     editBio.setEnabled(true);
                     btnEdit.setText("Save");
                     Toast.makeText(getActivity().getApplicationContext(),"You can edit your profile",Toast.LENGTH_SHORT).show();
@@ -131,7 +138,8 @@ public class ProfileFragment extends Fragment {
                     editUsername.setEnabled(false);
                     editEmail.setEnabled(false);
                     editPhone.setEnabled(false);
-                    editGender.setEnabled(false);
+                    for (int i = 0; i < editGender.getChildCount(); i++)
+                        editGender.getChildAt(i).setEnabled(false);
                     editBio.setEnabled(false);
                     btnEdit.setText("Edit");
                     Toast.makeText(getActivity().getApplicationContext(),"You have saved your profile",Toast.LENGTH_SHORT).show();
@@ -141,8 +149,17 @@ public class ProfileFragment extends Fragment {
         editUsername.setEnabled(false);
         editEmail.setEnabled(false);
         editPhone.setEnabled(false);
-        editGender.setEnabled(false);
+        for (int i = 0; i < editGender.getChildCount(); i++)
+            editGender.getChildAt(i).setEnabled(false);
         editBio.setEnabled(false);
+    }
+
+    private void setProfileContent() {
+        editUsername.setText("No name");
+        editEmail.setText(mUser.getEmail());
+        editPhone.setText("223 233 2323");
+        ((RadioButton) editGender.getChildAt(1)).setChecked(true);
+        editBio.setText("test test test");
     }
 
     private void onSignout() {

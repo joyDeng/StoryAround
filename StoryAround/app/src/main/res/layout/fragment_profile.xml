@@ -32,22 +32,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:layout_weight="0.5"
                 android:background="@android:color/transparent"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textColor="@color/color2"
                 android:text="Username" />
 
 
-            <EditText
+            <!-- profile gender -->
+            <RadioGroup
                 android:id="@+id/user_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:background="@android:color/transparent"
-                android:textSize="20dp"
-                android:textColor="@color/color4"
-                android:text="userGender" />
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radioGenderF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female"/>
+                <RadioButton
+                    android:id="@+id/radioGenderM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male"/>
+            </RadioGroup>
 
 
             <Button

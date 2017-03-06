@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -227,9 +228,10 @@ public class NewStoryActivity extends AppCompatActivity {
     private void saveStory() {
         EditText storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
         EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
+        Spinner storyTypeSpinner = (Spinner) findViewById(R.id.story_type);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
-        mStory.setStoryType(0);//TODO
+        mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
         mStory.setStoryMode(0);//TODO
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
         // mStory.setStoryImgURL("" + firebaseUri);
