@@ -41,7 +41,6 @@ import com.google.maps.android.clustering.ClusterManager;
 
 import java.util.HashMap;
 
-import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
@@ -54,7 +53,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private LocationManager locationManager;
     private DatabaseReference mDatabase;
     final private HashMap<String, Story> storyMap = new HashMap<>();
-    private ClusterManager<MyItem> mClusterManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
