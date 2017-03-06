@@ -69,6 +69,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/like_layout"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
@@ -102,6 +103,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:src="@drawable/map"
+                    android:tint="#000000"
                     android:scaleType="fitCenter"
                     android:layout_height="match_parent"
                     android:padding="3dp"/>

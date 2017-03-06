@@ -37,7 +37,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.maps.android.clustering.ClusterManager;
 
 import java.util.HashMap;
 
@@ -45,7 +44,8 @@ import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
+public class MapFragment extends Fragment implements OnMapReadyCallback,
+        GoogleMap.OnMarkerClickListener{
     public final static int LOCATION_PERMISSION_REQUEST = 1;
     private View rootView;
     private MapView mMapView;
@@ -53,6 +53,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private LocationManager locationManager;
     private DatabaseReference mDatabase;
     final private HashMap<String, Story> storyMap = new HashMap<>();
+    private Marker current;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -136,14 +137,43 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
             Criteria criteria = new Criteria();
             criteria.setAccuracy(Criteria.ACCURACY_FINE);
             String provider = locationManager.getBestProvider(criteria, true);
-            final Location current = locationManager.getLastKnownLocation(provider);
+            final Location last = locationManager.getLastKnownLocation(provider);
+            if(last!=null){
+                current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(last))
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.flag)));
+            }
+            locationManager.requestLocationUpdates(provider, 0, 0, new android.location.LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
+                    if(googleMap!=null){
+                        current.remove();
+                        current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(location))
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.flag)));
+                    }
+                }
+
+                @Override
+                public void onStatusChanged(String s, int i, Bundle bundle) {
+
+                }
+
+                @Override
+                public void onProviderEnabled(String s) {
+
+                }
+
+                @Override
+                public void onProviderDisabled(String s) {
+
+                }
+            });
             if(googleMap!=null){
                 BitmapFactory.Options opt = new BitmapFactory.Options();
                 opt.inMutable = true;
                 Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
                         R.drawable.logo,opt);
                 final Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(locationToLatLng(current)).zoom(17).build();
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(locationToLatLng(last)).zoom(17).build();
                 googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
                     @Override
                     public void onCameraIdle() {
@@ -278,5 +308,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
         return true;
     }
+
 
 }

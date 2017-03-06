@@ -92,6 +92,7 @@ public class NewStoryActivity extends AppCompatActivity {
 
         // create the button listener
         CreateStoryListener();
+        tempImgUri = null;
 
         // set up the database
         database = new MyDatabase();
