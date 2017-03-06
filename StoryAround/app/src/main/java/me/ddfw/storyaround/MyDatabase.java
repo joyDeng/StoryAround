@@ -184,6 +184,26 @@ public class MyDatabase {
         updateStoryLikes(REMOVE_LIKE, like.getStoryId());
     }
 
+    /*public void unlike(String userId, String storyId){
+
+        mDatabase.child(Likes.LIKES_TABLE).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.hasChild(like.getLikeId())){
+                    dataSnapshot.getRef().child(like.getLikeId()).setValue(null);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        updateStoryLikes(REMOVE_LIKE, like.getStoryId());
+    }*/
+
     private void updateStoryLikes(final int code, final String storyId){
 
         mDatabase.child(Story.STORY_TABLE).child(storyId).addListenerForSingleValueEvent(new ValueEventListener() {
