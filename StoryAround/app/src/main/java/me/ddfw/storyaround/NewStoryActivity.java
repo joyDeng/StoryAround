@@ -216,12 +216,10 @@ public class NewStoryActivity extends AppCompatActivity {
 
     // save the story when on click
     private void saveStory() {
-        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title);
-        EditText storyContentEditor = (EditText)findViewById(R.id.story_content);
+        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
+        EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
-        mStory.setStoryLat(0);
-        mStory.setStoryLng(0);
         mStory.setStoryType(0);
         mStory.setStoryMode(0);
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());

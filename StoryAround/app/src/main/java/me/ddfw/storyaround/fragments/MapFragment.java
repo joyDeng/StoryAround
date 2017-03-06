@@ -45,14 +45,6 @@ import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import java.util.HashMap;
-
 
 public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     public final static int LOCATION_PERMISSION_REQUEST = 1;
@@ -153,8 +145,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
                 Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
                         R.drawable.logo,opt);
                 final Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
-                googleMap.addMarker(new MarkerOptions().icon(
-                        BitmapDescriptorFactory.fromBitmap(resized)).position(locationToLatLng(current)));
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(locationToLatLng(current)).zoom(17).build();
                 googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
                     @Override

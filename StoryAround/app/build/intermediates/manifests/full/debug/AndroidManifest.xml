@@ -8,7 +8,7 @@
         android:minSdkVersion="23"
         android:targetSdkVersion="25" />
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera" />
 
     <permission
         android:name="com.example.gcm.permission.C2D_MESSAGE"
@@ -33,13 +33,13 @@
         android:name="com.example.gcm.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
-
     <library
         android:name="@string/app_name"
         android:label="@string/app_name" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <permission
         android:name="me.ddfw.storyaround.permission.C2D_MESSAGE"
@@ -69,7 +69,11 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name="me.ddfw.storyaround.Authen.ChooserActivity" />
         <activity android:name="me.ddfw.storyaround.CreateAccountActivity" />
-        <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -133,10 +137,6 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

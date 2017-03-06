@@ -318,12 +318,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\apple\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_871012b8a80b3bca0e313255d9c6c55ce66e446f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\10.2.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
         <dex dex="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-10.2.0_88591b3ca55277463ec06d2bd61a0e361026bc27\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\apple\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_e0784d06d27557ae6bda39a90373481d294740c7\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -480,6 +498,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui-storage\0.6.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3c433e48557e476290f45fb6cb568d1a103c9978">
+        <dex dex="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.firebaseui-firebase-ui-storage-0.6.0_6b61f231827cb9bf2bf90b1a11f55d0c9640bece\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\10.2.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -565,7 +592,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="27dc18e7224e0859eda5e1a79974e50c12e2642d">
+        sha1="7d1a219a9d68b95dbfbed5875310eb90c5f7d0aa">
         <dex dex="C:\StoryAround\StoryAround\StoryAround\app\build\intermediates\transforms\dex\debug\folders\1000\4\backend-android-endpoints_1675855015ca4e4865559d1f8a8b39e9d71ffcee\classes.dex" />
     </item>
     <item

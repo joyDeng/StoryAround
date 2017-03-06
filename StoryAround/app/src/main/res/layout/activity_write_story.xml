@@ -96,7 +96,7 @@
 
                 <!-- title -->
                 <EditText
-                    android:id="@+id/story_title"
+                    android:id="@+id/story_title_edit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
@@ -111,7 +111,7 @@
 
                 <!-- story -->
                 <EditText
-                    android:id="@+id/story_content"
+                    android:id="@+id/story_content_edit"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
                     android:background="@color/white"

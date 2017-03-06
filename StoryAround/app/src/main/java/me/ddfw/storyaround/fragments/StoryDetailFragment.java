@@ -9,7 +9,13 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
 import java.util.List;
@@ -55,16 +61,29 @@ public class StoryDetailFragment extends DialogFragment {
         viewHolder.content = (TextView) v.findViewById(R.id.story_content) ;
         viewHolder.like = (TextView) v.findViewById(R.id.story_like);
 
+        ImageView image = (ImageView)v.findViewById(R.id.story_image);
+        // Reference to an image file in Firebase Storage
+        if(!story.getStoryImgURL().isEmpty()){
+            StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(story.getStoryImgURL());
+            // Load the image using Glide
+            Glide.with(getActivity())
+                    .using(new FirebaseImageLoader())
+                    .load(storageReference)
+                    .into(image);
+        }
+
         try{
             Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(story.getStoryLat(), story.getStoryLng(), 1);
             Address address = addresses.get(0);
             String line=address.getAddressLine(0);
+            for(int i=0; i<address.getMaxAddressLineIndex(); i++){}
             viewHolder.location.setText(String.valueOf(line));
         }catch (IOException e){
 
 
         }
+
 
 
         //viewHolder.user.setText(story.);
