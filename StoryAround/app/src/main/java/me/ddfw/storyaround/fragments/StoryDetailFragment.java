@@ -29,6 +29,7 @@ public class StoryDetailFragment extends DialogFragment {
 
 
 
+
     public static StoryDetailFragment buildDialog(Story story){
         StoryDetailFragment dialog = new StoryDetailFragment();
         Bundle args = new Bundle();
@@ -102,4 +103,5 @@ public class StoryDetailFragment extends DialogFragment {
         TextView content;
         TextView like;
     }
+
 }

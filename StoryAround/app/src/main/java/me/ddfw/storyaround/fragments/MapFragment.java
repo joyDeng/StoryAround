@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -64,6 +65,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         MapsInitializer.initialize(getActivity());
     }
 
@@ -71,15 +73,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
-        //stories = Story.getTestStories();
-        locations = new ArrayList<>();
-        markers = new ArrayList<>();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        /*for(Story s:stories){
-            locations.add(s.getLocation());
-        }*/
         return rootView;
     }
+
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -96,6 +92,16 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
     }
 
+
+
+
+
+
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        menu.add("MapFragment test");
+    }
 
     @Override
     public void onResume() {
@@ -283,7 +289,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
             // in a raw resource file.
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
-                            getActivity(), R.raw.style_json));
+                           getActivity(), R.raw.style_json));
 
 
 

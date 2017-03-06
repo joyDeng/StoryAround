@@ -1,175 +1,245 @@
 package me.ddfw.storyaround;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.net.Uri;
+import android.location.Address;
+import android.location.Criteria;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.text.Editable;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.irshulx.BaseClass;
-import com.github.irshulx.Editor;
-import com.github.irshulx.models.EditorTextStyle;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-import java.io.IOException;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
+
+import me.ddfw.storyaround.model.Story;
 
 
-public class NewStoryActivity extends Activity {
+// list of TODO
+// image to url
+// story type
+// story privacy
 
 
-    Editor mEditor;
+
+
+public class NewStoryActivity extends AppCompatActivity {
+    private Story mStory;
+    private MyDatabase database;
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+    private LocationManager locationManager;
+
+    public static final String STORY_LAT = "lat";
+    public static final String STORY_LNG = "lng";
+
+    private final int MY_PERMISSIONS_REQUEST = 0;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_story);
-        mEditor = (Editor) findViewById(R.id.editor);
-        CreateEditor();
+
+        // create the button listener
+        CreateStoryListener();
+
+        // set up the database
+        database = new MyDatabase();
+        mStory = new Story();
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+
+        // get the location pass from other activity if exists
+        if (getIntent().getExtras() != null ) {
+            Double lat = getIntent().getExtras().getDouble(STORY_LAT);
+            Double lng = getIntent().getExtras().getDouble(STORY_LNG);
+            mStory.setStoryLat(lat);
+            mStory.setStoryLng(lng);
+        }
+        checkPermissions();
     }
 
 
-    private void CreateEditor() {
-        findViewById(R.id.action_h1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.H1);
+    // set the pre-saved location as the location where you want to write a mStory
+    private void setLocationText(double lat, double lng) {
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        TextView locationTextView = (TextView) findViewById(R.id.story_location);
+        String addressText = "  ";
+        try {
+            List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+            Log.d("******", "" + addresses.size());
+            if (addresses.size() > 0) {
+                Address address = addresses.get(0);
+                for (int i = 0; i < address.getMaxAddressLineIndex(); i++)
+                    if (i != address.getMaxAddressLineIndex() - 1) {
+                        addressText += address.getAddressLine(i) + ", ";
+                    } else {
+                        addressText += address.getAddressLine(i);
+                    }
+                locationTextView.setText(addressText);
+            } else {
+                locationTextView.setText("Middle of Nowhere");
             }
-        });
+        } catch (Exception e) {
+            locationTextView.setText("Middle of Nowhere");
+            Log.d("******", "set location text fail");
+        }
+    }
 
-        findViewById(R.id.action_h2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.H2);
-            }
-        });
+    // set the current location as the location where you want to write a mStory
+    private void setCurrentLocationText() {
+        locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        String provider = locationManager.getBestProvider(criteria, true);
+        Log.d("******","isProviderEnabled: " + locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER));
+        try {
+            Location location = locationManager.getLastKnownLocation(provider);
+            mStory.setStoryLat(location.getLatitude());
+            mStory.setStoryLng(location.getLongitude());
+            setLocationText(mStory.getStoryLat(), mStory.getStoryLng());
+            Log.d("******", "lat: " + location.getLatitude()
+                    + ", lng: " + location.getLongitude());
+        }catch(SecurityException e) {
+            checkPermissions();
+        }
+    }
 
-        findViewById(R.id.action_h3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.H3);
-            }
-        });
-
-        findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.BOLD);
-            }
-        });
-
-        findViewById(R.id.action_Italic).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.ITALIC);
-            }
-        });
-
-        findViewById(R.id.action_indent).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.INDENT);
-            }
-        });
-
-        findViewById(R.id.action_outdent).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.UpdateTextStyle(EditorTextStyle.OUTDENT);
-            }
-        });
-
-        findViewById(R.id.action_bulleted).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.InsertList(false);
-            }
-        });
-
-        findViewById(R.id.action_unordered_numbered).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.InsertList(true);
-            }
-        });
-
-        findViewById(R.id.action_hr).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mEditor.InsertDivider();
-            }
-        });
-
+    // create the button listener, onClick
+    private void CreateStoryListener() {
+        // pick your image
         findViewById(R.id.action_insert_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEditor.OpenImagePicker();
+                pickImage();
             }
         });
-
-        findViewById(R.id.action_insert_link).setOnClickListener(new View.OnClickListener() {
+        // mStory type
+        // TODO
+        // mStory privacy
+        // TODO
+        // save button
+        Button btnSave = (Button) findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEditor.InsertLink();
+                saveStory();
             }
         });
-
-        findViewById(R.id.action_erase).setOnClickListener(new View.OnClickListener() {
+        // cancel button
+        Button btnCancel = (Button) findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEditor.clearAllContents();
+                onBackPressed();
             }
         });
 
-
-        //mEditor.setImageUploaderUri("http://192.168.43.239/Laser-Editor-WebApi/api/ImageUploaderApi/PostImage");
-        mEditor.setFontFace(R.string.fontFamily__serif);
-        mEditor.setDividerLayout(R.layout.tmpl_divider_layout);
-        mEditor.setEditorImageLayout(R.layout.tmpl_image_view);
-        mEditor.setListItemLayout(R.layout.tmpl_list_item);
-
-        mEditor.setEditorListener(new BaseClass.EditorListener() {
-            @Override
-            public void onTextChanged(EditText editText, Editable text) {
-                // Toast.makeText(EditorTestActivity.this, text, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        mEditor.Render();
+        // some small modified with the UI
+        ImageView iconLocation = (ImageView) findViewById(R.id.location_icon);
+        iconLocation.setColorFilter(getResources().getColor(R.color.color3));
     }
+
+
+    private void pickImage() {
+        new android.app.AlertDialog.Builder(this)
+                .setTitle("Upload Image")
+                .setItems(new CharSequence[]{"Open Camera", "Select from Gallery"},
+                        new DialogInterface.OnClickListener() {
+                            public void onClick (DialogInterface dialog, int picker) {
+                                switch (picker) {
+                                    case 0:
+                                        //loadFromCamera();
+                                        break;
+                                    case 1:
+                                        //loadFromGallery();
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        }).create().show();
+    }
+
+
+
+
+    private void saveStory() {
+        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title);
+        EditText storyContentEditor = (EditText)findViewById(R.id.story_content);
+
+        mStory.setStoryAuthorId(user.getUid());
+        mStory.setStoryLat(0);
+        mStory.setStoryLng(0);
+        mStory.setStoryType(0);
+        mStory.setStoryMode(0);
+        mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
+        mStory.setStoryImgURL("test image url");
+        mStory.setStoryTitle(storyTitleEditor.getText().toString());
+        mStory.setStoryContent(storyContentEditor.getText().toString());
+        mStory.setStoryLikes(0);
+
+        // TODO
+        // thread
+        database.createStory(mStory);
+        Toast.makeText(this,"your mStory will be heard", Toast.LENGTH_SHORT).show();
+    }
+
 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == mEditor.PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK&& data != null && data.getData() != null) {
-            Uri uri = data.getData();
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                // Log.d(TAG, String.valueOf(bitmap));
-                mEditor.InsertImage(bitmap);
-            } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    setCurrentLocationText();
+                } else {
+                    finish();
+                }
+                return;
             }
         }
-        else if (resultCode == Activity.RESULT_CANCELED) {
-            //Write your code if there's no result
-            Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
-            // mEditor.RestoreState();
-        }
-        else if(requestCode== mEditor.MAP_MARKER_REQUEST){
-            mEditor.InsertMap(data.getStringExtra("cords"));
+    }
+
+    public void checkPermissions(){
+        if(Build.VERSION.SDK_INT < 23)
+            return;
+        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 0);
         }
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -185,12 +255,5 @@ public class NewStoryActivity extends Activity {
                 .setNegativeButton("No", null)
                 .show();
     }
-
-
-
-
-
-
-
 
 }

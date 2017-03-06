@@ -48,6 +48,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
             viewHolder.location.setText(story.getStoryLat()+"");
             viewHolder.tag.setText(story.getStoryType());
 
+
         }
         return convertView;
     }
