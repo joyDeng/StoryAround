@@ -65,11 +65,11 @@ public class StoryListCellAdapter extends ArrayAdapter<Story> {
 
         // bind data from selected element to view through view holder
 
-        viewHolder.dateText.setText(story.getFormattedDate());
-        viewHolder.user.setText(story.getUserName());
-        viewHolder.titile.setText(story.getTitle());
-        viewHolder.location.setText(story.getLocation().toString());
-        viewHolder.tag.setText(story.getTag());
+//        viewHolder.dateText.setText(story.getFormattedDate());
+//        viewHolder.user.setText(story.getUserName());
+//        viewHolder.titile.setText(story.getTitle());
+//        viewHolder.location.setText(story.getLocation().toString());
+//        viewHolder.tag.setText(story.getTag());
 
 
         return cell;

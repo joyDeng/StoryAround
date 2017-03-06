@@ -1,5 +1,8 @@
 package me.ddfw.storyaround.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import java.sql.Time;
@@ -10,7 +13,7 @@ import java.util.Date;
  * Created by xinbeifu on 3/3/17.
  */
 
-public class Story {
+public class Story implements Parcelable {
 
     //table's name
     public static final String STORY_TABLE = "story";
@@ -103,4 +106,52 @@ public class Story {
     public int getStoryLikes(){return storyLikes;}
 
     public void setStoryLikes(int storyLikes){this.storyLikes = storyLikes;}
+
+    // START: Make story pracelable
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.storyId);
+        dest.writeDouble(this.storyLat);
+        dest.writeDouble(this.storyLng);
+        dest.writeString(this.storyImgURL);
+        dest.writeString(this.storyContent);
+        dest.writeString(this.storyAuthorId);
+        dest.writeString(this.storyTitle);
+        dest.writeInt(this.storyType);
+        dest.writeValue(this.storyDateTime);
+        dest.writeInt(this.storyMode);
+        dest.writeInt(this.storyLikes);
+    }
+
+    protected Story(Parcel in) {
+        this.storyId = in.readString();
+        this.storyLat = in.readDouble();
+        this.storyLng = in.readDouble();
+        this.storyImgURL = in.readString();
+        this.storyContent = in.readString();
+        this.storyAuthorId = in.readString();
+        this.storyTitle = in.readString();
+        this.storyType = in.readInt();
+        this.storyDateTime = (Long) in.readValue(Long.class.getClassLoader());
+        this.storyMode = in.readInt();
+        this.storyLikes = in.readInt();
+    }
+
+    public static final Parcelable.Creator<Story> CREATOR = new Parcelable.Creator<Story>() {
+        @Override
+        public Story createFromParcel(Parcel source) {
+            return new Story(source);
+        }
+
+        @Override
+        public Story[] newArray(int size) {
+            return new Story[size];
+        }
+    };
+    // END: make story parcelable
 }

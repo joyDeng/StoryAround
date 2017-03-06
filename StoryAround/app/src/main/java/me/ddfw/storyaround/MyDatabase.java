@@ -28,6 +28,7 @@ public class MyDatabase {
 
     private int ADD_LIKE = 0;
     private int REMOVE_LIKE = 1;
+    public User mUser;
 
     public MyDatabase(){}
 
@@ -45,7 +46,7 @@ public class MyDatabase {
         mDatabase.child(User.USER_TABLE).child(userId).addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot snapshot){
-                User user = snapshot.getValue(User.class);
+                mUser = snapshot.getValue(User.class);
             }
 
             @Override
@@ -53,8 +54,8 @@ public class MyDatabase {
 
             }
         });
-
     }
+
 
     //methods concerning Story
     public String createStory(Story story){
@@ -167,7 +168,7 @@ public class MyDatabase {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 //get the number of story likes
-                int storyLikes = (int) dataSnapshot.child(Story.KEY_STORY_LIKES).getValue();
+                long storyLikes = (long) dataSnapshot.child(Story.KEY_STORY_LIKES).getValue();
 
                 Map<String,Object> map = new HashMap<String,Object>();
 

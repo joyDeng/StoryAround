@@ -41,19 +41,19 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MapsInitializer.initialize(getActivity());
+   //     MapsInitializer.initialize(getActivity());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
-        stories = Story.getTestStories();
-        locations = new ArrayList<>();
-        markers = new ArrayList<>();
-        for(Story s:stories){
-            locations.add(s.getLocation());
-        }
+//        stories = Story.getTestStories();
+//        locations = new ArrayList<>();
+//        markers = new ArrayList<>();
+//        for(Story s:stories){
+//            locations.add(s.getLocation());
+//        }
         return rootView;
     }
 
@@ -61,14 +61,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
-        if (mMapView != null) {
-            // Initialise the MapView
-            Log.d("DEBUG", mMapView.toString());
-            mMapView.onCreate(savedInstanceState);
-            mMapView.onResume();
-            // Set the map ready callback to receive the GoogleMap object
-            mMapView.getMapAsync(this);
-        }
+//        if (mMapView != null) {
+//            // Initialise the MapView
+//            Log.d("DEBUG", mMapView.toString());
+//            mMapView.onCreate(savedInstanceState);
+//            mMapView.onResume();
+//            // Set the map ready callback to receive the GoogleMap object
+//            mMapView.getMapAsync(this);
+//        }
 
     }
    /* @Override
@@ -129,25 +129,25 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onResume() {
         super.onResume();
-        mMapView.onResume();
+//        mMapView.onResume();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mMapView.onPause();
+ //       mMapView.onPause();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mMapView.onDestroy();
+//        mMapView.onDestroy();
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        mMapView.onLowMemory();
+  //      mMapView.onLowMemory();
     }
 
     @Override

@@ -26,11 +26,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import me.ddfw.storyaround.CreateAccountActivity;
 import me.ddfw.storyaround.Global;
 import me.ddfw.storyaround.MainActivity;
+import me.ddfw.storyaround.MyDatabase;
 import me.ddfw.storyaround.R;
+import me.ddfw.storyaround.model.User;
 
 public class ChooserActivity extends AppCompatActivity
     implements GoogleApiClient.OnConnectionFailedListener,
@@ -56,23 +62,29 @@ public class ChooserActivity extends AppCompatActivity
     private String mDisplayNmae;
     private String mGender;
 
+    private User mCurrentUser;
+    private MyDatabase mUserDataSource;
+    private boolean mFirstTime = false;
+    private GoogleSignInAccount mAcct;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooser);
 
+
         // get edit text feild
         mEmail = (EditText) findViewById(R.id.editUsername);
         mPassword = (EditText) findViewById(R.id.editPassword);
 
-        //set button OnClickListener
+        // START:set button OnClickListener
+        findViewById(R.id.btnForgetPassword).setOnClickListener(this);
         findViewById(R.id.btnNewAcc).setOnClickListener(this);
         findViewById(R.id.btnLogin).setOnClickListener(this);
         findViewById(R.id.btn_google_signin).setOnClickListener(this);
         findViewById(R.id.btnGuest).setOnClickListener(this);
+        // END: set button onclick listener
 
-
-        // Configure Google Sign In
+        // START: Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.web_client_id))
                 .requestEmail()
@@ -98,15 +110,23 @@ public class ChooserActivity extends AppCompatActivity
                     Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
                     SignOut(LoginMethod);
                     if(user.getDisplayName() == null) UpdateDisplayName(user,mDisplayNmae);
-                    InterApp();
+                    if(mFirstTime){//If login for the first time.
+                        mCurrentUser.setUserId(user.getUid());
+                        mUserDataSource.createProfile(mCurrentUser);
+                    }else{
+                        mUserDataSource.getProfile(user.getUid());
+                        mCurrentUser = mUserDataSource.mUser;
+                    }
+                     InterApp();
                 }else{
                     Log.d(TAG, "onAuthStateChanged:signed_out:");
                 }
             }
         };
-
-
         // END:auth_state_listener
+
+        //Initial a database
+        mUserDataSource = new MyDatabase();
     }
 
     @Override
@@ -125,8 +145,8 @@ public class ChooserActivity extends AppCompatActivity
         }
     }
 
+    // START: CREATE With Email and Password
     public void createAccount(String email, String password){
-        //CREATE NEW ACCOUNT
 
         //START: check_validation_of_input
         if(email.equals("") || password.equals("") || email == null || password == null) {
@@ -160,6 +180,7 @@ public class ChooserActivity extends AppCompatActivity
         }
         //END:create_new_account
     }
+    // END: CREATE With Email and Password
 
     public void EmailSignIn(String email, String password){
         //sign in exit user
@@ -239,6 +260,27 @@ public class ChooserActivity extends AppCompatActivity
         }
     }
 
+    // START: SEND A FORGET PASSWORD EMAIL
+    public void SendPasswordResetEmail(){
+        String email = mEmail.getText().toString();
+
+        if(email != null && !email.equals("")) {
+
+            mAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "Email sent");
+                                Toast.makeText(ChooserActivity.this,
+                                        "Reset Password Email Sent !", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+    }
+    // END: SEND A FORGET PASSWORD EMAIL
+
 
 
     @Override
@@ -252,21 +294,22 @@ public class ChooserActivity extends AppCompatActivity
    @Override
     public void onClick(View v) {
         switch (v.getId()){
-            //START: create_new_account
+            // START: create_new_account
             case R.id.btnNewAcc:
+                mFirstTime = true;
                 LoginMethod = Global.EMAIL_SIGNIN;
                 CreateProfile();
                 break;
-            //END: create_new_account
+            // END: create_new_account
 
-            //START: sign_in_with_email_and_password
+            // START: sign_in_with_email_and_password
             case R.id.btnLogin:
                 LoginMethod = Global.EMAIL_SIGNIN;
                 EmailSignIn(mEmail.getText().toString(),mPassword.getText().toString());
                 break;
-            //END: sign_in_with_email_and_password
+            // END: sign_in_with_email_and_password
 
-            //START:continue_as_guest
+            // START:continue_as_guest
             case R.id.btnGuest:
                 LoginMethod = Global.GUEST_VISIT;
                 Intent int_guest = new Intent(this,MainActivity.class);
@@ -274,14 +317,21 @@ public class ChooserActivity extends AppCompatActivity
                 startActivity(int_guest);
                 finish();
                 break;
-            //END:continue_as_guest
+            // END:continue_as_guest
 
-            //START:sign_in_with_google_account
+            // START:sign_in_with_google_account
             case R.id.btn_google_signin:
                 LoginMethod = Global.GOOGLE_SIGNIN;
                 GoogleSignIn();
                 break;
-            //END: sign_in_with_google_account
+            // END: sign_in_with_google_account
+
+            // START: SEND PASSWORD RESET EMAIL
+            case R.id.btnForgetPassword:
+                SendPasswordResetEmail();
+                break;
+            // END: SEND PASSWORD RESET EMAIL
+
             default:break;
         }
     }
@@ -296,8 +346,8 @@ public class ChooserActivity extends AppCompatActivity
                 GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
                 if (result.isSuccess()) {
                     // Google Sign In was successful, authenticate with Firebase
-                    GoogleSignInAccount account = result.getSignInAccount();
-                    firebaseAuthWithGoogle(account);
+                    mAcct = result.getSignInAccount();
+                    checkFirstLog(mAcct);
                 } else {
                     //Google Sign In failed
                     Toast.makeText(this, "Google Login Failed.", Toast.LENGTH_SHORT).show();
@@ -311,8 +361,13 @@ public class ChooserActivity extends AppCompatActivity
                     LoginMethod = data.getStringExtra(Global.LOGIN_METHOD);
                     mDisplayNmae = data.getStringExtra(Global.USER_NAME);
                     mGender = data.getStringExtra(Global.USER_GENDER);
+                    mCurrentUser = (User) data.getParcelableExtra(Global.NEWACCOUNT);
+
                     if (LoginMethod.equals(Global.EMAIL_SIGNIN))
                         createAccount(mEmail.getText().toString(), mPassword.getText().toString());
+                    if(LoginMethod.equals(Global.GOOGLE_SIGNIN)){
+                        firebaseAuthWithGoogle(mAcct);
+                    }
                 }
                 break;
             default:break;
@@ -347,10 +402,36 @@ public class ChooserActivity extends AppCompatActivity
     // START: Create_profile
     public void CreateProfile(){
         Intent intent = new Intent(this, CreateAccountActivity.class);
-        intent.putExtra(Global.LOGIN_METHOD,Global.EMAIL_SIGNIN);
+        if(LoginMethod.equals(Global.GOOGLE_SIGNIN))
+            intent.putExtra(Global.USER_EMAIL,mAcct.getEmail());
+        else {
+            intent.putExtra(Global.USER_EMAIL, mEmail.getText().toString());
+            intent.putExtra(Global.USER_PASSWORD, mPassword.getText().toString());
+        }
+        intent.putExtra(Global.LOGIN_METHOD,LoginMethod);
+        intent.putExtra(Global.NEWACCOUNT,mCurrentUser);//put userprofile
         startActivityForResult(intent,RC_CREATE_NEW);
     }
     // END: Create_profile
 
-
+    // START: Check whether user is logged in for the first time
+    public void checkFirstLog(GoogleSignInAccount acct){
+        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).orderByChild(User.KEY_USER_EMAIL).equalTo(acct.getEmail()).
+                addListenerForSingleValueEvent(new ValueEventListener() {
+             @Override
+             public void onDataChange(DataSnapshot dataSnapshot) {
+                 Log.d(TAG,dataSnapshot+"");
+                 if(!dataSnapshot.exists()){
+                //do something
+                  mFirstTime = true;
+                  CreateProfile();
+                }else{
+                     firebaseAuthWithGoogle(mAcct);
+                 }
+              }
+            @Override
+           public void onCancelled(DatabaseError databaseError) {}
+          });
+    }
+    // END: Check
 }

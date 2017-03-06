@@ -1,5 +1,8 @@
 package me.ddfw.storyaround.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.sql.Time;
 import java.util.Calendar;
 
@@ -7,7 +10,7 @@ import java.util.Calendar;
  * Created by xinbeifu on 3/3/17.
  */
 
-public class Likes {
+public class Likes implements Parcelable {
 
     //table's name
     public static final String LIKES_TABLE = "likes";
@@ -46,4 +49,41 @@ public class Likes {
     public Long getTabTime(){return tabTime;}
 
     public void setTabTime(Long tabTime){this.tabTime = tabTime;}
+
+    // START: make like parcelable
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.likeId);
+        dest.writeString(this.userId);
+        dest.writeString(this.storyId);
+        dest.writeValue(this.tabTime);
+    }
+
+    public Likes() {
+    }
+
+    protected Likes(Parcel in) {
+        this.likeId = in.readString();
+        this.userId = in.readString();
+        this.storyId = in.readString();
+        this.tabTime = (Long) in.readValue(Long.class.getClassLoader());
+    }
+
+    public static final Parcelable.Creator<Likes> CREATOR = new Parcelable.Creator<Likes>() {
+        @Override
+        public Likes createFromParcel(Parcel source) {
+            return new Likes(source);
+        }
+
+        @Override
+        public Likes[] newArray(int size) {
+            return new Likes[size];
+        }
+    };
+    // END: Make likes parcelable
 }
