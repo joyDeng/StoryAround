@@ -49,11 +49,14 @@ import java.util.Locale;
 
 import me.ddfw.storyaround.model.Story;
 
+import static com.google.api.client.http.HttpMethods.HEAD;
+
 
 // list of TODO
 // story type
 // story privacy
 // rotation
+// image compress
 
 
 public class NewStoryActivity extends AppCompatActivity {
@@ -61,6 +64,8 @@ public class NewStoryActivity extends AppCompatActivity {
     private MyDatabase database;
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    FirebaseStorage storage;
+    StorageReference storageReference;
     private LocationManager locationManager;
 
     public static final String STORY_LAT = "lat";
@@ -92,6 +97,9 @@ public class NewStoryActivity extends AppCompatActivity {
         mStory = new Story();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference().child("image/storyImage");
 
         // get the location pass from other activity if exists
         if (getIntent().getExtras() != null ) {
@@ -220,8 +228,8 @@ public class NewStoryActivity extends AppCompatActivity {
         EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
-        mStory.setStoryType(0);
-        mStory.setStoryMode(0);
+        mStory.setStoryType(0);//TODO
+        mStory.setStoryMode(0);//TODO
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
         // mStory.setStoryImgURL("" + firebaseUri);
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
@@ -310,16 +318,13 @@ public class NewStoryActivity extends AppCompatActivity {
 
 
     private void upload2Firebase() {
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference();
-        StorageReference ref = storageRef.child("image/storyImage");
         try {
             storyImageView.buildDrawingCache();
             Bitmap bmap = storyImageView.getDrawingCache();
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
             byte[] data = baos.toByteArray();
-            UploadTask uploadTask = ref.putBytes(data);
+            UploadTask uploadTask = storageReference.putBytes(data);
             uploadTask.addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
@@ -342,8 +347,8 @@ public class NewStoryActivity extends AppCompatActivity {
         //Picasso.with(this).load(firebaseUri).into(storyImageView);
 //        FirebaseStorage storage = FirebaseStorage.getInstance();
 //        StorageReference storageRef = storage.getReference();
-//        StorageReference ref = storageRef.child("image/storyImage");
-//        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//        StorageReference storageReference = storageRef.child("image/storyImage");
+//        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 //            @Override
 //            public void onSuccess(Uri uri) {
 //                firebaseUri = uri;

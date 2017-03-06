@@ -77,7 +77,10 @@ public class StoryDetailFragment extends DialogFragment {
             List<Address> addresses = geocoder.getFromLocation(story.getStoryLat(), story.getStoryLng(), 1);
             Address address = addresses.get(0);
             String line=address.getAddressLine(0);
-            for(int i=0; i<address.getMaxAddressLineIndex(); i++){}
+            for(int c=0; c<address.getMaxAddressLineIndex(); c++){
+                line = address.getAddressLine(c)+",";
+            }
+            line.substring(0,line.length()-1);
             viewHolder.location.setText(String.valueOf(line));
         }catch (IOException e){
 

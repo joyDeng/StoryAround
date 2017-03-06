@@ -7,11 +7,14 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -35,6 +38,14 @@ public class ProfileFragment extends Fragment {
     //Declare firebase user
     private FirebaseUser mUser;
 
+    private EditText editUsername;
+    private EditText editEmail;
+    private EditText editPhone;
+    private EditText editGender;
+    private EditText editBio;
+    private boolean isEditMode;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView;
@@ -51,6 +62,12 @@ public class ProfileFragment extends Fragment {
         else {
             //If User is logged in
             rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+            editUsername = (EditText) rootView.findViewById(R.id.user_username);
+            editEmail = (EditText) rootView.findViewById(R.id.user_email);
+            editPhone = (EditText) rootView.findViewById(R.id.user_phone);
+            editGender = (EditText) rootView.findViewById(R.id.user_gender);
+            editBio = (EditText) rootView.findViewById(R.id.user_bio);
+            isEditMode = false;
             setProfileBtn(rootView);
         }
         setRetainInstance(true);
@@ -78,7 +95,7 @@ public class ProfileFragment extends Fragment {
     }
 
 
-    private void setProfileBtn(View rootView) {
+    private void setProfileBtn(final View rootView) {
         Button btnLogout = (Button) rootView.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +105,44 @@ public class ProfileFragment extends Fragment {
                 Toast.makeText(getActivity().getApplicationContext(),"Log out",Toast.LENGTH_SHORT).show();
             }
         });
+
+        final Button btnEdit = (Button) rootView.findViewById(R.id.btnEdit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText editUsername = (EditText) rootView.findViewById(R.id.user_username);
+                // if not in edit mode
+                if (!isEditMode) {
+                    isEditMode = true;
+                    editUsername.setEnabled(true);
+                    editEmail.setEnabled(true);
+                    editPhone.setEnabled(true);
+                    editGender.setEnabled(true);
+                    editBio.setEnabled(true);
+                    btnEdit.setText("Save");
+                    Toast.makeText(getActivity().getApplicationContext(),"You can edit your profile",Toast.LENGTH_SHORT).show();
+                }
+                // if already in edit mode
+                else {
+                    getActivity().getWindow().setSoftInputMode(
+                            WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+                    );
+                    isEditMode = false;
+                    editUsername.setEnabled(false);
+                    editEmail.setEnabled(false);
+                    editPhone.setEnabled(false);
+                    editGender.setEnabled(false);
+                    editBio.setEnabled(false);
+                    btnEdit.setText("Edit");
+                    Toast.makeText(getActivity().getApplicationContext(),"You have saved your profile",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        editUsername.setEnabled(false);
+        editEmail.setEnabled(false);
+        editPhone.setEnabled(false);
+        editGender.setEnabled(false);
+        editBio.setEnabled(false);
     }
 
     private void onSignout() {
