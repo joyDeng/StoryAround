@@ -24,8 +24,6 @@ public class StoryDetailFragment extends DialogFragment {
     private Story story;
 
 
-    /*
-
     public static StoryDetailFragment buildDialog(Story story){
         StoryDetailFragment dialog = new StoryDetailFragment();
         Bundle args = new Bundle();
@@ -51,12 +49,12 @@ public class StoryDetailFragment extends DialogFragment {
         viewHolder.location = (TextView) v.findViewById(R.id.story_location) ;
         viewHolder.tag = (TextView) v.findViewById(R.id.story_tag) ;
         viewHolder.content = (WebView) v.findViewById(R.id.story_content) ;
-
-        viewHolder.dateText.setText(story.getFormattedDate());
-        viewHolder.user.setText(story.getUserName());
-        viewHolder.title.setText(story.getTitle());
-        viewHolder.location.setText(story.getLocation().toString());
-        viewHolder.tag.setText(story.getTag());
+//
+//        viewHolder.dateText.setText(story.getFormattedDate());
+//        viewHolder.user.setText(story.getUserName());
+//        viewHolder.title.setText(story.getTitle());
+//        viewHolder.location.setText(story.getLocation().toString());
+//        viewHolder.tag.setText(story.getTag());
 
         builder.setView(v);
 
@@ -73,8 +71,6 @@ public class StoryDetailFragment extends DialogFragment {
         });
         viewHolder.content.loadUrl(url);
         return builder.create();
-
-
     }
 
     private static class ViewHolder {
@@ -85,5 +81,4 @@ public class StoryDetailFragment extends DialogFragment {
         TextView tag;
         WebView content;
     }
-    */
 }
