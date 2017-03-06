@@ -305,7 +305,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
         googleMap.setOnMarkerClickListener(this);
         markers = new ArrayList<>();
-        mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
+        //mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
 
 
         // Point the map's listeners at the listeners implemented by the cluster
