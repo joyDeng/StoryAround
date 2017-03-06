@@ -28,6 +28,7 @@ import static me.ddfw.storyaround.fragments.MapFragment.LOCATION_PERMISSION_REQU
 
 public class PostFragment extends Fragment{
     List<LatLng> stories = new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
@@ -71,6 +72,8 @@ public class PostFragment extends Fragment{
 
         return rootView;
     }
+
+
 
     public void onStartClicked() {
         Intent intent;

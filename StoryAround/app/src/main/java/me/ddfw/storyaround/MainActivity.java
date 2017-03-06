@@ -14,9 +14,16 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import android.util.Log;
+import android.view.Menu;
+import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -29,7 +36,6 @@ import me.ddfw.storyaround.fragments.LikesFragment;
 import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
-
 
 
 public class MainActivity extends AppCompatActivity{
@@ -91,11 +97,7 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         };
-        // END:auth_state_listener
-
     }
-
-        
 
 
     public void pageSetup(){

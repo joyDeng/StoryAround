@@ -17,7 +17,6 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -46,6 +45,14 @@ import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import java.util.HashMap;
+
 
 public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     public final static int LOCATION_PERMISSION_REQUEST = 1;
@@ -60,17 +67,17 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
         MapsInitializer.initialize(getActivity());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
         return rootView;
     }
-
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -85,10 +92,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
     }
 
-    @Override
-    public void onPrepareOptionsMenu(Menu menu) {
-        menu.add("MapFragment test");
-    }
 
     @Override
     public void onResume() {
@@ -249,6 +252,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onMapReady(GoogleMap mMap) {
         googleMap = mMap;
+
         try {
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
@@ -269,6 +273,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
         //mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
 
+
         checkPermission(getActivity());
     }
     @Override
@@ -280,7 +285,5 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
         return true;
     }
-
-
 
 }

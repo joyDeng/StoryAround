@@ -64,7 +64,6 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
             viewHolder.tag = (TextView) convertView.findViewById(R.id.story_tag) ;
 
 
-
             viewHolder.dateText.setText(story.getStoryContent());
 
             String authorId = story.getStoryAuthorId();
@@ -103,6 +102,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
             //TODO: need to set the story type as string!!!!
             viewHolder.tag.setText(String.valueOf(story.getStoryType()));
+
 
         }
         return convertView;
