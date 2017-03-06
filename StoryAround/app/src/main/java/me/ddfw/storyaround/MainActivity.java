@@ -14,11 +14,19 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import android.view.Menu;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +36,7 @@ import me.ddfw.storyaround.fragments.LikesFragment;
 import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
+
 
 public class MainActivity extends AppCompatActivity{
     private static final String TAG = "MainActivity";
@@ -60,13 +69,18 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        checkUser();
+        checkPermission(this);     
+        pageSetup();
+    }
 
+    public void checkUser(){
 
        mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
 
-        if(mLoginMethod == null) startChooser();
+        if(mLoginMethod == null) mLoginMethod = "";
 
         // START:auth_state_listener
         mAuthListener = new FirebaseAuth.AuthStateListener(){
@@ -78,16 +92,13 @@ public class MainActivity extends AppCompatActivity{
                     // User signed in
                     //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
                 }else{
-                    Log.d(TAG, "onAuthStateChanged:signed_out:");
+                    //Log.d(TAG, "onAuthStateChanged:signed_out:");
                     startChooser();
                 }
             }
         };
-
-        // END:auth_state_listener
-        checkPermission(this);
-        pageSetup();
     }
+
 
     public void pageSetup(){
         mapFragment = new MapFragment();
@@ -133,25 +144,6 @@ public class MainActivity extends AppCompatActivity{
         return true;
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.add("test");
-        return true;
-    }
-
-    // START: set_login_method
-    public void setmLoginMethod(String string){
-        mLoginMethod = string;
-    }
-    // END: set_login_method
-
-    // START: Turn to login page
-    public void startChooser(){
-        Intent intent = new Intent(mcontext,ChooserActivity.class);
-        intent.putExtra(Global.LOGIN_METHOD,mLoginMethod);
-        startActivity(intent);
-        finish();
-    }
 
     public void checkPermission(Activity activity){
         if(Build.VERSION.SDK_INT < 23) return;
@@ -176,8 +168,6 @@ public class MainActivity extends AppCompatActivity{
             s.toArray(permissions);
             ActivityCompat.requestPermissions(activity, permissions, PERMISSIONS_REQUEST);
         }
-
-
     }
 
     @Override
@@ -208,6 +198,28 @@ public class MainActivity extends AppCompatActivity{
 
         }
     }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.add("test");
+        return true;
+    }
+
+    // START: set_login_method
+    public void setmLoginMethod(String string){
+        mLoginMethod = string;
+    }
+    // END: set_login_method
+
+    // START: Turn to login page
+    public void startChooser(){
+        Intent intent = new Intent(mcontext,ChooserActivity.class);
+        intent.putExtra(Global.LOGIN_METHOD,mLoginMethod);
+        startActivity(intent);
+        finish();
+    }
+    // END: Turn to login page
+
 }
 
 

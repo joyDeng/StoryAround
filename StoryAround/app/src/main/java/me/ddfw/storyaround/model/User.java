@@ -1,7 +1,11 @@
 package me.ddfw.storyaround.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class User {
+
+
+public class User implements Parcelable {
 
     //table's name
     public static final String USER_TABLE = "user";
@@ -64,4 +68,44 @@ public class User {
 
     public void setUserGender(int userGender){ this.userGender = userGender;}
 
+
+    // START: Make parcelable
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.userId);
+        dest.writeString(this.userName);
+        dest.writeString(this.userImageURL);
+        dest.writeString(this.userBio);
+        dest.writeString(this.userEmail);
+        dest.writeString(this.userPhoNum);
+        dest.writeInt(this.userGender);
+    }
+
+    protected User(Parcel in) {
+        this.userId = in.readString();
+        this.userName = in.readString();
+        this.userImageURL = in.readString();
+        this.userBio = in.readString();
+        this.userEmail = in.readString();
+        this.userPhoNum = in.readString();
+        this.userGender = in.readInt();
+    }
+
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel source) {
+            return new User(source);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
+    // END: Make parcelable
 }

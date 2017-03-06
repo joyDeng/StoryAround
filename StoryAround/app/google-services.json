@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "755525064943",
-    "firebase_url": "https://storyaround-41526.firebaseio.com",
-    "project_id": "storyaround-41526",
-    "storage_bucket": "storyaround-41526.appspot.com"
+    "project_number": "782934398387",
+    "firebase_url": "https://cs65test.firebaseio.com",
+    "project_id": "cs65test",
+    "storage_bucket": "cs65test.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:755525064943:android:b56dde4036bef714",
+        "mobilesdk_app_id": "1:782934398387:android:b56dde4036bef714",
         "android_client_info": {
           "package_name": "me.ddfw.storyaround"
         }
       },
       "oauth_client": [
         {
-          "client_id": "755525064943-1aa15j8sn09aiqie6mqbohnsf8kgglmn.apps.googleusercontent.com",
+          "client_id": "782934398387-nrmtsm4md0pdrq7c66k2v5n4jl8u49mr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.ddfw.storyaround",
+            "certificate_hash": "7a06b2fc210c2c9081a46901342d1bbe030109a3"
+          }
+        },
+        {
+          "client_id": "782934398387-2h7hf0g64tbmcg1g5jbq75oo3kojr484.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDjQA4IgNihzcD_BjvgYrse2fO8MsCctPI"
+          "current_key": "AIzaSyCqXlDvPcfDqza06EV8m4-QWz4VFnUZl48"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782934398387-2h7hf0g64tbmcg1g5jbq75oo3kojr484.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

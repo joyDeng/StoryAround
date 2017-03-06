@@ -49,6 +49,8 @@ import java.util.Locale;
 
 import me.ddfw.storyaround.model.Story;
 
+import static com.google.api.client.http.HttpMethods.HEAD;
+
 
 // list of TODO
 // story type
@@ -222,12 +224,12 @@ public class NewStoryActivity extends AppCompatActivity {
 
     // save the story when on click
     private void saveStory() {
-        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title);
-        EditText storyContentEditor = (EditText)findViewById(R.id.story_content);
+        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
+        EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
-        mStory.setStoryType(0); // TODO
-        mStory.setStoryMode(0); // TODO
+        mStory.setStoryType(0);//TODO
+        mStory.setStoryMode(0);//TODO
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
         // mStory.setStoryImgURL("" + firebaseUri);
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
