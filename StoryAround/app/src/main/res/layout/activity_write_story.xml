@@ -27,16 +27,14 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/color4"
                 android:orientation="horizontal">
-                <ImageButton
-                    android:id="@+id/action_insert_image"
+                <ImageView
+                    android:id="@+id/story_image"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@color/color4"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icon_image"
-                    android:tint="@color/white" />
+                    android:scaleType="fitCenter" />
             </LinearLayout>
 
 

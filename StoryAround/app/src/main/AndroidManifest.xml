@@ -4,6 +4,7 @@
 
 
 
+    <uses-feature android:name="android.hardware.camera" />
 
     <permission
         android:name="com.example.gcm.permission.C2D_MESSAGE"
@@ -45,6 +46,8 @@
             android:name=".NewStoryActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".Authen.ChooserActivity" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+
 
     </application>
 

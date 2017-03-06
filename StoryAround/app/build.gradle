@@ -30,12 +30,13 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:design:25.1.0'
-    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
     compile 'com.ramotion.foldingcell:folding-cell:1.1.0' //folding cell
     compile 'com.google.maps.android:android-maps-utils:0.5+'//cluster marker
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar' // crop image
+    compile 'com.squareup.picasso:picasso:2.5.2' // load image from firebase
 
     //google map
     compile 'com.google.android.gms:play-services:10.2.0'
