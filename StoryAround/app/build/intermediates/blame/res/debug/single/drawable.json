@@ -216,6 +216,10 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_mini_controller_stop_large.xml"
     },
     {
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_image.png",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\icon_image.png"
+    },
+    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },

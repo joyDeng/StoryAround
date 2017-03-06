@@ -99,7 +99,8 @@ public class NewStoryActivity extends AppCompatActivity {
         user = mAuth.getCurrentUser();
 
         storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReference().child("image/storyImage");
+        storageReference = storage.getReference().child("image/storyImage_"
+                + user.getUid() + Calendar.getInstance().getTimeInMillis());
 
         // get the location pass from other activity if exists
         if (getIntent().getExtras() != null ) {
@@ -237,7 +238,7 @@ public class NewStoryActivity extends AppCompatActivity {
         mStory.setStoryLikes(0);
 
         upload2Firebase();
-        Toast.makeText(this,"your mStory will be heard", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"your story will be heard", Toast.LENGTH_SHORT).show();
         finish();
     }
 
