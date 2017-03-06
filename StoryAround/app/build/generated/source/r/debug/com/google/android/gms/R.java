@@ -423,25 +423,14 @@ public final class R {
 		public static final int normal = 0x7f10001f;
 		public static final int omnibox_title_section = 0x7f10006d;
 		public static final int omnibox_url_section = 0x7f10006e;
-<<<<<<< HEAD
-		public static final int place_autocomplete_clear_button = 0x7f10015b;
-		public static final int place_autocomplete_powered_by_google = 0x7f10015d;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f10015f;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f100160;
-		public static final int place_autocomplete_progress = 0x7f10015e;
-		public static final int place_autocomplete_search_button = 0x7f100159;
-		public static final int place_autocomplete_search_input = 0x7f10015a;
-		public static final int place_autocomplete_separator = 0x7f10015c;
-=======
-		public static final int place_autocomplete_clear_button = 0x7f10015a;
-		public static final int place_autocomplete_powered_by_google = 0x7f10015c;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f10015e;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f10015f;
-		public static final int place_autocomplete_progress = 0x7f10015d;
-		public static final int place_autocomplete_search_button = 0x7f100158;
-		public static final int place_autocomplete_search_input = 0x7f100159;
-		public static final int place_autocomplete_separator = 0x7f10015b;
->>>>>>> 94349eea8a580808eb1a03d1e1592f6b200f0409
+		public static final int place_autocomplete_clear_button = 0x7f10015c;
+		public static final int place_autocomplete_powered_by_google = 0x7f10015e;
+		public static final int place_autocomplete_prediction_primary_text = 0x7f100160;
+		public static final int place_autocomplete_prediction_secondary_text = 0x7f100161;
+		public static final int place_autocomplete_progress = 0x7f10015f;
+		public static final int place_autocomplete_search_button = 0x7f10015a;
+		public static final int place_autocomplete_search_input = 0x7f10015b;
+		public static final int place_autocomplete_separator = 0x7f10015d;
 		public static final int plain = 0x7f100066;
 		public static final int production = 0x7f100076;
 		public static final int progressBar = 0x7f1000fb;
