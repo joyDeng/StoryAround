@@ -64,6 +64,7 @@ public class StoryDetailFragment extends DialogFragment {
             viewHolder.location.setText(String.valueOf(line));
         }catch (IOException e){
 
+
         }
 
 
@@ -74,6 +75,7 @@ public class StoryDetailFragment extends DialogFragment {
         //viewHolder.location.setText(String.valueOf(story.getStoryLat()));
         viewHolder.tag.setText(story.getStoryType()+"");
         viewHolder.content.setText(story.getStoryContent());
+
 
         builder.setView(v);
 

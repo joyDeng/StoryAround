@@ -30,9 +30,11 @@ import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
 
-public class MainActivity extends AppCompatActivity {
-    private static final int PERMISSIONS_REQUEST = 1;
+
+
+public class MainActivity extends AppCompatActivity{
     private static final String TAG = "MainActivity";
+    private static final int PERMISSIONS_REQUEST = 1;
 
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
     private ViewPager viewPager;
@@ -61,17 +63,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        checkPermission(this);
         checkUser();
+        checkPermission(this);     
         pageSetup();
     }
 
     public void checkUser(){
-        mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
+
+       mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
 
-        if(mLoginMethod == null) startChooser();
+        if(mLoginMethod == null) mLoginMethod = "";
 
         // START:auth_state_listener
         mAuthListener = new FirebaseAuth.AuthStateListener(){
@@ -88,7 +91,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+        // END:auth_state_listener
+
     }
+
+        
+
+
     public void pageSetup(){
         mapFragment = new MapFragment();
         likesFragment = new LikesFragment();
@@ -132,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
     public void checkPermission(Activity activity){
         if(Build.VERSION.SDK_INT < 23) return;
         boolean i,r,w;
@@ -155,8 +166,6 @@ public class MainActivity extends AppCompatActivity {
             s.toArray(permissions);
             ActivityCompat.requestPermissions(activity, permissions, PERMISSIONS_REQUEST);
         }
-
-
     }
 
     @Override

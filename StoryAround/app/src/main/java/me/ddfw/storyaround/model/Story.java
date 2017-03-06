@@ -3,6 +3,11 @@ package me.ddfw.storyaround.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import java.sql.Time;
+import java.util.Calendar;
+import java.util.Date;
 /**
  * Created by xinbeifu on 3/3/17.
  */
@@ -101,6 +106,7 @@ public class Story implements Parcelable {
 
     public void setStoryLikes(int storyLikes){this.storyLikes = storyLikes;}
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -146,5 +152,6 @@ public class Story implements Parcelable {
             return new Story[size];
         }
     };
+
 
 }

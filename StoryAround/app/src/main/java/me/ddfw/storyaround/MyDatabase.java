@@ -25,6 +25,9 @@ public class MyDatabase {
 
     private int ADD_LIKE = 0;
     private int REMOVE_LIKE = 1;
+    public User mUser;
+
+    public static ArrayList<Story> stories = new ArrayList<>();
 
     public MyDatabase(){}
 
@@ -43,7 +46,7 @@ public class MyDatabase {
         mDatabase.child(User.USER_TABLE).child(userId).addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot snapshot){
-                User user = snapshot.getValue(User.class);
+                mUser = snapshot.getValue(User.class);
             }
 
             @Override
@@ -51,8 +54,30 @@ public class MyDatabase {
 
             }
         });
+    }
+
+
+    public void isFirstLogin(String userEmail){
+
+        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).orderByChild(User.KEY_USER_EMAIL).equalTo(userEmail).
+                addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        if(dataSnapshot.exists()){
+                            //do something
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
 
     }
+
 
     //methods concerning Story
     public String createStory(Story story){
@@ -66,8 +91,6 @@ public class MyDatabase {
     }
 
     public void updateStory(Story story){
-
-        Log.d("msg", "update story");
         mDatabase.child(Story.STORY_TABLE).child(story.getStoryId()).setValue(story);
 
     }
@@ -89,9 +112,9 @@ public class MyDatabase {
         });
     }
 
-    public void getStoryByLocation(LatLng northeast, LatLng southwest){
+    public ArrayList<Story> getStoryByLocation(LatLng northeast, LatLng southwest){
 
-        final ArrayList<Story> stories = new ArrayList<>();
+//        final ArrayList<Story> stories = new ArrayList<>();
         final HashMap<String, Story> storiesMap = new HashMap<>();
         
         double nLat = northeast.latitude, sLat = southwest.latitude;
@@ -102,17 +125,19 @@ public class MyDatabase {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        for(DataSnapshot child : dataSnapshot.getChildren()){
+                        fetchData(dataSnapshot, sLng, nLng);
 
-                            Story story = child.getValue(Story.class);
-
-                            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
-
-                                stories.add(story);
-                                storiesMap.put(story.getStoryId(), story);
-                            }
-
-                        }
+//                        for(DataSnapshot child : dataSnapshot.getChildren()){
+//
+//                            Story story = child.getValue(Story.class);
+//
+//                            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
+//
+//                                stories.add(story);
+//                                storiesMap.put(story.getStoryId(), story);
+//                            }
+//
+//                        }
 
                     }
 
@@ -122,7 +147,7 @@ public class MyDatabase {
                     }
                 });
 
-//        return stories;
+        return stories;
 //        return storiesMap;
     }
     
@@ -144,6 +169,7 @@ public class MyDatabase {
         mDatabase.child(Likes.LIKES_TABLE).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 if(dataSnapshot.hasChild(like.getLikeId())){
                     dataSnapshot.getRef().child(like.getLikeId()).setValue(null);
                 }
@@ -189,5 +215,23 @@ public class MyDatabase {
 
             }
         });
+    }
+
+    private void fetchData(DataSnapshot dataSnapshot, double sLng, double nLng){
+        stories.clear();
+
+        Log.d("msg", "the size of data snapshot is: " + dataSnapshot.getChildrenCount());
+
+        for(DataSnapshot child : dataSnapshot.getChildren()){
+
+            Story story = child.getValue(Story.class);
+
+            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
+
+                stories.add(story);
+//                storiesMap.put(story.getStoryId(), story);
+            }
+
+        }
     }
 }

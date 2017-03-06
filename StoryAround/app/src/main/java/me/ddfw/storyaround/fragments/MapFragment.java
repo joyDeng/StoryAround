@@ -40,9 +40,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.maps.android.clustering.ClusterManager;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
@@ -54,11 +52,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private View rootView;
     private MapView mMapView;
     private GoogleMap googleMap;
-    private List<Marker> markers;
-    private List<LatLng> locations;
     private LocationManager locationManager;
     private DatabaseReference mDatabase;
-    final private List<Story> stories = new ArrayList<>();
     final private HashMap<String, Story> storyMap = new HashMap<>();
     private ClusterManager<MyItem> mClusterManager;
 
@@ -71,7 +66,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         return rootView;
@@ -83,21 +77,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         super.onViewCreated(view, savedInstanceState);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         if (mMapView != null) {
-            // Initialise the MapView
             Log.d("DEBUG", mMapView.toString());
             mMapView.onCreate(savedInstanceState);
             mMapView.onResume();
-            // Set the map ready callback to receive the GoogleMap object
             mMapView.getMapAsync(this);
         }
 
     }
-
-
-
-
-
-
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
@@ -173,22 +159,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
                         //googleMap.clear();
                         LatLngBounds bounds = googleMap.getProjection().getVisibleRegion().latLngBounds;
                         getStoryByLocation(bounds);
-
-                        /*Log.i("BOUND northeast",bounds.northeast.toString());
-                        Log.i("BOUND southwest",bounds.southwest.toString());
-                        Log.i("BOUND current",locationToLatLng(current).toString());
-                        // Instantiates a new Polyline object and adds points to define a rectangle
-                        PolylineOptions rectOptions = new PolylineOptions().add(bounds.northeast).add(bounds.southwest);
-                        googleMap.addPolyline(rectOptions);
-                        googleMap.addMarker(new MarkerOptions().icon(
-                                BitmapDescriptorFactory.fromBitmap(resized)).position(locationToLatLng(current)));
-                        googleMap.addMarker(new MarkerOptions().icon(
-                                BitmapDescriptorFactory.fromBitmap(resized)).position(bounds.northeast));
-                        googleMap.addMarker(new MarkerOptions().icon(
-                                BitmapDescriptorFactory.fromBitmap(resized)).position(bounds.southwest));*/
                     }
                 });
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                googleMap.setOnMarkerClickListener(this);
                 googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
                     @Override
                     public void onMapLongClick(LatLng latLng) {
@@ -202,10 +176,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }catch (SecurityException e){
 
         }
-
-        //onLocationChanged(location);
-        //locationManager.requestLocationUpdates(provider, 0, 0, this);
-
     }
 
     public void getStoryByLocation(LatLngBounds bounds){
@@ -235,8 +205,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
                             }
                         }
-                        // after got all stories
-
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
@@ -281,16 +249,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     @Override
     public void onMapReady(GoogleMap mMap) {
         googleMap = mMap;
-
-        // For showing a move to my map button
-        //googleMap.setMyLocationEnabled(true);
-
         try {
-            // Customise the styling of the base map using a JSON object defined
-            // in a raw resource file.
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
-                           getActivity(), R.raw.style_json));
+                            getActivity(), R.raw.style_json));
 
 
 
@@ -300,36 +262,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         } catch (Resources.NotFoundException e) {
             Log.e("TAG", "Can't find style. Error: ", e);
         }
-        // Position the map's camera near Sydney, Australia.
-        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(-34, 151)));
-
-        // For dropping a marker at a point on the Map
-
-        //googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inMutable = true;
         Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
                 R.drawable.logo,opt);
-        Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
-        googleMap.setOnMarkerClickListener(this);
-        markers = new ArrayList<>();
-        mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
 
+        //mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
 
-        // Point the map's listeners at the listeners implemented by the cluster
-        // manager.
-        //googleMap.setOnCameraIdleListener(mClusterManager);
-        //googleMap.setOnMarkerClickListener(mClusterManager);
-        /*markers.add(googleMap.addMarker(new MarkerOptions().icon(
-                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(0))));
-        markers.add(googleMap.addMarker(new MarkerOptions().icon(
-                BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(1))));
-        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));*/
-        //start = map.addMarker(new MarkerOptions().position(list.get(0)));
-
-        // For zooming automatically to the map of the marker
-       // CameraPosition cameraPosition = new CameraPosition.Builder().target(locations.get(1)).zoom(12).build();
-        //googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         checkPermission(getActivity());
     }
     @Override
@@ -341,9 +280,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
         return true;
     }
-
-
-
 
 
 

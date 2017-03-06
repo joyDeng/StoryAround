@@ -86,17 +86,33 @@
                 android:singleLine="true" />
         </LinearLayout>
 
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_gravity="right">
+        <Button
+            android:id="@+id/btnForgetPassword"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_margin="0dp"
+            android:background="@color/color5"
+            android:layout_gravity="right"
+            android:onClick="onLogin"
+            android:text="Forget Password" />
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_margin="20dp"
+            android:layout_margin="0dp"
             android:background="@color/color5"
             android:layout_gravity="right"
             android:onClick="onLogin"
             android:text="Login" />
-
+         </LinearLayout>
         <!-- End of login input -->
+
 
 
         <View
