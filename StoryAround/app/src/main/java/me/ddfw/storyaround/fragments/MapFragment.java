@@ -28,13 +28,22 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.maps.android.clustering.ClusterManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
@@ -46,8 +55,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private GoogleMap googleMap;
     private List<Marker> markers;
     private List<LatLng> locations;
-    private List<Story> stories;
     private LocationManager locationManager;
+    private DatabaseReference mDatabase;
+    final private List<Story> stories = new ArrayList<>();
+    final private HashMap<String, Story> storyMap = new HashMap<>();
+    private ClusterManager<MyItem> mClusterManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,12 +71,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
-        stories = Story.getTestStories();
+        //stories = Story.getTestStories();
         locations = new ArrayList<>();
         markers = new ArrayList<>();
-        for(Story s:stories){
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        /*for(Story s:stories){
             locations.add(s.getLocation());
-        }
+        }*/
         return rootView;
     }
 
@@ -137,17 +150,47 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
             Criteria criteria = new Criteria();
             criteria.setAccuracy(Criteria.ACCURACY_FINE);
             String provider = locationManager.getBestProvider(criteria, true);
-            Location current = locationManager.getLastKnownLocation(provider);
+            final Location current = locationManager.getLastKnownLocation(provider);
             if(googleMap!=null){
                 BitmapFactory.Options opt = new BitmapFactory.Options();
                 opt.inMutable = true;
                 Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
                         R.drawable.logo,opt);
-                Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
+                final Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
                 googleMap.addMarker(new MarkerOptions().icon(
                         BitmapDescriptorFactory.fromBitmap(resized)).position(locationToLatLng(current)));
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(locationToLatLng(current)).zoom(17).build();
+                googleMap.setOnCameraIdleListener(new GoogleMap.OnCameraIdleListener() {
+                    @Override
+                    public void onCameraIdle() {
+                        //googleMap.clear();
+                        LatLngBounds bounds = googleMap.getProjection().getVisibleRegion().latLngBounds;
+                        getStoryByLocation(bounds);
+
+                        /*Log.i("BOUND northeast",bounds.northeast.toString());
+                        Log.i("BOUND southwest",bounds.southwest.toString());
+                        Log.i("BOUND current",locationToLatLng(current).toString());
+                        // Instantiates a new Polyline object and adds points to define a rectangle
+                        PolylineOptions rectOptions = new PolylineOptions().add(bounds.northeast).add(bounds.southwest);
+                        googleMap.addPolyline(rectOptions);
+                        googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(locationToLatLng(current)));
+                        googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(bounds.northeast));
+                        googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(bounds.southwest));*/
+                    }
+                });
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+                    @Override
+                    public void onMapLongClick(LatLng latLng) {
+                        googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(latLng));
+                        Log.i("BOUND This is",latLng.toString());
+                    }
+                });
+
             }
         }catch (SecurityException e){
 
@@ -156,6 +199,43 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         //onLocationChanged(location);
         //locationManager.requestLocationUpdates(provider, 0, 0, this);
 
+    }
+
+    public void getStoryByLocation(LatLngBounds bounds){
+        LatLng northeast = bounds.northeast, southwest = bounds.southwest;
+        double nLat = northeast.latitude, sLat = southwest.latitude;
+        final double nLng = northeast.longitude, sLng = southwest.longitude;
+        BitmapFactory.Options opt = new BitmapFactory.Options();
+        opt.inMutable = true;
+        Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
+                R.drawable.logo,opt);
+        final Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
+
+        mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).startAt(sLat).endAt(nLat).
+                addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot child : dataSnapshot.getChildren()){
+                            Story story = child.getValue(Story.class);
+                            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
+                                if(!storyMap.containsKey(story.getStoryId())){
+                                    storyMap.put(story.getStoryId(),story);
+                                    googleMap.addMarker(new MarkerOptions().icon(
+                                            BitmapDescriptorFactory.fromBitmap(resized)).position(
+                                            new LatLng(story.getStoryLat(),story.getStoryLng())).
+                                            title(story.getStoryId()));
+                                }
+
+                            }
+                        }
+                        // after got all stories
+
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
     }
 
     public LatLng locationToLatLng(Location l){
@@ -226,11 +306,18 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
         googleMap.setOnMarkerClickListener(this);
         markers = new ArrayList<>();
-        markers.add(googleMap.addMarker(new MarkerOptions().icon(
+        mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
+
+
+        // Point the map's listeners at the listeners implemented by the cluster
+        // manager.
+        //googleMap.setOnCameraIdleListener(mClusterManager);
+        //googleMap.setOnMarkerClickListener(mClusterManager);
+        /*markers.add(googleMap.addMarker(new MarkerOptions().icon(
                 BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(0))));
         markers.add(googleMap.addMarker(new MarkerOptions().icon(
                 BitmapDescriptorFactory.fromBitmap(resized)).position(locations.get(1))));
-        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));
+        markers.add(googleMap.addMarker(new MarkerOptions().position(locations.get(2))));*/
         //start = map.addMarker(new MarkerOptions().position(list.get(0)));
 
         // For zooming automatically to the map of the marker
@@ -240,14 +327,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     }
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        if (marker.equals(markers.get(1))) {
-            //handle click here
+        if(storyMap.containsKey(marker.getTitle())){
             DialogFragment dialog;
-            dialog = StoryDetailFragment.buildDialog(stories.get(1));
+            dialog = StoryDetailFragment.buildDialog(storyMap.get(marker.getTitle()));
             dialog.show(getFragmentManager(), "");
         }
         return true;
     }
+
+
 
 
 
