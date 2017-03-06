@@ -37,7 +37,6 @@ dependencies {
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.google.android.gms:play-services:10.2.0' //google map
     compile 'com.android.support:support-v13:25.1.0' // for tab layout FragmentPagerAdapter
-    compile 'com.github.irshulx:laser-native-editor:0.3.5' // for text editor
     compile 'com.ramotion.foldingcell:folding-cell:1.1.0' //folding cell
 
     //for firebase

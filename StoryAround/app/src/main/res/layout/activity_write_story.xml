@@ -4,35 +4,159 @@
     android:id="@+id/fragment_post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/color6">
+    android:background="@color/color6"
+    android:orientation="vertical">
 
-    <HorizontalScrollView android:id="@+id/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color3"
-        android:layout_alignParentTop="true"
-        android:scrollbars="none">
-        <include layout="@layout/editor_toolbar_linearlayout_horizontal" />
-    </HorizontalScrollView>
 
+    <!-- Story -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical"
         android:layout_margin="5dp"
-        android:layout_weight="1">
-        <com.github.irshulx.Editor
-            android:id="@+id/editor"
-            android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:padding="8dp"
-            android:background="@drawable/editor_background"
-            app:render_type="Editor"
-            app:placeholder="Tell us your story...">
-        </com.github.irshulx.Editor>
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <!-- Image upload -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/color4"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/action_insert_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/color4"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_image"
+                    android:tint="@color/white" />
+            </LinearLayout>
+
+
+            <!-- Story information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <!-- Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/map"
+                        android:tint="@color/color3" />
+                    <TextView
+                        android:id="@+id/story_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color6"
+                        android:hint="location right now"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <!-- Story type -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text=" #"
+                        android:textColor="@color/color3"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/story_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="your story type"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- end of story information -->
+
+            <!-- story start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- title -->
+                <EditText
+                    android:id="@+id/story_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:hint="Title"
+                    android:padding="8dp"
+                    android:textSize="20dp"></EditText>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color4" />
+
+                <!-- story -->
+                <EditText
+                    android:id="@+id/story_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:hint="Tell us your story..."
+                    android:padding="8dp"
+                    android:textSize="15dp"></EditText>
+            </LinearLayout>
+            <!-- end of story -->
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- End of story -->
+
+
+
+    <!-- Save and Cancel button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/color2"
+            android:onClick="onSaveClicked"
+            android:text="save"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/color2"
+            android:onClick="onCancelClicked"
+            android:text="cancel"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
 
 </LinearLayout>
