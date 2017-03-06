@@ -2,12 +2,8 @@ package me.ddfw.storyaround.fragments;
 
 
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,19 +15,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import me.ddfw.storyaround.Authen.ChooserActivity;
-import me.ddfw.storyaround.Global;
 import me.ddfw.storyaround.MainActivity;
 import me.ddfw.storyaround.R;
-
-import static android.R.attr.action;
-import static android.R.attr.start;
+import me.ddfw.storyaround.model.User;
 
 
 // TODO
@@ -42,13 +37,15 @@ public class ProfileFragment extends Fragment {
 
     private static final String TAG = "ProfileFragment";
 
-    private FirebaseUser mUser;
+    private FirebaseUser mFirebaseUser;
+    private User mUser;
     private EditText editUsername;
     private EditText editEmail;
     private EditText editPhone;
     private RadioGroup editGender;
     private EditText editBio;
     private boolean isEditMode;
+    private DatabaseReference mDatabase;
 
 
     @Override
@@ -56,10 +53,10 @@ public class ProfileFragment extends Fragment {
         View rootView;
 
         //Get current user;
-        mUser = FirebaseAuth.getInstance().getCurrentUser();
+        mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         //Check whether user is logged in
-        if (mUser == null) {
+        if (mFirebaseUser == null) {
             //User is not logged in then turn to Chooseractivity
             rootView = inflater.inflate(R.layout.fragment_profile_login,container,false);
             setLoginBtn(rootView);
@@ -73,8 +70,23 @@ public class ProfileFragment extends Fragment {
             editGender = (RadioGroup) rootView.findViewById(R.id.user_gender);
             editBio = (EditText) rootView.findViewById(R.id.user_bio);
             isEditMode = false;
+
+            mDatabase = FirebaseDatabase.getInstance().getReference();
+            mDatabase.child(User.USER_TABLE).child(mFirebaseUser.getUid())
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot snapshot) {
+                            mUser = snapshot.getValue(User.class);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+
+                        }
+                    });
+
             setProfileBtn(rootView);
-            // setProfileContent();
+            setProfileContent();
         }
         setRetainInstance(true);
 
@@ -155,11 +167,11 @@ public class ProfileFragment extends Fragment {
     }
 
     private void setProfileContent() {
-        editUsername.setText("No name");
-        editEmail.setText(mUser.getEmail());
-        editPhone.setText("223 233 2323");
+        editUsername.setText(mUser.getUserName());
+        editEmail.setText(mUser.getUserEmail());
+        editPhone.setText(mUser.getUserPhoNum());
         ((RadioButton) editGender.getChildAt(1)).setChecked(true);
-        editBio.setText("test test test");
+        editBio.setText(mUser.getUserBio());
     }
 
     private void onSignout() {

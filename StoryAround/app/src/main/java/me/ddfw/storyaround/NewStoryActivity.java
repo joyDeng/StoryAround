@@ -332,6 +332,8 @@ public class NewStoryActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
                     Log.d("******", "Firebase upload fail: " + exception);
+                    // TODO
+                    // if fail, pop up dialog
                 }
             }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override

@@ -33,7 +33,6 @@ public class MyDatabase {
 
     //methods concerning User
     public void createProfile(User user){
-
         mDatabase.child(User.USER_TABLE).child(user.getUserId()).setValue(user);
     }
 
@@ -42,7 +41,6 @@ public class MyDatabase {
     }
 
     public void getProfile(final String userId){
-
         mDatabase.child(User.USER_TABLE).child(userId).addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot snapshot){
