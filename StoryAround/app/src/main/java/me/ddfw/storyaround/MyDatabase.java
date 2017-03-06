@@ -58,9 +58,9 @@ public class MyDatabase {
 
     }
 
-    public boolean isFirstLogin(String userEmail){
+    public void isFirstLogin(String userEmail){
 
-        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).child(User.KEY_USER_EMAIL).equalTo(userEmail).
+        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).orderByChild(User.KEY_USER_EMAIL).equalTo(userEmail).
                 addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
