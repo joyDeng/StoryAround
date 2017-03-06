@@ -18,7 +18,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -78,7 +80,9 @@ public class NewStoryActivity extends AppCompatActivity {
             mStory.setStoryLat(lat);
             mStory.setStoryLng(lng);
         }
-        checkPermissions();
+        else {
+            checkPermissions();
+        }
     }
 
 
@@ -236,6 +240,9 @@ public class NewStoryActivity extends AppCompatActivity {
             return;
         if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 0);
+        }
+        else {
+            setCurrentLocationText();
         }
     }
 

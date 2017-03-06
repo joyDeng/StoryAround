@@ -26,6 +26,13 @@ public class DiaryFragment extends Fragment {
     }
 
     @Override
+    public void onPrepareOptionsMenu(Menu menu){
+
+    }
+
+
+
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         menu.clear();
         inflater.inflate(R.menu.menu_diary,menu);

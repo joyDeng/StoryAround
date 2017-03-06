@@ -28,13 +28,22 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.maps.android.clustering.ClusterManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+import me.ddfw.storyaround.MyItem;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Story;
 
@@ -58,7 +67,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     private DatabaseReference mDatabase;
     final private List<Story> stories = new ArrayList<>();
     final private HashMap<String, Story> storyMap = new HashMap<>();
-    //private ClusterManager<MyItem> mClusterManager;
+    private ClusterManager<MyItem> mClusterManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -305,7 +314,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
         googleMap.setOnMarkerClickListener(this);
         markers = new ArrayList<>();
-        //mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
+        mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
 
 
         // Point the map's listeners at the listeners implemented by the cluster
@@ -333,6 +342,5 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         }
         return true;
     }
-
 
 }

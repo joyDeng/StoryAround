@@ -104,7 +104,8 @@
                     android:background="@color/white"
                     android:hint="Title"
                     android:padding="8dp"
-                    android:textSize="20dp"></EditText>
+                    android:textSize="20dp"
+                    android:textColor="@color/color4"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -118,7 +119,8 @@
                     android:background="@color/white"
                     android:hint="Tell us your story..."
                     android:padding="8dp"
-                    android:textSize="15dp"></EditText>
+                    android:textSize="15dp"
+                    android:textColor="@color/color4"/>
             </LinearLayout>
             <!-- end of story -->
 
