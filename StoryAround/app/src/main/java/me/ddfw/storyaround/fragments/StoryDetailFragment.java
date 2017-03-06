@@ -63,7 +63,7 @@ public class StoryDetailFragment extends DialogFragment {
 
         ImageView image = (ImageView)v.findViewById(R.id.story_image);
         // Reference to an image file in Firebase Storage
-        if(!story.getStoryImgURL().isEmpty()){
+        if(story.getStoryImgURL() != null && !story.getStoryImgURL().isEmpty()){
             StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(story.getStoryImgURL());
             // Load the image using Glide
             Glide.with(getActivity())
