@@ -3,21 +3,24 @@ package me.ddfw.storyaround;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import me.ddfw.storyaround.model.Likes;
-import me.ddfw.storyaround.model.Story;
-import me.ddfw.storyaround.model.User;
+import me.ddfw.storyaround.model.*;
 
-
+/**
+ * Created by xinbeifu on 3/4/17.
+ */
 
 public class MyDatabase {
 
@@ -30,7 +33,6 @@ public class MyDatabase {
 
     //methods concerning User
     public void createProfile(User user){
-
         mDatabase.child(User.USER_TABLE).child(user.getUserId()).setValue(user);
     }
 
@@ -56,7 +58,7 @@ public class MyDatabase {
 
     //methods concerning Story
     public String createStory(Story story){
-        Log.d("DEBUG","create now");
+
         DatabaseReference reference = mDatabase.child(Story.STORY_TABLE);
         String storyId = reference.push().getKey();
         story.setStoryId(storyId);
