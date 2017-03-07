@@ -362,6 +362,8 @@ public class ChooserActivity extends AppCompatActivity
                     mDisplayNmae = data.getStringExtra(Global.USER_NAME);
                     mGender = data.getStringExtra(Global.USER_GENDER);
                     mCurrentUser = (User) data.getParcelableExtra(Global.NEWACCOUNT);
+                    mEmail.setText(data.getStringExtra(Global.USER_EMAIL));
+                    mPassword.setText(data.getStringExtra(Global.USER_PASSWORD));
 
                     if (LoginMethod.equals(Global.EMAIL_SIGNIN))
                         createAccount(mEmail.getText().toString(), mPassword.getText().toString());

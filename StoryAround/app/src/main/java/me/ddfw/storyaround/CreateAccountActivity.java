@@ -56,6 +56,7 @@ implements View.OnClickListener{
         password = mPassword.getText().toString();
 
         if (email.equals("") ||
+                !email.contains("@") ||
                 password.equals("") ||
                 email == null || password == null) {
             //if input is empty
