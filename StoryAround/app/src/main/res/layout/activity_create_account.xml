@@ -8,17 +8,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/color6"
     tools:context="me.ddfw.storyaround.CreateAccountActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="30dp"
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
-
 
         <!-- Login Title -->
         <LinearLayout
@@ -35,7 +34,8 @@
 
 
 
-        <!-- Basic Imformation Input -->
+        <!-- Basic Information Input -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -44,7 +44,7 @@
             android:background="@color/color5"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="10dp"
@@ -59,67 +59,135 @@
                 android:textSize="15dp"
                 android:background="@color/white"
                 android:textColor="@color/color4"
+                android:hint="your display name"
+                android:inputType="text"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Email"
+                android:textSize="15dp" />
+            <EditText
+                android:id="@+id/create_editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:background="@color/white"
+                android:textColor="@color/color4"
                 android:hint="your email address"
                 android:inputType="textWebEmailAddress"
                 android:singleLine="true" />
         </LinearLayout>
 
 
-
-        <!-- End of login input -->
-        <RadioGroup
-            android:id="@+id/create_radioSex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Password"
+                android:textSize="15dp" />
+            <EditText
+                android:id="@+id/create_editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:background="@color/white"
+                android:textColor="@color/color4"
+                android:hint="your password"
+                android:inputType="textWebPassword"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+
+
+
+        <!-- profile gender -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Gender"
                 android:textSize="15dp" />
 
-                <RadioButton
-                android:id="@+id/radioMale"
+            <RadioGroup
+                android:id="@+id/create_radioSex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_male"
-                android:checked="true" />
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
 
                 <RadioButton
-                android:id="@+id/radioFemale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_female" />
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male" />
+
 
                 <RadioButton
                     android:id="@+id/radioNone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/radio_none" />
+                    android:text="N/A" />
 
-            </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
 
-        </RadioGroup>
 
+
+        <!-- End of login input -->
 
 
         <Button
             android:id="@+id/btnCreate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             android:background="@color/white"
             android:onClick="onNewAcc"
             android:textAllCaps="false"
+            android:backgroundTint="@color/color4"
+            android:textColor="@color/white"
             android:text="Create" />
 
 

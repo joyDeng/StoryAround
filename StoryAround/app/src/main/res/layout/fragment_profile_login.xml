@@ -3,17 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="@string/login_requet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login_requet" />
-
         <Button
             android:id="@+id/btn_switch_to_login"
             android:layout_width="match_parent"
@@ -22,6 +25,8 @@
             android:background="@color/white"
             android:onClick="onSwitch"
             android:text="@string/button_sign_in"
+            android:backgroundTint="@color/color4"
+            android:textColor="@color/white"
             android:textAllCaps="false" />
 
 

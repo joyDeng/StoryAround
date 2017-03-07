@@ -40,26 +40,6 @@
                 android:text="Username" />
 
 
-            <!-- profile gender -->
-            <RadioGroup
-                android:id="@+id/user_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/radioGenderF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="female"/>
-                <RadioButton
-                    android:id="@+id/radioGenderM"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="male"/>
-            </RadioGroup>
-
-
             <Button
                 android:id="@+id/btnEdit"
                 android:layout_width="wrap_content"
@@ -74,27 +54,56 @@
         </LinearLayout>
 
 
-
-        <EditText
-            android:id="@+id/user_email"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:background="@android:color/transparent"
-            android:textSize="15dp"
-            android:textColor="@color/color4"
-            android:text="userEmail@test.com" />
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/user_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="userEmail@test.com"
+                    android:textColor="@color/color4"
+                    android:textSize="15dp" />
+                <EditText
+                    android:id="@+id/user_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="123 456 7890"
+                    android:textColor="@color/color4"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
+            <!-- profile gender -->
+            <RadioGroup
+                android:id="@+id/user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layout_marginRight="15dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radioGenderF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female" />
+                <RadioButton
+                    android:id="@+id/radioGenderM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male" />
+            </RadioGroup>
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/user_phone"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:background="@android:color/transparent"
-            android:textSize="15dp"
-            android:textColor="@color/color4"
-            android:text="123 456 7890"/>
 
 
 
@@ -103,16 +112,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/editor_background"
             android:textSize="18dp"
             android:textColor="@color/color3"
-            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-            unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+            android:text="How will you describe yourself?" />
 
 
 
@@ -121,6 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="5dp"
+            android:layout_gravity="bottom"
             android:background="@color/color2"
             android:textColor="@color/white"
             android:onClick="onSignout"

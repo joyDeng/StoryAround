@@ -43,9 +43,10 @@ public class ProfileFragment extends Fragment {
     private EditText editEmail;
     private EditText editPhone;
     private RadioGroup editGender;
+
     private EditText editBio;
     private boolean isEditMode;
-    private DatabaseReference mDatabase;
+    private DatabaseReference databaseRef;
 
 
     @Override
@@ -57,7 +58,7 @@ public class ProfileFragment extends Fragment {
 
         //Check whether user is logged in
         if (mFirebaseUser == null) {
-            //User is not logged in then turn to Chooseractivity
+            //User is not logged in then turn to ChooserActivity
             rootView = inflater.inflate(R.layout.fragment_profile_login,container,false);
             setLoginBtn(rootView);
         }
@@ -71,25 +72,24 @@ public class ProfileFragment extends Fragment {
             editBio = (EditText) rootView.findViewById(R.id.user_bio);
             isEditMode = false;
 
-            mDatabase = FirebaseDatabase.getInstance().getReference();
-            mDatabase.child(User.USER_TABLE).child(mFirebaseUser.getUid())
+            databaseRef = FirebaseDatabase.getInstance().getReference();
+            databaseRef.child(User.USER_TABLE).child(mFirebaseUser.getUid())
                     .addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
                             mUser = snapshot.getValue(User.class);
+                            if (mUser != null) {
+                                setProfileContent();
+                            }
+                            Log.d("******", "snapshot.getValue: " + mUser.getUserName() );
                         }
-
                         @Override
                         public void onCancelled(DatabaseError error) {
-
                         }
                     });
-
             setProfileBtn(rootView);
-            //setProfileContent();
         }
         setRetainInstance(true);
-
         return rootView;
     }
 
@@ -106,20 +106,13 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    private void onLogin() {
-        // TODO
-        //isLogin = true;
-        getFragmentManager().beginTransaction().detach(this).attach(this).commit();
-    }
-
-
     private void setProfileBtn(final View rootView) {
         Button btnLogout = (Button) rootView.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onSignout();
-                Log.d(TAG,"onSignout");
+                onSignOut();
+                Log.d(TAG,"onSignOut");
                 Toast.makeText(getActivity().getApplicationContext(),"Log out",Toast.LENGTH_SHORT).show();
             }
         });
@@ -129,7 +122,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 EditText editUsername = (EditText) rootView.findViewById(R.id.user_username);
-                // if not in edit mode
+                // if not in edit mode, -> edit
                 if (!isEditMode) {
                     isEditMode = true;
                     editUsername.setEnabled(true);
@@ -141,7 +134,7 @@ public class ProfileFragment extends Fragment {
                     btnEdit.setText("Save");
                     Toast.makeText(getActivity().getApplicationContext(),"You can edit your profile",Toast.LENGTH_SHORT).show();
                 }
-                // if already in edit mode
+                // if already in edit mode -> save
                 else {
                     getActivity().getWindow().setSoftInputMode(
                             WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
@@ -174,7 +167,7 @@ public class ProfileFragment extends Fragment {
         editBio.setText(mUser.getUserBio());
     }
 
-    private void onSignout() {
+    private void onSignOut() {
         ((MainActivity)getActivity()).setmLoginMethod("");
         FirebaseAuth.getInstance().signOut();
     }
