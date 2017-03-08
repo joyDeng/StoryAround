@@ -34,7 +34,6 @@ public class PostFragment extends Fragment{
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
 
         setRetainInstance(true);
-        Log.d("******","PostFragment onCreateView");
 
         Button btnStart = (Button) rootView.findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {

@@ -58,6 +58,7 @@ import static com.google.api.client.http.HttpMethods.HEAD;
 // story privacy
 // rotation
 // image compress
+// don't save default icon
 
 
 public class NewStoryActivity extends AppCompatActivity {

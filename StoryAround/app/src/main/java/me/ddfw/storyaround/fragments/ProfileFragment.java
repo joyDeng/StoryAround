@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,12 +40,12 @@ public class ProfileFragment extends Fragment {
 
     private FirebaseUser mFirebaseUser;
     private User mUser;
-    private EditText editUsername;
-    private EditText editEmail;
-    private EditText editPhone;
+    private TextView editUsername;
+    private TextView editEmail;
+    private TextView editPhone;
     private RadioGroup editGender;
 
-    private EditText editBio;
+    private TextView editBio;
     private boolean isEditMode;
     private DatabaseReference databaseRef;
 
@@ -65,11 +66,11 @@ public class ProfileFragment extends Fragment {
         else {
             //If User is logged in
             rootView = inflater.inflate(R.layout.fragment_profile, container, false);
-            editUsername = (EditText) rootView.findViewById(R.id.user_username);
-            editEmail = (EditText) rootView.findViewById(R.id.user_email);
-            editPhone = (EditText) rootView.findViewById(R.id.user_phone);
+            editUsername = (TextView) rootView.findViewById(R.id.user_username);
+            editEmail = (TextView) rootView.findViewById(R.id.user_email);
+            editPhone = (TextView) rootView.findViewById(R.id.user_phone);
             editGender = (RadioGroup) rootView.findViewById(R.id.user_gender);
-            editBio = (EditText) rootView.findViewById(R.id.user_bio);
+            editBio = (TextView) rootView.findViewById(R.id.user_bio);
             isEditMode = false;
 
             databaseRef = FirebaseDatabase.getInstance().getReference();
@@ -81,7 +82,6 @@ public class ProfileFragment extends Fragment {
                             if (mUser != null) {
                                 setProfileContent();
                             }
-                            Log.d("******", "snapshot.getValue: " + mUser.getUserName() );
                         }
                         @Override
                         public void onCancelled(DatabaseError error) {
@@ -112,11 +112,31 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 onSignOut();
-                Log.d(TAG,"onSignOut");
-                Toast.makeText(getActivity().getApplicationContext(),"Log out",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "Log out",Toast.LENGTH_SHORT).show();
             }
         });
 
+        Button btnSave = (Button) rootView.findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "You have saved your profile",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        Button btnCancel = (Button) rootView.findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "Canceled",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        /*
         final Button btnEdit = (Button) rootView.findViewById(R.id.btnEdit);
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +171,7 @@ public class ProfileFragment extends Fragment {
                 }
             }
         });
+        */
         editUsername.setEnabled(false);
         editEmail.setEnabled(false);
         editPhone.setEnabled(false);
@@ -160,10 +181,11 @@ public class ProfileFragment extends Fragment {
     }
 
     private void setProfileContent() {
+        Log.d("******","set profile content: " + mUser.getUserGender());
         editUsername.setText(mUser.getUserName());
         editEmail.setText(mUser.getUserEmail());
         editPhone.setText(mUser.getUserPhoNum());
-        ((RadioButton) editGender.getChildAt(1)).setChecked(true);
+        ((RadioButton) editGender.getChildAt(mUser.getUserGender())).setChecked(true);
         editBio.setText(mUser.getUserBio());
     }
 
