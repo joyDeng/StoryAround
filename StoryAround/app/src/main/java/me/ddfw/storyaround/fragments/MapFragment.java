@@ -66,13 +66,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        return rootView;
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         if (mMapView != null) {
             Log.d("DEBUG", mMapView.toString());
@@ -80,6 +73,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
             mMapView.onResume();
             mMapView.getMapAsync(this);
         }
+
+        return rootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
 
     }
 

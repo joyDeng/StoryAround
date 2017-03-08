@@ -25,12 +25,14 @@ import me.ddfw.storyaround.StoryListAdapter;
 import me.ddfw.storyaround.model.Likes;
 import me.ddfw.storyaround.model.Story;
 
+import static me.ddfw.storyaround.MyDatabase.stories;
+
 
 public class LikesFragment extends Fragment {
 
     private StoryListAdapter storyListAdapter; // tester adapter
 //    private ArrayList<String> data;
-    private ArrayList<Story> stories;
+    private ArrayList<Story> stsories;
     private ListView list;
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
 
@@ -115,9 +117,10 @@ public class LikesFragment extends Fragment {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Log.d("ADD",(String)dataSnapshot.child(Story.KEY_STORY_TITLE).getValue());
                         Story story = dataSnapshot.getValue(Story.class);
-                        storyListAdapter.insert(story,0);
-                        storyListAdapter.notifyDataSetChanged();
-                        //stories.add(0,story);
+                        //storyListAdapter.insert(story,0);
+                        //storyListAdapter.notifyDataSetChanged();
+                        //stories.add(story);
+                        storyListAdapter.add(story);
                         //storyListAdapter.notifyDataSetChanged();
                     }
                     @Override
