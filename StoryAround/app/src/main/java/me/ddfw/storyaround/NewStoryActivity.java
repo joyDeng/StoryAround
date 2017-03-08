@@ -75,6 +75,7 @@ public class NewStoryActivity extends AppCompatActivity {
     private Uri tempImgUri;
     private Uri firebaseUri;
     private ImageView storyImageView;
+    private String addressText = "  ";
 
     private boolean isNewImage;
 
@@ -124,7 +125,6 @@ public class NewStoryActivity extends AppCompatActivity {
     private void setLocationText(double lat, double lng) {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         TextView locationTextView = (TextView) findViewById(R.id.story_location);
-        String addressText = "  ";
         try {
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
             if (addresses.size() > 0) {
