@@ -88,12 +88,9 @@ public class PostFragment extends Fragment{
 
     public void onSaveClicked() {
         //write test data inside:
-<<<<<<< HEAD
         Toast.makeText(getActivity().getApplicationContext(),
                 "You have saved your location", Toast.LENGTH_SHORT).show();
-=======
         markLocation();
->>>>>>> origin/xinbeilike
         checkPermission(getActivity());
     }
 

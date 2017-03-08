@@ -147,15 +147,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 @Override
                 public void onLocationChanged(Location location) {
                     if(googleMap!=null){
-<<<<<<< HEAD
                         if(current!=null)
                             current.remove();
-=======
-
-                        if(current != null)
-                            current.remove();
-
->>>>>>> origin/xinbeilike
                         current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(location))
                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.flag)));
                     }

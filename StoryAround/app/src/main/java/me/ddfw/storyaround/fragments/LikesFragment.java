@@ -121,22 +121,11 @@ public class LikesFragment extends Fragment {
         databaseRef.child(Story.STORY_TABLE).child(storyId).
                 addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Log.d("ADD",(String)dataSnapshot.child(Story.KEY_STORY_TITLE).getValue());
                         Story story = dataSnapshot.getValue(Story.class);
-<<<<<<< HEAD
-                        //storyListAdapter.insert(story,0);
-                        //storyListAdapter.notifyDataSetChanged();
-                        //stories.add(story);
-                        storyListAdapter.add(story);
-                        //storyListAdapter.notifyDataSetChanged();
-=======
-
                         storyListAdapter.insert(story,0);
                         storyListAdapter.notifyDataSetChanged();
-
->>>>>>> origin/xinbeilike
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
