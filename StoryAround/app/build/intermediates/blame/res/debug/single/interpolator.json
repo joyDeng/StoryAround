@@ -1,18 +1,26 @@
 [
     {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_fast_out_slow_in.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_fast_out_slow_in.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_fast_out_slow_in.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_fast_out_slow_in.xml"
     },
     {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_linear_out_slow_in.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_linear_out_slow_in.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_linear_out_slow_in.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_linear_out_slow_in.xml"
     },
     {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/interpolator/mr_linear_out_slow_in.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/interpolator/mr_linear_out_slow_in.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_linear_out_slow_in.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_linear_out_slow_in.xml"
     },
     {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/interpolator/mr_fast_out_slow_in.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/interpolator/mr_fast_out_slow_in.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_fast_out_slow_in.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_fast_out_slow_in.xml",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\interpolator\\mr_linear_out_slow_in.xml",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\interpolator\\mr_linear_out_slow_in.xml"
     }
 ]

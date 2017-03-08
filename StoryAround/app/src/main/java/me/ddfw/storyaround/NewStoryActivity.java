@@ -233,7 +233,7 @@ public class NewStoryActivity extends AppCompatActivity {
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
         mStory.setStoryContent(storyContentEditor.getText().toString());
         mStory.setStoryLikes(0);
-
+        mStory.setStoryAddress(addressText);
         upload2Firebase();
         Toast.makeText(this,"your story will be heard", Toast.LENGTH_SHORT).show();
         finish();
