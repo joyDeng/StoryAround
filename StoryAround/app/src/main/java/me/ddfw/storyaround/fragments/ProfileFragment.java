@@ -126,10 +126,6 @@ public class ProfileFragment extends Fragment {
                                 storageReference = storage.getReference().child("image/profileImage_"
                                         + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
                             }
-<<<<<<< HEAD
-=======
-                            //Log.d("******", "snapshot.getValue: " + mUser.getUserName() );
->>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
                         }
                         @Override
                         public void onCancelled(DatabaseError error) {
