@@ -40,20 +40,6 @@ public class MyDatabase {
         mDatabase.child(User.USER_TABLE).child(user.getUserId()).setValue(user);
     }
 
-    public void getProfile(final String userId){
-        mDatabase.child(User.USER_TABLE).child(userId).addListenerForSingleValueEvent(new ValueEventListener(){
-            @Override
-            public void onDataChange(DataSnapshot snapshot){
-                mUser = snapshot.getValue(User.class);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-
-            }
-        });
-    }
-
 
     //methods concerning Story
     public String createStory(Story story){
@@ -64,11 +50,6 @@ public class MyDatabase {
         reference.child(story.getStoryId()).setValue(story);
 
         return storyId;
-    }
-
-    public void updateStory(Story story){
-        mDatabase.child(Story.STORY_TABLE).child(story.getStoryId()).setValue(story);
-
     }
 
     public void deleteStory(final String storyId){
@@ -86,45 +67,6 @@ public class MyDatabase {
 
             }
         });
-    }
-
-    public ArrayList<Story> getStoryByLocation(LatLng northeast, LatLng southwest){
-
-//        final ArrayList<Story> stories = new ArrayList<>();
-        final HashMap<String, Story> storiesMap = new HashMap<>();
-        
-        double nLat = northeast.latitude, sLat = southwest.latitude;
-        final double nLng = northeast.longitude, sLng = southwest.longitude;
-
-        mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).startAt(sLat).endAt(nLat).
-                addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        fetchData(dataSnapshot, sLng, nLng);
-
-//                        for(DataSnapshot child : dataSnapshot.getChildren()){
-//
-//                            Story story = child.getValue(Story.class);
-//
-//                            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
-//
-//                                stories.add(story);
-//                                storiesMap.put(story.getStoryId(), story);
-//                            }
-//
-//                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-        return stories;
-//        return storiesMap;
     }
     
     //methods concerning Likes
@@ -211,23 +153,5 @@ public class MyDatabase {
 
             }
         });
-    }
-
-    private void fetchData(DataSnapshot dataSnapshot, double sLng, double nLng){
-        stories.clear();
-
-        Log.d("msg", "the size of data snapshot is: " + dataSnapshot.getChildrenCount());
-
-        for(DataSnapshot child : dataSnapshot.getChildren()){
-
-            Story story = child.getValue(Story.class);
-
-            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
-
-                stories.add(story);
-//                storiesMap.put(story.getStoryId(), story);
-            }
-
-        }
     }
 }

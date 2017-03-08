@@ -90,8 +90,6 @@ public class ProfileFragment extends Fragment {
     private MyDatabase database;
 
 
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,6 +131,7 @@ public class ProfileFragment extends Fragment {
                                 storageReference = storage.getReference().child("image/profileImage_"
                                         + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
                             }
+
                         }
                         @Override
                         public void onCancelled(DatabaseError error) {

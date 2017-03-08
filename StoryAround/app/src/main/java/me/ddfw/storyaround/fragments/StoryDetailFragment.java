@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -51,8 +52,6 @@ public class StoryDetailFragment extends DialogFragment {
     private ViewHolder viewHolder = new ViewHolder();
 
 
-
-
     public static StoryDetailFragment buildDialog(Story story){
         StoryDetailFragment dialog = new StoryDetailFragment();
         Bundle args = new Bundle();
@@ -72,7 +71,7 @@ public class StoryDetailFragment extends DialogFragment {
 
 
         final Activity parent = getActivity();
-        AlertDialog.Builder builder = new AlertDialog.Builder(parent);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(parent);
         LayoutInflater i = parent.getLayoutInflater();
         View v;
         viewHolder = new ViewHolder();
@@ -180,7 +179,45 @@ public class StoryDetailFragment extends DialogFragment {
             }
         });
 
+        Button btn_delete = (Button) v.findViewById(R.id.btn_delete);
 
+        if(userId != null){
+
+            if(story.getStoryAuthorId().equals(userId)){
+
+                btn_delete.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view){
+
+                        mdb.deleteStory(storyId);
+
+                        databaseRef.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_STORY_ID).equalTo(storyId)
+                                .addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        for(DataSnapshot child : dataSnapshot.getChildren()){
+                                            child.getRef().setValue(null);
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(DatabaseError databaseError) {
+
+                                    }
+                                });
+
+                        dismiss();
+
+                    }
+
+                });
+
+            }else
+                btn_delete.setVisibility(View.GONE);
+        }else{
+            btn_delete.setVisibility(View.GONE);
+        }
 
         viewHolder.title.setText(story.getStoryTitle());
         viewHolder.tag.setText(story.getStoryType()+"");

@@ -516,6 +516,7 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
 		public static final int abc_textfield_search_material = 0x7f020051;
+<<<<<<< HEAD
 		public static final int ic_audiotrack = 0x7f0200b5;
 		public static final int ic_audiotrack_light = 0x7f0200b6;
 		public static final int ic_cast_dark = 0x7f0200b7;
@@ -688,6 +689,180 @@ public final class R {
 	}
 	public static final class id {
 		public static final int action0 = 0x7f10014e;
+=======
+		public static final int ic_audiotrack = 0x7f0200b3;
+		public static final int ic_audiotrack_light = 0x7f0200b4;
+		public static final int ic_cast_dark = 0x7f0200b5;
+		public static final int ic_cast_disabled_light = 0x7f0200b6;
+		public static final int ic_cast_grey = 0x7f0200b7;
+		public static final int ic_cast_light = 0x7f0200b8;
+		public static final int ic_cast_off_light = 0x7f0200b9;
+		public static final int ic_cast_white = 0x7f0200ba;
+		public static final int ic_close_dark = 0x7f0200bb;
+		public static final int ic_close_light = 0x7f0200bc;
+		public static final int ic_collapse = 0x7f0200bd;
+		public static final int ic_collapse_00000 = 0x7f0200be;
+		public static final int ic_collapse_00001 = 0x7f0200bf;
+		public static final int ic_collapse_00002 = 0x7f0200c0;
+		public static final int ic_collapse_00003 = 0x7f0200c1;
+		public static final int ic_collapse_00004 = 0x7f0200c2;
+		public static final int ic_collapse_00005 = 0x7f0200c3;
+		public static final int ic_collapse_00006 = 0x7f0200c4;
+		public static final int ic_collapse_00007 = 0x7f0200c5;
+		public static final int ic_collapse_00008 = 0x7f0200c6;
+		public static final int ic_collapse_00009 = 0x7f0200c7;
+		public static final int ic_collapse_00010 = 0x7f0200c8;
+		public static final int ic_collapse_00011 = 0x7f0200c9;
+		public static final int ic_collapse_00012 = 0x7f0200ca;
+		public static final int ic_collapse_00013 = 0x7f0200cb;
+		public static final int ic_collapse_00014 = 0x7f0200cc;
+		public static final int ic_collapse_00015 = 0x7f0200cd;
+		public static final int ic_expand = 0x7f0200ce;
+		public static final int ic_expand_00000 = 0x7f0200cf;
+		public static final int ic_expand_00001 = 0x7f0200d0;
+		public static final int ic_expand_00002 = 0x7f0200d1;
+		public static final int ic_expand_00003 = 0x7f0200d2;
+		public static final int ic_expand_00004 = 0x7f0200d3;
+		public static final int ic_expand_00005 = 0x7f0200d4;
+		public static final int ic_expand_00006 = 0x7f0200d5;
+		public static final int ic_expand_00007 = 0x7f0200d6;
+		public static final int ic_expand_00008 = 0x7f0200d7;
+		public static final int ic_expand_00009 = 0x7f0200d8;
+		public static final int ic_expand_00010 = 0x7f0200d9;
+		public static final int ic_expand_00011 = 0x7f0200da;
+		public static final int ic_expand_00012 = 0x7f0200db;
+		public static final int ic_expand_00013 = 0x7f0200dc;
+		public static final int ic_expand_00014 = 0x7f0200dd;
+		public static final int ic_expand_00015 = 0x7f0200de;
+		public static final int ic_media_pause = 0x7f0200df;
+		public static final int ic_media_play = 0x7f0200e0;
+		public static final int ic_media_route_connecting_00_dark = 0x7f0200e1;
+		public static final int ic_media_route_connecting_00_light = 0x7f0200e2;
+		public static final int ic_media_route_connecting_01_dark = 0x7f0200e3;
+		public static final int ic_media_route_connecting_01_light = 0x7f0200e4;
+		public static final int ic_media_route_connecting_02_dark = 0x7f0200e5;
+		public static final int ic_media_route_connecting_02_light = 0x7f0200e6;
+		public static final int ic_media_route_connecting_03_dark = 0x7f0200e7;
+		public static final int ic_media_route_connecting_03_light = 0x7f0200e8;
+		public static final int ic_media_route_connecting_04_dark = 0x7f0200e9;
+		public static final int ic_media_route_connecting_04_light = 0x7f0200ea;
+		public static final int ic_media_route_connecting_05_dark = 0x7f0200eb;
+		public static final int ic_media_route_connecting_05_light = 0x7f0200ec;
+		public static final int ic_media_route_connecting_06_dark = 0x7f0200ed;
+		public static final int ic_media_route_connecting_06_light = 0x7f0200ee;
+		public static final int ic_media_route_connecting_07_dark = 0x7f0200ef;
+		public static final int ic_media_route_connecting_07_light = 0x7f0200f0;
+		public static final int ic_media_route_connecting_08_dark = 0x7f0200f1;
+		public static final int ic_media_route_connecting_08_light = 0x7f0200f2;
+		public static final int ic_media_route_connecting_09_dark = 0x7f0200f3;
+		public static final int ic_media_route_connecting_09_light = 0x7f0200f4;
+		public static final int ic_media_route_connecting_10_dark = 0x7f0200f5;
+		public static final int ic_media_route_connecting_10_light = 0x7f0200f6;
+		public static final int ic_media_route_connecting_11_dark = 0x7f0200f7;
+		public static final int ic_media_route_connecting_11_light = 0x7f0200f8;
+		public static final int ic_media_route_connecting_12_dark = 0x7f0200f9;
+		public static final int ic_media_route_connecting_12_light = 0x7f0200fa;
+		public static final int ic_media_route_connecting_13_dark = 0x7f0200fb;
+		public static final int ic_media_route_connecting_13_light = 0x7f0200fc;
+		public static final int ic_media_route_connecting_14_dark = 0x7f0200fd;
+		public static final int ic_media_route_connecting_14_light = 0x7f0200fe;
+		public static final int ic_media_route_connecting_15_dark = 0x7f0200ff;
+		public static final int ic_media_route_connecting_15_light = 0x7f020100;
+		public static final int ic_media_route_connecting_16_dark = 0x7f020101;
+		public static final int ic_media_route_connecting_16_light = 0x7f020102;
+		public static final int ic_media_route_connecting_17_dark = 0x7f020103;
+		public static final int ic_media_route_connecting_17_light = 0x7f020104;
+		public static final int ic_media_route_connecting_18_dark = 0x7f020105;
+		public static final int ic_media_route_connecting_18_light = 0x7f020106;
+		public static final int ic_media_route_connecting_19_dark = 0x7f020107;
+		public static final int ic_media_route_connecting_19_light = 0x7f020108;
+		public static final int ic_media_route_connecting_20_dark = 0x7f020109;
+		public static final int ic_media_route_connecting_20_light = 0x7f02010a;
+		public static final int ic_media_route_connecting_21_dark = 0x7f02010b;
+		public static final int ic_media_route_connecting_21_light = 0x7f02010c;
+		public static final int ic_media_route_connecting_22_dark = 0x7f02010d;
+		public static final int ic_media_route_connecting_22_light = 0x7f02010e;
+		public static final int ic_media_route_disabled_mono_dark = 0x7f02010f;
+		public static final int ic_media_route_off_mono_dark = 0x7f020110;
+		public static final int ic_media_route_on_00_dark = 0x7f020111;
+		public static final int ic_media_route_on_00_light = 0x7f020112;
+		public static final int ic_media_route_on_01_dark = 0x7f020113;
+		public static final int ic_media_route_on_01_light = 0x7f020114;
+		public static final int ic_media_route_on_02_dark = 0x7f020115;
+		public static final int ic_media_route_on_02_light = 0x7f020116;
+		public static final int ic_media_route_on_03_dark = 0x7f020117;
+		public static final int ic_media_route_on_03_light = 0x7f020118;
+		public static final int ic_media_route_on_04_dark = 0x7f020119;
+		public static final int ic_media_route_on_04_light = 0x7f02011a;
+		public static final int ic_media_route_on_05_dark = 0x7f02011b;
+		public static final int ic_media_route_on_05_light = 0x7f02011c;
+		public static final int ic_media_route_on_06_dark = 0x7f02011d;
+		public static final int ic_media_route_on_06_light = 0x7f02011e;
+		public static final int ic_media_route_on_07_dark = 0x7f02011f;
+		public static final int ic_media_route_on_07_light = 0x7f020120;
+		public static final int ic_media_route_on_08_dark = 0x7f020121;
+		public static final int ic_media_route_on_08_light = 0x7f020122;
+		public static final int ic_media_route_on_09_dark = 0x7f020123;
+		public static final int ic_media_route_on_09_light = 0x7f020124;
+		public static final int ic_media_route_on_10_dark = 0x7f020125;
+		public static final int ic_media_route_on_10_light = 0x7f020126;
+		public static final int ic_media_route_on_11_dark = 0x7f020127;
+		public static final int ic_media_route_on_11_light = 0x7f020128;
+		public static final int ic_media_route_on_12_dark = 0x7f020129;
+		public static final int ic_media_route_on_12_light = 0x7f02012a;
+		public static final int ic_media_route_on_13_dark = 0x7f02012b;
+		public static final int ic_media_route_on_13_light = 0x7f02012c;
+		public static final int ic_media_route_on_14_dark = 0x7f02012d;
+		public static final int ic_media_route_on_14_light = 0x7f02012e;
+		public static final int ic_media_route_on_15_dark = 0x7f02012f;
+		public static final int ic_media_route_on_15_light = 0x7f020130;
+		public static final int ic_media_route_on_16_dark = 0x7f020131;
+		public static final int ic_media_route_on_16_light = 0x7f020132;
+		public static final int ic_media_route_on_17_dark = 0x7f020133;
+		public static final int ic_media_route_on_17_light = 0x7f020134;
+		public static final int ic_media_route_on_18_dark = 0x7f020135;
+		public static final int ic_media_route_on_18_light = 0x7f020136;
+		public static final int ic_media_route_on_19_dark = 0x7f020137;
+		public static final int ic_media_route_on_19_light = 0x7f020138;
+		public static final int ic_media_route_on_20_dark = 0x7f020139;
+		public static final int ic_media_route_on_20_light = 0x7f02013a;
+		public static final int ic_media_route_on_21_dark = 0x7f02013b;
+		public static final int ic_media_route_on_21_light = 0x7f02013c;
+		public static final int ic_media_route_on_22_dark = 0x7f02013d;
+		public static final int ic_media_route_on_22_light = 0x7f02013e;
+		public static final int ic_media_route_on_light = 0x7f02013f;
+		public static final int ic_pause_dark = 0x7f020140;
+		public static final int ic_pause_light = 0x7f020141;
+		public static final int ic_play_dark = 0x7f020142;
+		public static final int ic_play_light = 0x7f020143;
+		public static final int ic_speaker_dark = 0x7f020148;
+		public static final int ic_speaker_group_dark = 0x7f020149;
+		public static final int ic_speaker_group_light = 0x7f02014a;
+		public static final int ic_speaker_light = 0x7f02014b;
+		public static final int ic_tv_dark = 0x7f02014c;
+		public static final int ic_tv_light = 0x7f02014d;
+		public static final int mr_dialog_material_background_dark = 0x7f020156;
+		public static final int mr_dialog_material_background_light = 0x7f020157;
+		public static final int mr_ic_audiotrack_light = 0x7f020158;
+		public static final int mr_ic_cast_dark = 0x7f020159;
+		public static final int mr_ic_cast_light = 0x7f02015a;
+		public static final int mr_ic_close_dark = 0x7f02015b;
+		public static final int mr_ic_close_light = 0x7f02015c;
+		public static final int mr_ic_media_route_connecting_dark = 0x7f02015d;
+		public static final int mr_ic_media_route_connecting_light = 0x7f02015e;
+		public static final int mr_ic_media_route_mono_dark = 0x7f02015f;
+		public static final int mr_ic_media_route_mono_light = 0x7f020160;
+		public static final int mr_ic_media_route_on_dark = 0x7f020161;
+		public static final int mr_ic_media_route_on_light = 0x7f020162;
+		public static final int mr_ic_pause_dark = 0x7f020163;
+		public static final int mr_ic_pause_light = 0x7f020164;
+		public static final int mr_ic_play_dark = 0x7f020165;
+		public static final int mr_ic_play_light = 0x7f020166;
+		public static final int notification_template_icon_bg = 0x7f0201a9;
+	}
+	public static final class id {
+		public static final int action0 = 0x7f10014c;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int action_bar = 0x7f1000b1;
 		public static final int action_bar_activity_content = 0x7f100000;
 		public static final int action_bar_container = 0x7f1000b0;
@@ -696,7 +871,11 @@ public final class R {
 		public static final int action_bar_subtitle = 0x7f10008f;
 		public static final int action_bar_title = 0x7f10008e;
 		public static final int action_context_bar = 0x7f1000b2;
+<<<<<<< HEAD
 		public static final int action_divider = 0x7f100152;
+=======
+		public static final int action_divider = 0x7f100150;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int action_menu_divider = 0x7f100002;
 		public static final int action_menu_presenter = 0x7f100003;
 		public static final int action_mode_bar = 0x7f1000ae;
@@ -709,9 +888,15 @@ public final class R {
 		public static final int beginning = 0x7f10005a;
 		public static final int bottom = 0x7f100035;
 		public static final int buttonPanel = 0x7f100098;
+<<<<<<< HEAD
 		public static final int cancel_action = 0x7f10014f;
 		public static final int checkbox = 0x7f1000a8;
 		public static final int chronometer = 0x7f100157;
+=======
+		public static final int cancel_action = 0x7f10014d;
+		public static final int checkbox = 0x7f1000a8;
+		public static final int chronometer = 0x7f100155;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int collapseActionView = 0x7f100061;
 		public static final int contentPanel = 0x7f10009b;
 		public static final int custom = 0x7f1000a2;
@@ -721,7 +906,11 @@ public final class R {
 		public static final int disableHome = 0x7f100021;
 		public static final int edit_query = 0x7f1000b3;
 		public static final int end = 0x7f100039;
+<<<<<<< HEAD
 		public static final int end_padder = 0x7f10015f;
+=======
+		public static final int end_padder = 0x7f10015d;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int expand_activities_button = 0x7f100092;
 		public static final int expanded_menu = 0x7f1000a7;
 		public static final int home = 0x7f100013;
@@ -729,6 +918,7 @@ public final class R {
 		public static final int icon = 0x7f100096;
 		public static final int ifRoom = 0x7f100062;
 		public static final int image = 0x7f100093;
+<<<<<<< HEAD
 		public static final int info = 0x7f100158;
 		public static final int line1 = 0x7f10015d;
 		public static final int line3 = 0x7f10015e;
@@ -760,6 +950,39 @@ public final class R {
 		public static final int mr_volume_group_list = 0x7f100142;
 		public static final int mr_volume_item_icon = 0x7f100144;
 		public static final int mr_volume_slider = 0x7f100145;
+=======
+		public static final int info = 0x7f100156;
+		public static final int line1 = 0x7f10015b;
+		public static final int line3 = 0x7f10015c;
+		public static final int listMode = 0x7f10001e;
+		public static final int list_item = 0x7f100095;
+		public static final int media_actions = 0x7f10014f;
+		public static final int middle = 0x7f10005b;
+		public static final int mr_art = 0x7f10013b;
+		public static final int mr_chooser_list = 0x7f100130;
+		public static final int mr_chooser_route_desc = 0x7f100133;
+		public static final int mr_chooser_route_icon = 0x7f100131;
+		public static final int mr_chooser_route_name = 0x7f100132;
+		public static final int mr_close = 0x7f100138;
+		public static final int mr_control_divider = 0x7f10013e;
+		public static final int mr_control_play_pause = 0x7f100144;
+		public static final int mr_control_subtitle = 0x7f100147;
+		public static final int mr_control_title = 0x7f100146;
+		public static final int mr_control_title_container = 0x7f100145;
+		public static final int mr_custom_control = 0x7f100139;
+		public static final int mr_default_control = 0x7f10013a;
+		public static final int mr_dialog_area = 0x7f100135;
+		public static final int mr_expandable_area = 0x7f100134;
+		public static final int mr_group_expand_collapse = 0x7f100148;
+		public static final int mr_media_main_control = 0x7f10013c;
+		public static final int mr_name = 0x7f100137;
+		public static final int mr_playback_control = 0x7f10013d;
+		public static final int mr_title_bar = 0x7f100136;
+		public static final int mr_volume_control = 0x7f10013f;
+		public static final int mr_volume_group_list = 0x7f100140;
+		public static final int mr_volume_item_icon = 0x7f100142;
+		public static final int mr_volume_slider = 0x7f100143;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int multiply = 0x7f10002e;
 		public static final int never = 0x7f100048;
 		public static final int none = 0x7f100023;
@@ -792,21 +1015,33 @@ public final class R {
 		public static final int src_atop = 0x7f100030;
 		public static final int src_in = 0x7f100031;
 		public static final int src_over = 0x7f100032;
+<<<<<<< HEAD
 		public static final int status_bar_latest_event_content = 0x7f100150;
+=======
+		public static final int status_bar_latest_event_content = 0x7f10014e;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int submenuarrow = 0x7f1000ab;
 		public static final int submit_area = 0x7f1000bc;
 		public static final int tabMode = 0x7f100020;
 		public static final int text = 0x7f100103;
 		public static final int text2 = 0x7f100055;
 		public static final int textSpacerNoButtons = 0x7f10009f;
+<<<<<<< HEAD
 		public static final int time = 0x7f100156;
+=======
+		public static final int time = 0x7f100154;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int title = 0x7f100097;
 		public static final int title_template = 0x7f1000a4;
 		public static final int top = 0x7f10003e;
 		public static final int topPanel = 0x7f1000a3;
 		public static final int up = 0x7f10001c;
 		public static final int useLogo = 0x7f100027;
+<<<<<<< HEAD
 		public static final int volume_item_container = 0x7f100143;
+=======
+		public static final int volume_item_container = 0x7f100141;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 		public static final int withText = 0x7f100063;
 		public static final int wrap_content = 0x7f100033;
 	}
@@ -850,6 +1085,7 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040018;
 		public static final int abc_search_view = 0x7f040019;
 		public static final int abc_select_dialog_material = 0x7f04001a;
+<<<<<<< HEAD
 		public static final int mr_chooser_dialog = 0x7f040042;
 		public static final int mr_chooser_list_item = 0x7f040043;
 		public static final int mr_controller_material_dialog_b = 0x7f040044;
@@ -867,6 +1103,25 @@ public final class R {
 		public static final int select_dialog_multichoice_material = 0x7f04005c;
 		public static final int select_dialog_singlechoice_material = 0x7f04005d;
 		public static final int support_simple_spinner_dropdown_item = 0x7f04005e;
+=======
+		public static final int mr_chooser_dialog = 0x7f040041;
+		public static final int mr_chooser_list_item = 0x7f040042;
+		public static final int mr_controller_material_dialog_b = 0x7f040043;
+		public static final int mr_controller_volume_item = 0x7f040044;
+		public static final int mr_playback_control = 0x7f040045;
+		public static final int mr_volume_control = 0x7f040046;
+		public static final int notification_media_action = 0x7f040049;
+		public static final int notification_media_cancel_action = 0x7f04004a;
+		public static final int notification_template_big_media = 0x7f04004b;
+		public static final int notification_template_big_media_narrow = 0x7f04004d;
+		public static final int notification_template_media = 0x7f040052;
+		public static final int notification_template_part_chronometer = 0x7f040054;
+		public static final int notification_template_part_time = 0x7f040055;
+		public static final int select_dialog_item_material = 0x7f04005a;
+		public static final int select_dialog_multichoice_material = 0x7f04005b;
+		public static final int select_dialog_singlechoice_material = 0x7f04005c;
+		public static final int support_simple_spinner_dropdown_item = 0x7f04005d;
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f090000;

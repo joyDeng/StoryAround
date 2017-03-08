@@ -58,12 +58,14 @@ implements View.OnClickListener{
             Toast.makeText(CreateAccountActivity.this,
                     "Invalid Email or Password",
                     Toast.LENGTH_SHORT).show();
+            return;
         }
         if (password.length() < 6) {
             //if password is less than 6 character
             Toast.makeText(CreateAccountActivity.this,
                     "Invalid  Password, Password should have at least 6 characters",
                     Toast.LENGTH_SHORT).show();
+            return;
         }
 
         else {

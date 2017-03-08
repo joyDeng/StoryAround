@@ -118,7 +118,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
 
             //TODO: need to set the story type as string!!!!
-            viewHolder.tag.setText(String.valueOf(story.getStoryType()));
+            viewHolder.tag.setText("# " + Global.STORY_TYPE[story.getStoryType()]);
             Log.d("debug", String.valueOf(story.getStoryType()));
 
             SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
@@ -126,6 +126,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
             Log.d("debug", dateFormat.format(new Date(story.getStoryDateTime())));
 
+        viewHolder.location.setText(story.getStoryAddress());
 
 
         return convertView;

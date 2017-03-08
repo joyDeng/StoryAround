@@ -52,7 +52,6 @@ import java.util.Locale;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.model.Story;
 
-
 // list of TODO
 // story type
 // story privacy
@@ -76,12 +75,16 @@ public class NewStoryActivity extends AppCompatActivity {
     public static final String STORY_IMAGE = "image";
 
     private static final String URI_INSTANCE_STATE_KEY = "saved_uri";
+    private static final String STORY_INSTANCE_STATE_KEY = "saved_story";
     private Uri tempImgUri;
     private Uri firebaseUri;
     private ImageView storyImageView;
     private String addressText = "";
 
     private boolean isNewImage;
+    EditText storyTitleEditor;
+    EditText storyContentEditor;
+    Spinner storyTypeSpinner;
 
 
 
@@ -94,20 +97,25 @@ public class NewStoryActivity extends AppCompatActivity {
 
         // create the button listener
         CreateStoryListener();
-        tempImgUri = null;
+        storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
+        storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
+        storyTypeSpinner = (Spinner) findViewById(R.id.story_type);
 
         // set up the database
         database = new MyDatabase();
-        mStory = new Story();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference().child("image/storyImage_"
                 + user.getUid() + Calendar.getInstance().getTimeInMillis());
 
+        if (savedInstanceState == null) {
+            mStory = new Story();
+            isNewImage = false;
+        }
+
         // get the location pass from other activity if exists
-        if (getIntent().getExtras() != null ) {
+        if (getIntent().getExtras() != null) {
             Double lat = getIntent().getExtras().getDouble(STORY_LAT);
             Double lng = getIntent().getExtras().getDouble(STORY_LNG);
             mStory.setStoryLat(lat);
@@ -125,7 +133,20 @@ public class NewStoryActivity extends AppCompatActivity {
 
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
+        mStory.setStoryTitle(storyTitleEditor.getText().toString());
+        mStory.setStoryContent(storyContentEditor.getText().toString());
         outState.putParcelable(URI_INSTANCE_STATE_KEY, this.tempImgUri);
+        outState.putParcelable(STORY_INSTANCE_STATE_KEY, this.mStory);
+        outState.putBoolean("isNewImage", isNewImage);
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mStory = savedInstanceState.getParcelable(STORY_INSTANCE_STATE_KEY);
+        tempImgUri = savedInstanceState.getParcelable(URI_INSTANCE_STATE_KEY);
+        isNewImage = savedInstanceState.getBoolean("isNewImage");
+        loadSnap();
     }
 
 
@@ -167,6 +188,8 @@ public class NewStoryActivity extends AppCompatActivity {
         }catch(SecurityException e) {
             checkPermissions();
         }
+        catch (Exception e) {
+        }
     }
 
     // create the button listener, onClick
@@ -179,8 +202,6 @@ public class NewStoryActivity extends AppCompatActivity {
             }
         });
         // mStory type
-        // TODO
-        // mStory privacy
         // TODO
         // save button
         Button btnSave = (Button) findViewById(R.id.btnSave);
@@ -229,15 +250,12 @@ public class NewStoryActivity extends AppCompatActivity {
 
     // save the story when on click
     private void saveStory() {
-        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
-        EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
-        Spinner storyTypeSpinner = (Spinner) findViewById(R.id.story_type);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
         mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
         mStory.setStoryMode(0);//TODO
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
-        // mStory.setStoryImgURL("" + firebaseUri);
+        //mStory.setStoryImgURL(tempImgUri+"");
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
         mStory.setStoryContent(storyContentEditor.getText().toString());
         mStory.setStoryLikes(0);
@@ -295,7 +313,8 @@ public class NewStoryActivity extends AppCompatActivity {
 
     private void loadSnap() {
         if (tempImgUri != null) {
-            isNewImage = false;
+            storyImageView.setImageURI(null);
+            storyImageView.setPadding(0,0,0,0);
             storyImageView.setImageURI(tempImgUri);
         }
         else {

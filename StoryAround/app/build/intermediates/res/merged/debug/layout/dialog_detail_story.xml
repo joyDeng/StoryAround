@@ -4,6 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="500dp">
     <ScrollView
+<<<<<<< HEAD
+=======
+        android:id="@+id/scrollView"
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
         android:layout_width="match_parent"
         android:layout_height="500dp">
 
@@ -130,6 +134,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/text_view_padding"/>
+<<<<<<< HEAD
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
+=======
+ </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_below="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:background="@color/color2"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+>>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
