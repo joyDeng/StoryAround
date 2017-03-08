@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },

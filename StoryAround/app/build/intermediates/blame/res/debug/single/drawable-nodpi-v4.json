@@ -6,5 +6,13 @@
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\cast_album_art_placeholder_large.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable-nodpi-v4\\cast_album_art_placeholder_large.png"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\cast_album_art_placeholder.png",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\drawable-nodpi-v4\\cast_album_art_placeholder.png"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\cast_album_art_placeholder_large.png",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\drawable-nodpi-v4\\cast_album_art_placeholder_large.png"
     }
 ]

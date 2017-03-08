@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]
