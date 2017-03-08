@@ -89,8 +89,6 @@ public class ProfileFragment extends Fragment {
     private MyDatabase database;
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView;
