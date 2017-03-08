@@ -3,6 +3,8 @@ package me.ddfw.storyaround.fragments;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +38,8 @@ public class LikesFragment extends Fragment {
     private ListView list;
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
 
+//    private Handler handler;
+
     // private ArrayList<Story> data;
     // private static ArrayAdapter<Story> mAdapter; // TODO
 
@@ -43,6 +47,8 @@ public class LikesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_likes, container, false);
         String userId = null;
+
+//        handler = null;
 
         //get current user id
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
@@ -57,6 +63,7 @@ public class LikesFragment extends Fragment {
 //        //initialize adapter
         storyListAdapter = new StoryListAdapter(getActivity(), stories);
         list.setAdapter(storyListAdapter);
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -68,43 +75,44 @@ public class LikesFragment extends Fragment {
 
         //query story id
         if(userId!=null)
-        databaseRef.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_USER_ID).
-                equalTo(userId).addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String storyId = (String)dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
+            databaseRef.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_USER_ID).
+                    equalTo(userId).addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    String storyId = (String)dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
 
-                insertStory(storyId);
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-                String id = (String) dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
-                for (Story s: stories){
-                    if(s.getStoryId().equals(id)){
-                        stories.remove(s);
-                        break;
-                    }
+                    insertStory(storyId);
                 }
 
-                storyListAdapter.notifyDataSetChanged();
-            }
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                }
 
-            }
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                    String id = (String) dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
+                    for (Story s: stories){
+                        if(s.getStoryId().equals(id)){
+                            stories.remove(s);
+                            break;
+                        }
+                    }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                    storyListAdapter.notifyDataSetChanged();
 
-            }
-        });
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
 
         return rootView;
     }
@@ -117,11 +125,18 @@ public class LikesFragment extends Fragment {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Log.d("ADD",(String)dataSnapshot.child(Story.KEY_STORY_TITLE).getValue());
                         Story story = dataSnapshot.getValue(Story.class);
+<<<<<<< HEAD
                         //storyListAdapter.insert(story,0);
                         //storyListAdapter.notifyDataSetChanged();
                         //stories.add(story);
                         storyListAdapter.add(story);
                         //storyListAdapter.notifyDataSetChanged();
+=======
+
+                        storyListAdapter.insert(story,0);
+                        storyListAdapter.notifyDataSetChanged();
+
+>>>>>>> origin/xinbeilike
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {

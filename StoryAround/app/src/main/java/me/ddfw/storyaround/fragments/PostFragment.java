@@ -3,8 +3,13 @@ package me.ddfw.storyaround.fragments;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -83,8 +88,12 @@ public class PostFragment extends Fragment{
 
     public void onSaveClicked() {
         //write test data inside:
+<<<<<<< HEAD
         Toast.makeText(getActivity().getApplicationContext(),
                 "You have saved your location", Toast.LENGTH_SHORT).show();
+=======
+        markLocation();
+>>>>>>> origin/xinbeilike
         checkPermission(getActivity());
     }
 
@@ -118,6 +127,44 @@ public class PostFragment extends Fragment{
         }else{
             writeRandomStory();
         }
+
+    }
+
+    private void markLocation(){
+
+        String key = "my_shared_preferences";
+
+        SharedPreferences mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor meditor = mprefs.edit();
+        meditor.clear();
+
+        LocationManager locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        try{
+
+            Criteria criteria = new Criteria();
+            criteria.setAccuracy(Criteria.ACCURACY_FINE);
+            String provider = locationManager.getBestProvider(criteria, true);
+            final Location last = locationManager.getLastKnownLocation(provider);
+
+            if(last != null){
+                double lat = last.getLatitude();
+                double lng = last.getLongitude();
+
+                meditor.putFloat("lat", (float) lat);
+                meditor.putFloat("lng", (float) lng);
+
+                meditor.commit();
+
+                Toast.makeText(getActivity(), "your location is saved", Toast.LENGTH_SHORT).show();
+            }else{
+
+                Toast.makeText(getActivity(), "your location can not be detected", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }catch(SecurityException e){}
 
     }
 

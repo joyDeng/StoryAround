@@ -30,6 +30,7 @@ public class Story implements Parcelable {
     public static final String KEY_STORY_DATE_TIME = "storyDateTime";
     public static final String KEY_STORY_MODE = "storyMode";
     public static final String KEY_STORY_LIKES = "storyLikes";
+    public static final String KEY_STORY_ADDRESS = "storyAddress";
 
     private String storyId;
     private double storyLat;
@@ -42,13 +43,14 @@ public class Story implements Parcelable {
     private Long storyDateTime;
     private int storyMode;
     private int storyLikes;
+    private String storyAddress;
 
     public Story(){}
 
     public Story(double storyLat, double storyLng,
                  String storyImgURL, String storyContent, String storyAuthorId,
                  String storyTitle, int storyType, Long storyDateTime,
-                 int storyMode, int storyLikes){
+                 int storyMode, int storyLikes, String storyAddress){
 
         this.storyLat = storyLat;
         this.storyLng = storyLng;
@@ -60,6 +62,8 @@ public class Story implements Parcelable {
         this.storyDateTime = storyDateTime;
         this.storyMode = storyMode;
         this.storyLikes = storyLikes;
+        this.storyAddress = storyAddress;
+
     }
 
     public String getStoryId(){return storyId;}
@@ -106,6 +110,10 @@ public class Story implements Parcelable {
 
     public void setStoryLikes(int storyLikes){this.storyLikes = storyLikes;}
 
+    public String getStoryAddress(){return storyAddress;}
+
+    public void setStoryAddress(String storyAddress){this.storyAddress = storyAddress;}
+
 
     @Override
     public int describeContents() {
@@ -125,6 +133,7 @@ public class Story implements Parcelable {
         dest.writeValue(this.storyDateTime);
         dest.writeInt(this.storyMode);
         dest.writeInt(this.storyLikes);
+        dest.writeString(this.storyAddress);
     }
 
     protected Story(Parcel in) {
@@ -139,6 +148,7 @@ public class Story implements Parcelable {
         this.storyDateTime = (Long) in.readValue(Long.class.getClassLoader());
         this.storyMode = in.readInt();
         this.storyLikes = in.readInt();
+        this.storyAddress = in.readString();
     }
 
     public static final Parcelable.Creator<Story> CREATOR = new Parcelable.Creator<Story>() {
