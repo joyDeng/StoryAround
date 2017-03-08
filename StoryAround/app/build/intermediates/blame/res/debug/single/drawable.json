@@ -550,5 +550,9 @@
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_play.xml",
         "source": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\drawable\\cast_ic_mini_controller_play.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder.png",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\folder.png"
     }
 ]

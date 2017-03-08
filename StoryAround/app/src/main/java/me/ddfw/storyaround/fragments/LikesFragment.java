@@ -43,6 +43,7 @@ public class LikesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_likes, container, false);
         String userId = null;
+        setHasOptionsMenu(false);
 
         //get current user id
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){

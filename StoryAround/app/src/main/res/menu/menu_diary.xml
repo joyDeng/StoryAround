@@ -5,9 +5,8 @@
     <item
         android:id="@+id/menu_delete"
         android:orderInCategory="100"
-        android:icon="@drawable/map2"
+        android:icon="@drawable/folder"
         android:title=""
-        android:onClick="onClickDelete"
         app:showAsAction="ifRoom" />
 
 </menu>
