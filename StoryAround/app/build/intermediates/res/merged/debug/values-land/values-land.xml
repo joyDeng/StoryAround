@@ -10,6 +10,7 @@
     <dimen name="cast_expanded_controller_ad_layout_width">240dp</dimen>
     <dimen name="cast_expanded_controller_margin_between_seek_bar_and_control_buttons">8dp</dimen>
     <dimen name="cast_expanded_controller_margin_between_status_text_and_seek_bar">8dp</dimen>
+    <dimen name="crop__bar_height">48dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_height">61dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">18dp</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">132dp</dimen>

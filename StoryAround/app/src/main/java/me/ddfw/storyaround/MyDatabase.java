@@ -3,24 +3,21 @@ package me.ddfw.storyaround;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import me.ddfw.storyaround.model.*;
+import me.ddfw.storyaround.model.Likes;
+import me.ddfw.storyaround.model.Story;
+import me.ddfw.storyaround.model.User;
 
-/**
- * Created by xinbeifu on 3/4/17.
- */
+
 
 public class MyDatabase {
 
@@ -28,6 +25,7 @@ public class MyDatabase {
 
     private int ADD_LIKE = 0;
     private int REMOVE_LIKE = 1;
+    public User mUser;
 
     public static ArrayList<Story> stories = new ArrayList<>();
 
@@ -43,11 +41,10 @@ public class MyDatabase {
     }
 
     public void getProfile(final String userId){
-
         mDatabase.child(User.USER_TABLE).child(userId).addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot snapshot){
-                User user = snapshot.getValue(User.class);
+                mUser = snapshot.getValue(User.class);
             }
 
             @Override
@@ -55,33 +52,12 @@ public class MyDatabase {
 
             }
         });
-
     }
 
-    public void isFirstLogin(String userEmail){
-
-        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).orderByChild(User.KEY_USER_EMAIL).equalTo(userEmail).
-                addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        if(dataSnapshot.exists()){
-                            //do something
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-    }
 
     //methods concerning Story
     public String createStory(Story story){
-
+        Log.d("DEBUG","create now");
         DatabaseReference reference = mDatabase.child(Story.STORY_TABLE);
         String storyId = reference.push().getKey();
         story.setStoryId(storyId);
@@ -183,6 +159,26 @@ public class MyDatabase {
 
         updateStoryLikes(REMOVE_LIKE, like.getStoryId());
     }
+
+    /*public void unlike(String userId, String storyId){
+
+        mDatabase.child(Likes.LIKES_TABLE).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.hasChild(like.getLikeId())){
+                    dataSnapshot.getRef().child(like.getLikeId()).setValue(null);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        updateStoryLikes(REMOVE_LIKE, like.getStoryId());
+    }*/
 
     private void updateStoryLikes(final int code, final String storyId){
 

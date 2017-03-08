@@ -20,22 +20,24 @@
             android:layout_height="100dp"
             android:layout_marginBottom="10dp"
             android:padding="10dp"
-            android:background="@color/color5"
+            android:background="@color/color2"
             android:onClick="onStartClick"
             android:text="Post your story now"
+            android:textColor="@color/color4"
             android:textAllCaps="false"
-            android:drawableLeft="@drawable/post" />
+            android:drawableLeft="@drawable/write" />
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:padding="10dp"
-            android:background="@color/color5"
+            android:background="@color/color2"
             android:onClick="onSaveClick"
+            android:textColor="@color/color4"
             android:text="Save your location, post story later"
             android:textAllCaps="false"
-            android:drawableLeft="@drawable/map" />
+            android:drawableRight="@drawable/world_location" />
 
 
 

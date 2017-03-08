@@ -8,16 +8,16 @@ package com.ramotion.foldingcell;
 
 public final class R {
 	public static final class attr {
-		public static final int additionalFlipsCount = 0x7f010117;
-		public static final int animationDuration = 0x7f010116;
-		public static final int backSideColor = 0x7f010115;
-		public static final int cameraHeight = 0x7f010118;
+		public static final int additionalFlipsCount = 0x7f01011c;
+		public static final int animationDuration = 0x7f01011b;
+		public static final int backSideColor = 0x7f01011a;
+		public static final int cameraHeight = 0x7f01011d;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f090076;
+		public static final int app_name = 0x7f09007b;
 	}
 	public static final class styleable {
-		public static final int[] FoldingCell = { 0x7f010115, 0x7f010116, 0x7f010117, 0x7f010118 };
+		public static final int[] FoldingCell = { 0x7f01011a, 0x7f01011b, 0x7f01011c, 0x7f01011d };
 		public static final int FoldingCell_additionalFlipsCount = 2;
 		public static final int FoldingCell_animationDuration = 1;
 		public static final int FoldingCell_backSideColor = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navegar para a página inicial"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
@@ -19,6 +19,11 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartilhar com %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string name="crop__cancel" ns1:ignore="ButtonCase">CANCELAR</string>
+    <string name="crop__done">FINALIZADO</string>
+    <string name="crop__pick_error">Sem fontes de imagem disponíveis</string>
+    <string name="crop__saving">Salvando imagem…</string>
+    <string name="crop__wait">Por favor, aguarde…</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Botão Transmitir"</string>
     <string msgid="6349900579507521956" name="mr_chooser_searching">"Localizando dispositivos"</string>
     <string msgid="414301941546135990" name="mr_chooser_title">"Transmitir para"</string>

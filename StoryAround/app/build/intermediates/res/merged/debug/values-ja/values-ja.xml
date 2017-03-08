@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"ホームへ移動"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s、%2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s、%2$s、%3$s"</string>
@@ -78,6 +78,11 @@
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Googleにログイン"</string>
     <string msgid="6155048007205742679" name="create_calendar_message">"広告がカレンダーの予定を作成することを許可しますか？"</string>
     <string msgid="7967007864778154790" name="create_calendar_title">"カレンダーの予定の作成"</string>
+    <string name="crop__cancel" ns2:ignore="ButtonCase">キャンセル</string>
+    <string name="crop__done">決定</string>
+    <string name="crop__pick_error">画像が見つかりません</string>
+    <string name="crop__saving">保存中…</string>
+    <string name="crop__wait">お待ちください…</string>
     <string msgid="4722375419392727435" name="debug_menu_ad_information">"広告の情報"</string>
     <string msgid="1605938743055376690" name="debug_menu_creative_preview">"クリエイティブのプレビュー"</string>
     <string msgid="2039274714455389140" name="debug_menu_title">"デバッグモードの選択"</string>

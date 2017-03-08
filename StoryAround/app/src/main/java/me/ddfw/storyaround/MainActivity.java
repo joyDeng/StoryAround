@@ -3,35 +3,39 @@ package me.ddfw.storyaround;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-
-import com.google.android.gms.maps.model.LatLng;
-
-import java.util.ArrayList;
-
-import me.ddfw.storyaround.model.Likes;
-import me.ddfw.storyaround.model.Story;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import me.ddfw.storyaround.Authen.ChooserActivity;
 import me.ddfw.storyaround.fragments.DiaryFragment;
 import me.ddfw.storyaround.fragments.LikesFragment;
 import me.ddfw.storyaround.fragments.MapFragment;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.fragments.ProfileFragment;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity{
+    private static final String TAG = "MainActivity";
     private static final int PERMISSIONS_REQUEST = 1;
 
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
@@ -44,20 +48,53 @@ public class MainActivity extends AppCompatActivity {
     private DiaryFragment diaryFragment;
     private ProfileFragment profileFragment;
 
+    //comments
+    //declare_auth
+    private FirebaseAuth mAuth;
+
+    //declare_auth_listener
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
+    //set a context
+    private Context mcontext = this;
+
+    //declare_login_status
+    private String mLoginMethod = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Likes likes = new Likes("1213", "-KeROcyUJUuqfCccbXhH", (long) 2017);
-
-        MyDatabase myDatabase = new MyDatabase();
-
-//        myDatabase.like(likes);
-
+        checkUser();
         checkPermission(this);
         pageSetup();
     }
+
+    public void checkUser(){
+
+       mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
+        // initialize_auth
+        mAuth = FirebaseAuth.getInstance();
+
+        if(mLoginMethod == null) mLoginMethod = "";
+
+        // START:auth_state_listener
+        mAuthListener = new FirebaseAuth.AuthStateListener(){
+
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user != null || !mLoginMethod.equals("") ){
+                    // User signed in
+                    //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
+                }else{
+                    //Log.d(TAG, "onAuthStateChanged:signed_out:");
+                    startChooser();
+                }
+            }
+        };
+    }
+
 
     public void pageSetup(){
         mapFragment = new MapFragment();
@@ -79,14 +116,43 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOffscreenPageLimit(5);
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
+
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+            @Override
+            public void onPageSelected(int position) {
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
     }
 
+    @Override
+    public void onStart(){
+        super.onStart();
+        //addAuthListener to mAuth
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        //removeAuthListener from mAuth
+        if(mAuthListener != null){
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
 
     public void checkPermission(Activity activity){
         if(Build.VERSION.SDK_INT < 23) return;
@@ -141,6 +207,27 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.add("test");
+        return true;
+    }
+
+    // START: set_login_method
+    public void setmLoginMethod(String string){
+        mLoginMethod = string;
+    }
+    // END: set_login_method
+
+    // START: Turn to login page
+    public void startChooser(){
+        Intent intent = new Intent(mcontext,ChooserActivity.class);
+        intent.putExtra(Global.LOGIN_METHOD,mLoginMethod);
+        startActivity(intent);
+        finish();
+    }
+    // END: Turn to login page
 
 }
 

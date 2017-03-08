@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Vai alla home page"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
@@ -78,6 +78,11 @@
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Accedi con Google"</string>
     <string msgid="6155048007205742679" name="create_calendar_message">"Consentire ad AdMob di creare un evento di calendario?"</string>
     <string msgid="7967007864778154790" name="create_calendar_title">"Crea evento di calendario"</string>
+    <string name="crop__cancel" ns2:ignore="ButtonCase">ANNULLA</string>
+    <string name="crop__done">ACCETTA</string>
+    <string name="crop__pick_error">Nessuna immagine disponibile</string>
+    <string name="crop__saving">Salvataggio immagine…</string>
+    <string name="crop__wait">Attendere prego…</string>
     <string msgid="4722375419392727435" name="debug_menu_ad_information">"Informazioni sull\'annuncio"</string>
     <string msgid="1605938743055376690" name="debug_menu_creative_preview">"Anteprima creatività"</string>
     <string msgid="2039274714455389140" name="debug_menu_title">"Seleziona una modalità di debug"</string>

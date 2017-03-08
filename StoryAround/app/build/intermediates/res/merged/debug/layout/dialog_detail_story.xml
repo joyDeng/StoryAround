@@ -3,61 +3,139 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="500dp">
-    <LinearLayout
-        android:layout_height="500dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/story_date"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:text="DEC 12th"
-            android:textSize="22sp"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:background="@color/color2"/>
+        android:layout_height="500dp">
+
         <LinearLayout
+            android:layout_height="500dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="8"
-            android:weightSum="15">
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/story_title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:textSize="18sp"
-                android:layout_weight="1"/>
-            <TextView
-                android:id="@+id/story_user"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="DEC 12th"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="@dimen/text_view_padding"
+                android:background="@color/color2"/>
+            <LinearLayout
+                android:padding="8px"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/heart2"
+                        android:scaleType="fitCenter"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/story_user"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/heart2"
+                        android:scaleType="fitCenter"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/story_tag"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/like_layout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView
+
+                        android:id="@+id/heart_icon"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/heart2"
+                        android:scaleType="fitCenter"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/story_like"
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <ImageView
+                    android:id="@+id/location_icon"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/map"
+                    android:tint="#000000"
+                    android:scaleType="fitCenter"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"/>
+                <TextView
+                    android:id="@+id/story_location"
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/story_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_weight="1"/>
+                android:scaleType="fitCenter"/>
             <TextView
-                android:id="@+id/story_tag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_weight="1"/>
-            <TextView
-                android:id="@+id/story_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_weight="1"/>
-            <WebView
                 android:id="@+id/story_content"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="20"></WebView>
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_view_padding"/>
+
+
+
 
         </LinearLayout>
 
-    </LinearLayout>
+
+    </ScrollView>
+
+
+
 
 
 

@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">StoryAround</string>
     <string name="google_maps_api_key">AIzaSyByAxgEAHlP4eNfBeTYeLZKEcgBTvjcU_o</string>
+
+
+    <!--Authentication-->
+    <!--chooser-->
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="button_create_account">Create Account</string>
+    <string name="button_sign_in">Sign In</string>
+
+    <!--Fragment Profile Request Login-->
+    <string name="login_requet">You need to Login</string>
+    <string name="button_login">Sign In</string>
+
+    <!--WebClientId-->
+    <string name="web_client_id">271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com</string>
+
+    <!--CreateAccount-->
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_none">None</string>
+
 </resources>

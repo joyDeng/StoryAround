@@ -9,8 +9,17 @@
 <item>@id/cast_button_type_empty</item>
 <item>@id/cast_button_type_play_pause_toggle</item>
 </array>
+    <string-array name="story_type">
+        <item>-- Select your story type --</item>
+        <item>type 0</item>
+        <item>type 1</item>
+        <item>type 2</item>
+        <item>type 3</item>
+        <item>type 4</item>
+    </string-array>
     <attr format="reference" name="MediaRouteControllerWindowBackground"/>
     <attr format="reference" name="castExpandedControllerToolbarStyle"/>
+    <attr format="reference" name="cropImageStyle"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -40,19 +49,17 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <color name="Loginbutton">#edf4b7</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <item name="android_default_primary" type="color">#009688</item>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <item name="blue" type="color">#2b6dad</item>
-    <color name="blue_overlay" type="color">#803b5999</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -78,9 +85,6 @@
     <color name="color4">#f0b49e</color>
     <color name="color5">#f7e4be</color>
     <color name="color6">#fff5e1</color>
-    <color name="colorAccent">#FFCDD2</color>
-    <color name="colorPrimary">#C62828</color>
-    <color name="colorPrimaryDark">#B71C1C</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -89,14 +93,11 @@
     <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <color name="crop__selector_pressed">#1a000000</color>
     <color name="darkGray">#616161</color>
-    <item name="darkblue" type="color">#005099 </item>
-    <item name="darkertext" type="color">#333</item>
-    <item name="darkgreen" type="color">#2DA44B</item>
-    <item name="darkorange" type="color">#f3761c</item>
-    <item name="darkpurple" type="color">#FF9933CC</item>
-    <item name="darkred" type="color">#B71C1C</item>
-    <item name="darktext" type="color">#5E5E5E</item>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -112,14 +113,10 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <item name="f5f5f5" type="color">#f5f5f5</item>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <item name="green" type="color">#99CC00</item>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <item name="lightBackground" type="color">#eee</item>
-    <item name="lighttext" type="color">#999</item>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -135,13 +132,6 @@
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
-    <item name="orange" type="color">#FFFF8800</item>
-    <color name="overlay" type="color">#80EE3124</color>
-    <color name="overlay_light" type="color">#80ffffff</color>
-    <color name="petron_primary" type="color">#202b68</color>
-    <color name="petron_secondary" type="color">#218EDD</color>
-    <color name="petron_tertiary" type="color">#EE3124</color>
-    <item name="pink" type="color">#B81365</item>
     <color name="place_autocomplete_prediction_primary_text">#212121</color>
     <color name="place_autocomplete_prediction_primary_text_highlight">#757575</color>
     <color name="place_autocomplete_prediction_secondary_text">#757575</color>
@@ -156,8 +146,6 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <item name="purple" type="color">#FFAA66CC</item>
-    <item name="red" type="color">#FFFF4444</item>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -180,7 +168,6 @@
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
     <color name="white">#ffffff</color>
-    <color name="yellow" type="color">#FFD72D</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
             <enum name="normal" value="0"/>
@@ -380,6 +367,7 @@
             <flag name="all" value="0x77"/>
         </attr></declare-styleable>
     <declare-styleable name="Corpus"><attr format="string" name="corpusId"/><attr format="string" name="corpusVersion"/><attr format="string" name="contentProviderUri"/><attr format="boolean" name="trimmable"/><attr format="string" name="schemaOrgType"/><attr format="boolean" name="semanticallySearchable"/><attr format="integer" name="documentMaxAgeSecs"/><attr format="boolean" name="perAccountTemplate"/></declare-styleable>
+    <declare-styleable name="CropImageView"><attr format="reference|color" name="highlightColor"/><attr format="boolean" name="showThirds"/><attr format="boolean" name="showCircle"/><attr name="showHandles"><enum name="changing" value="0"/><enum name="always" value="1"/><enum name="never" value="2"/></attr></declare-styleable>
     <declare-styleable name="CustomCastTheme"><attr format="reference" name="castIntroOverlayStyle"/><attr format="reference" name="castMiniControllerStyle"/><attr format="reference" name="castExpandedControllerStyle"/></declare-styleable>
     <declare-styleable name="CustomWalletTheme"><attr name="windowTransitionStyle">
 <enum name="slide" value="1"/>
@@ -676,7 +664,6 @@
 <enum name="monochrome" value="2"/>
 
 </attr></declare-styleable>
-    <declare-styleable name="editor"><attr format="string" name="render_type"/><attr format="string" name="placeholder"/></declare-styleable>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -753,9 +740,6 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="app_bar_height">230dp</dimen>
-    <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="body_text">14sp</dimen>
     <dimen name="cast_expanded_controller_ad_background_layout_height">350dp</dimen>
     <dimen name="cast_expanded_controller_ad_background_layout_width">-1px</dimen>
     <dimen name="cast_expanded_controller_ad_layout_height">350dp</dimen>
@@ -785,6 +769,7 @@
     <dimen name="cast_notification_image_size">64dp</dimen>
     <dimen name="cast_tracks_chooser_dialog_no_message_text_size">18sp</dimen>
     <dimen name="cast_tracks_chooser_dialog_row_text_size">18sp</dimen>
+    <dimen name="crop__bar_height">56dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -825,8 +810,6 @@
     <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <dimen name="extra_large_text">18sp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -837,16 +820,12 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
-    <dimen name="large_text">13sp</dimen>
-    <dimen name="larger_text">16sp</dimen>
     <dimen name="mr_controller_volume_group_list_item_height">68dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">24dp</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">288dp</dimen>
     <dimen name="mr_controller_volume_group_list_padding_top">16dp</dimen>
     <dimen name="mr_dialog_fixed_width_major">320dp</dimen>
     <dimen name="mr_dialog_fixed_width_minor">320dp</dimen>
-    <dimen name="nav_header_height">160dp</dimen>
-    <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>
@@ -872,14 +851,14 @@
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
-    <dimen name="small_text">11sp</dimen>
-    <dimen name="text_margin">16dp</dimen>
+    <dimen name="text_view_padding">8dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="amu_text" type="id"/>
     <item name="cast_button_type_closed_caption" type="id"/>
     <item name="cast_button_type_custom" type="id"/>
     <item name="cast_button_type_empty" type="id"/>
@@ -954,6 +933,9 @@
     <string name="app_name">StoryAround</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="button_create_account">Create Account</string>
+    <string name="button_login">Sign In</string>
+    <string name="button_sign_in">Sign In</string>
     <string name="cast_ad_label">Ad</string>
     <string name="cast_casting_to_device">Casting to %1$s</string>
     <string name="cast_closed_captions">Closed captions</string>
@@ -1015,6 +997,11 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
+    <string name="crop__cancel" ns2:ignore="ButtonCase">CANCEL</string>
+    <string name="crop__done">DONE</string>
+    <string name="crop__pick_error">No image sources available</string>
+    <string name="crop__saving">Saving picture…</string>
+    <string name="crop__wait">Please wait…</string>
     <string name="debug_menu_ad_information">Ad Information</string>
     <string name="debug_menu_creative_preview">Creative Preview</string>
     <string name="debug_menu_title">Select a Debug Mode</string>
@@ -1022,22 +1009,13 @@
     <string name="decline">Decline</string>
     <string name="default_web_client_id" translatable="false">613225563492-imi1100rs3rr1k8c1avg6olarj6tpphh.apps.googleusercontent.com</string>
     <string name="firebase_database_url" translatable="false">https://my-map-project-157915.firebaseio.com</string>
-    <string name="fontFamily__casual">casual</string>
-    <string name="fontFamily__cursive">cursive</string>
-    <string name="fontFamily__monospace">monospace</string>
-    <string name="fontFamily__sans_serif">sans-serif</string>
-    <string name="fontFamily__sans_serif_condensed">sans-serif-condensed</string>
-    <string name="fontFamily__sans_serif_light">sans-serif-light</string>
-    <string name="fontFamily__sans_serif_medium">sans-serif-medium</string>
-    <string name="fontFamily__sans_serif_thin">sans-serif-thin</string>
-    <string name="fontFamily__serif">serif</string>
-    <string name="fontFamily__serif_monospace">serif-monospace</string>
     <string name="gcm_defaultSenderId" translatable="false">613225563492</string>
     <string name="google_api_key" translatable="false">AIzaSyDhzS8XKvnw4MpNAvTKxJkpjcy3uTDCcls</string>
     <string name="google_app_id" translatable="false">1:613225563492:android:b56dde4036bef714</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDhzS8XKvnw4MpNAvTKxJkpjcy3uTDCcls</string>
     <string name="google_maps_api_key">AIzaSyByAxgEAHlP4eNfBeTYeLZKEcgBTvjcU_o</string>
     <string name="google_storage_bucket" translatable="false">my-map-project-157915.appspot.com</string>
+    <string name="login_requet">You need to Login</string>
     <string name="mr_button_content_description">Cast button</string>
     <string name="mr_chooser_searching">Finding devices</string>
     <string name="mr_chooser_title">Cast to</string>
@@ -1061,6 +1039,9 @@
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="radio_female">Female</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_none">None</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -1068,7 +1049,10 @@
     <string name="tagmanager_preview_dialog_button">Continue</string>
     <string name="tagmanager_preview_dialog_message">Preview mode updated.</string>
     <string name="tagmanager_preview_dialog_title">Preview</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="web_client_id">271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1086,17 +1070,6 @@
         <item name="android:textColor">@color/color3</item>
         <item name="android:itemBackground">@color/color6</item>
     </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme.LoginActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -2163,18 +2136,46 @@
 <item name="castPlayButtonDrawable">@drawable/cast_ic_mini_controller_play</item>
 <item name="castShowImageThumbnail">true</item>
 </style>
+    <style name="Crop"/>
+    <style name="Crop.ActionButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/crop__selectable_background</item>
+    </style>
+    <style name="Crop.ActionButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">20dp</item> <!-- Offsets left drawable -->
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/crop__button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Crop.ActionButtonText.Cancel">
+        <item name="android:drawableLeft">@drawable/crop__ic_cancel</item>
+        <item name="android:text">@string/crop__cancel</item>
+    </style>
+    <style name="Crop.ActionButtonText.Done">
+        <item name="android:drawableLeft">@drawable/crop__ic_done</item>
+        <item name="android:text">@string/crop__done</item>
+    </style>
+    <style name="Crop.DoneCancelBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/crop__bar_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:divider">@drawable/crop__divider</item>
+        <item name="android:showDividers" ns2:ignore="NewApi">middle</item>
+        <item name="android:dividerPadding" ns2:ignore="NewApi">12dp</item>
+        <item name="android:background">@color/crop__button_bar</item>
+    </style>
     <style name="CustomCastTheme">
 <item name="castExpandedControllerStyle">@style/CastExpandedController</item>
 <item name="castIntroOverlayStyle">@style/CastIntroOverlay</item>
 <item name="castMiniControllerStyle">@style/CastMiniController</item>
 </style>
-    <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorControlNormal">@color/white</item>
-        <item name="colorControlActivated">@color/white</item>
-        <item name="colorControlHighlight">@color/white</item>
-        <item name="colorAccent">@color/white</item>
-        <item name="android:textColorHint">@color/white</item>
-    </style>
     <style name="EditorTheme" parent="AppTheme">
         <item name="android:textColorPrimary">@color/darkGray</item>
         <item name="android:textColorSecondary">@color/color3</item>
@@ -2846,7 +2847,16 @@
         <item name="android:contentDescription">@string/mr_button_content_description</item>
         <item name="externalRouteEnabledDrawable">@drawable/mr_ic_media_route_mono_dark</item>
     </style>
-    <style name="customLayoutStyle">
-        <item name="android:background">#f2f2f2</item>
+    <style name="amu_Bubble.TextAppearance.Dark" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff7f7f7f</item>
+    </style>
+    <style name="amu_Bubble.TextAppearance.Light" parent="amu_Bubble.TextAppearance.Dark">
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+    <style name="amu_ClusterIcon.TextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">#ffeeeeee</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>
