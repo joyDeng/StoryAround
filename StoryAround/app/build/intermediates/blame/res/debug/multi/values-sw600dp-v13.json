@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-        "outputFile": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 119
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 188
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 258
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 332
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 408
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 467
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 538
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 606
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 666
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 736
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 807
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 879
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 937
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 995
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1101
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1165
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1234
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -406,11 +334,7 @@
                     "endOffset": 1303
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -429,11 +353,7 @@
                     "endOffset": 1366
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -453,11 +373,7 @@
                     "endOffset": 1548
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,

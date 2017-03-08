@@ -63,14 +63,7 @@ public class PostFragment extends Fragment{
 
         setRetainInstance(true);
 
-<<<<<<< HEAD
         mprefs = getActivity().getSharedPreferences(PREF_KEY, Context.MODE_PRIVATE);
-=======
-
-        stories = new ArrayList<>();
-
-        mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
         meditor = mprefs.edit();
         String json = mprefs.getString(LOCATION_KEY, null);
         String json2 = mprefs.getString(ADDR_KEY, null);
@@ -182,7 +175,6 @@ public class PostFragment extends Fragment{
             String provider = locationManager.getBestProvider(criteria, true);
             final Location last = locationManager.getLastKnownLocation(provider);
             if(last != null){
-<<<<<<< HEAD
 
                 savedLocations.add(MapFragment.locationToLatLng(last));
                 Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
@@ -213,11 +205,6 @@ public class PostFragment extends Fragment{
                 meditor.putString(LOCATION_KEY, json);
                 meditor.putString(ADDR_KEY, json2);
 
-=======
-                savedLocations.add(last);
-                JSONArray jsonArray= new JSONArray(savedLocations);
-                meditor.putString("locations", jsonArray.toString());
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                 meditor.commit();
                 Toast.makeText(getActivity(), "your location is saved", Toast.LENGTH_SHORT).show();
             }

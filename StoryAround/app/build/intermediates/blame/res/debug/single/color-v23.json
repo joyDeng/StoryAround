@@ -1,6 +1,5 @@
 [
     {
-<<<<<<< HEAD
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
@@ -43,49 +42,5 @@
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\color-v23\\design_tint_password_toggle.xml"
-=======
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_edittext.xml"
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
     }
 ]

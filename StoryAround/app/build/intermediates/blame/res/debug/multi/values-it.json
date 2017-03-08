@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
-=======
-        "outputFile": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 254
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 362
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 485
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 585
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 694
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 778
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 887
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 1012
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 1089
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 1165
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 1246
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 1352
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 1460
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 1558
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1662
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1767
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1874
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -406,11 +334,7 @@
                     "endOffset": 1996
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -429,11 +353,7 @@
                     "endOffset": 2096
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -452,11 +372,7 @@
                     "endOffset": 2169
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -475,11 +391,7 @@
                     "endOffset": 2250
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -498,11 +410,7 @@
                     "endOffset": 2350
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -521,11 +429,7 @@
                     "endOffset": 2441
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -544,11 +448,7 @@
                     "endOffset": 2560
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -567,11 +467,7 @@
                     "endOffset": 2646
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -590,11 +486,7 @@
                     "endOffset": 2816
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -613,11 +505,7 @@
                     "endOffset": 2933
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -636,11 +524,7 @@
                     "endOffset": 3043
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -659,11 +543,7 @@
                     "endOffset": 3160
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -682,11 +562,7 @@
                     "endOffset": 3264
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -705,11 +581,7 @@
                     "endOffset": 3368
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -728,11 +600,7 @@
                     "endOffset": 3446
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -751,11 +619,7 @@
                     "endOffset": 3544
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -774,11 +638,7 @@
                     "endOffset": 3643
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -797,11 +657,7 @@
                     "endOffset": 3751
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -820,11 +676,7 @@
                     "endOffset": 3835
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -843,11 +695,7 @@
                     "endOffset": 3970
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -866,11 +714,7 @@
                     "endOffset": 4109
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -889,11 +733,7 @@
                     "endOffset": 4208
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -912,11 +752,7 @@
                     "endOffset": 4283
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 20,
                         "startColumn": 0,
@@ -935,11 +771,7 @@
                     "endOffset": 4361
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 21,
                         "startColumn": 0,
@@ -958,11 +790,7 @@
                     "endOffset": 4440
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 22,
                         "startColumn": 0,
@@ -981,11 +809,7 @@
                     "endOffset": 4539
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 23,
                         "startColumn": 0,
@@ -1004,11 +828,7 @@
                     "endOffset": 4635
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 24,
                         "startColumn": 0,
@@ -1027,11 +847,7 @@
                     "endOffset": 4730
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 25,
                         "startColumn": 0,
@@ -1050,11 +866,7 @@
                     "endOffset": 4832
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 26,
                         "startColumn": 0,
@@ -1073,11 +885,7 @@
                     "endOffset": 4934
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 27,
                         "startColumn": 0,
@@ -1096,11 +904,7 @@
                     "endOffset": 5013
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 28,
                         "startColumn": 0,
@@ -1119,11 +923,7 @@
                     "endOffset": 5116
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 29,
                         "startColumn": 0,
@@ -1142,11 +942,7 @@
                     "endOffset": 5213
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 30,
                         "startColumn": 0,
@@ -1165,11 +961,7 @@
                     "endOffset": 5313
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 31,
                         "startColumn": 0,
@@ -1188,11 +980,7 @@
                     "endOffset": 5426
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 32,
                         "startColumn": 0,
@@ -1211,11 +999,7 @@
                     "endOffset": 5572
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 33,
                         "startColumn": 0,
@@ -1234,11 +1018,7 @@
                     "endOffset": 5707
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 34,
                         "startColumn": 0,
@@ -1257,11 +1037,7 @@
                     "endOffset": 5844
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 35,
                         "startColumn": 0,
@@ -1280,11 +1056,7 @@
                     "endOffset": 5942
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 36,
                         "startColumn": 0,
@@ -1303,11 +1075,7 @@
                     "endOffset": 6033
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 37,
                         "startColumn": 0,
@@ -1326,11 +1094,7 @@
                     "endOffset": 6140
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 38,
                         "startColumn": 0,
@@ -1349,11 +1113,7 @@
                     "endOffset": 6225
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 39,
                         "startColumn": 0,
@@ -1372,11 +1132,7 @@
                     "endOffset": 6332
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -1395,11 +1151,7 @@
                     "endOffset": 6515
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -1418,11 +1170,7 @@
                     "endOffset": 6642
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -1441,11 +1189,7 @@
                     "endOffset": 6752
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -1464,11 +1208,7 @@
                     "endOffset": 6969
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -1487,11 +1227,7 @@
                     "endOffset": 7099
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -1510,11 +1246,7 @@
                     "endOffset": 7232
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -1533,11 +1265,7 @@
                     "endOffset": 7427
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -1556,11 +1284,7 @@
                     "endOffset": 7643
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -1579,11 +1303,7 @@
                     "endOffset": 7752
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -1602,11 +1322,7 @@
                     "endOffset": 7937
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -1625,11 +1341,7 @@
                     "endOffset": 8066
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -1648,11 +1360,7 @@
                     "endOffset": 8281
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -1671,11 +1379,7 @@
                     "endOffset": 8492
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -1694,11 +1398,7 @@
                     "endOffset": 8589
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -1717,11 +1417,7 @@
                     "endOffset": 8680
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -1740,11 +1436,7 @@
                     "endOffset": 8786
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -1763,11 +1455,7 @@
                     "endOffset": 8923
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -1786,11 +1474,7 @@
                     "endOffset": 9029
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -1809,11 +1493,7 @@
                     "endOffset": 9102
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.soundcloud.android\\android-crop\\1.0.1\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1832,11 +1512,7 @@
                     "endOffset": 9149
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.soundcloud.android\\android-crop\\1.0.1\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1855,11 +1531,7 @@
                     "endOffset": 9223
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.soundcloud.android\\android-crop\\1.0.1\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1878,11 +1550,7 @@
                     "endOffset": 9286
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.soundcloud.android\\android-crop\\1.0.1\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1901,11 +1569,7 @@
                     "endOffset": 9342
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.soundcloud.android\\android-crop\\1.0.1\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1924,11 +1588,7 @@
                     "endOffset": 9454
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -1947,11 +1607,7 @@
                     "endOffset": 9561
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -1970,11 +1626,7 @@
                     "endOffset": 9668
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -1993,11 +1645,7 @@
                     "endOffset": 9778
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -2016,11 +1664,7 @@
                     "endOffset": 9852
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -2039,11 +1683,7 @@
                     "endOffset": 9959
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -2062,11 +1702,7 @@
                     "endOffset": 10070
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -2085,11 +1721,7 @@
                     "endOffset": 10156
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -2108,11 +1740,7 @@
                     "endOffset": 10248
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2131,11 +1759,7 @@
                     "endOffset": 10371
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -2154,11 +1778,7 @@
                     "endOffset": 10468
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -2177,11 +1797,7 @@
                     "endOffset": 10564
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -2200,11 +1816,7 @@
                     "endOffset": 10656
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -2223,11 +1835,7 @@
                     "endOffset": 10749
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -2246,11 +1854,7 @@
                     "endOffset": 10872
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -2269,11 +1873,7 @@
                     "endOffset": 11004
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -2292,11 +1892,7 @@
                     "endOffset": 11088
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -2315,11 +1911,7 @@
                     "endOffset": 11174
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -2338,11 +1930,7 @@
                     "endOffset": 11275
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -2361,11 +1949,7 @@
                     "endOffset": 11362
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -2384,11 +1968,7 @@
                     "endOffset": 11460
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -2407,11 +1987,7 @@
                     "endOffset": 11567
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -2430,11 +2006,7 @@
                     "endOffset": 11662
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -2453,11 +2025,7 @@
                     "endOffset": 11745
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -2476,11 +2044,7 @@
                     "endOffset": 11846
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-it\\values-it.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-it/values-it.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -2499,11 +2063,7 @@
                     "endOffset": 11997
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -2522,11 +2082,7 @@
                     "endOffset": 12090
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -2545,11 +2101,7 @@
                     "endOffset": 12198
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-wallet\\10.2.0\\res\\values-it\\values.xml",
-=======
-                    "file": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.2.0/res/values-it/values.xml",
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,

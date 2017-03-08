@@ -253,7 +253,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 if(storyMap.containsKey(story.getStoryId())){
                     storyMap.remove(story.getStoryId());
                     Marker m = markerMap.get(story.getStoryId());
-                    m = null;
+                    m.remove();
                     markerMap.remove(story.getStoryId());
                 }
             }
@@ -361,6 +361,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
     }
     @Override
     public boolean onMarkerClick(final Marker marker) {
+        if(marker == current){
+            return true;
+        }
         if(storyMap.containsKey(marker.getTitle())){
             DialogFragment dialog;
             dialog = StoryDetailFragment.buildDialog(storyMap.get(marker.getTitle()));

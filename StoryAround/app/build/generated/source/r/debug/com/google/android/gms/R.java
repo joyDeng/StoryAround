@@ -283,7 +283,6 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_focused = 0x7f02009e;
 		public static final int common_google_signin_btn_text_light_normal = 0x7f02009f;
 		public static final int common_google_signin_btn_text_light_normal_background = 0x7f0200a0;
-<<<<<<< HEAD
 		public static final int googleg_disabled_color_18 = 0x7f0200b1;
 		public static final int googleg_standard_color_18 = 0x7f0200b2;
 		public static final int ic_plusone_medium_off_client = 0x7f020146;
@@ -335,59 +334,6 @@ public final class R {
 		public static final int quantum_ic_volume_off_white_36 = 0x7f0201a0;
 		public static final int quantum_ic_volume_up_grey600_36 = 0x7f0201a1;
 		public static final int quantum_ic_volume_up_white_36 = 0x7f0201a2;
-=======
-		public static final int googleg_disabled_color_18 = 0x7f0200af;
-		public static final int googleg_standard_color_18 = 0x7f0200b0;
-		public static final int ic_plusone_medium_off_client = 0x7f020144;
-		public static final int ic_plusone_small_off_client = 0x7f020145;
-		public static final int ic_plusone_standard_off_client = 0x7f020146;
-		public static final int ic_plusone_tall_off_client = 0x7f020147;
-		public static final int places_ic_clear = 0x7f020172;
-		public static final int places_ic_search = 0x7f020173;
-		public static final int powered_by_google_dark = 0x7f020175;
-		public static final int powered_by_google_light = 0x7f020176;
-		public static final int quantum_ic_art_track_grey600_48 = 0x7f020178;
-		public static final int quantum_ic_bigtop_updates_white_24 = 0x7f020179;
-		public static final int quantum_ic_cast_connected_white_24 = 0x7f02017a;
-		public static final int quantum_ic_cast_white_36 = 0x7f02017b;
-		public static final int quantum_ic_clear_white_24 = 0x7f02017c;
-		public static final int quantum_ic_closed_caption_grey600_36 = 0x7f02017d;
-		public static final int quantum_ic_closed_caption_white_36 = 0x7f02017e;
-		public static final int quantum_ic_forward_10_white_24 = 0x7f02017f;
-		public static final int quantum_ic_forward_30_grey600_36 = 0x7f020180;
-		public static final int quantum_ic_forward_30_white_24 = 0x7f020181;
-		public static final int quantum_ic_forward_30_white_36 = 0x7f020182;
-		public static final int quantum_ic_keyboard_arrow_down_white_36 = 0x7f020183;
-		public static final int quantum_ic_pause_circle_filled_grey600_36 = 0x7f020184;
-		public static final int quantum_ic_pause_circle_filled_white_36 = 0x7f020185;
-		public static final int quantum_ic_pause_grey600_36 = 0x7f020186;
-		public static final int quantum_ic_pause_grey600_48 = 0x7f020187;
-		public static final int quantum_ic_pause_white_24 = 0x7f020188;
-		public static final int quantum_ic_play_arrow_grey600_36 = 0x7f020189;
-		public static final int quantum_ic_play_arrow_grey600_48 = 0x7f02018a;
-		public static final int quantum_ic_play_arrow_white_24 = 0x7f02018b;
-		public static final int quantum_ic_play_circle_filled_grey600_36 = 0x7f02018c;
-		public static final int quantum_ic_play_circle_filled_white_36 = 0x7f02018d;
-		public static final int quantum_ic_refresh_white_24 = 0x7f02018e;
-		public static final int quantum_ic_replay_10_white_24 = 0x7f02018f;
-		public static final int quantum_ic_replay_30_grey600_36 = 0x7f020190;
-		public static final int quantum_ic_replay_30_white_24 = 0x7f020191;
-		public static final int quantum_ic_replay_30_white_36 = 0x7f020192;
-		public static final int quantum_ic_replay_white_24 = 0x7f020193;
-		public static final int quantum_ic_skip_next_grey600_36 = 0x7f020194;
-		public static final int quantum_ic_skip_next_white_24 = 0x7f020195;
-		public static final int quantum_ic_skip_next_white_36 = 0x7f020196;
-		public static final int quantum_ic_skip_previous_grey600_36 = 0x7f020197;
-		public static final int quantum_ic_skip_previous_white_24 = 0x7f020198;
-		public static final int quantum_ic_skip_previous_white_36 = 0x7f020199;
-		public static final int quantum_ic_stop_grey600_36 = 0x7f02019a;
-		public static final int quantum_ic_stop_grey600_48 = 0x7f02019b;
-		public static final int quantum_ic_stop_white_24 = 0x7f02019c;
-		public static final int quantum_ic_volume_off_grey600_36 = 0x7f02019d;
-		public static final int quantum_ic_volume_off_white_36 = 0x7f02019e;
-		public static final int quantum_ic_volume_up_grey600_36 = 0x7f02019f;
-		public static final int quantum_ic_volume_up_white_36 = 0x7f0201a0;
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 	}
 	public static final class id {
 		public static final int ad_container = 0x7f1000e5;
@@ -477,25 +423,14 @@ public final class R {
 		public static final int normal = 0x7f10001f;
 		public static final int omnibox_title_section = 0x7f10006d;
 		public static final int omnibox_url_section = 0x7f10006e;
-<<<<<<< HEAD
-		public static final int place_autocomplete_clear_button = 0x7f100162;
-		public static final int place_autocomplete_powered_by_google = 0x7f100164;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f100166;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f100167;
-		public static final int place_autocomplete_progress = 0x7f100165;
-		public static final int place_autocomplete_search_button = 0x7f100160;
-		public static final int place_autocomplete_search_input = 0x7f100161;
-		public static final int place_autocomplete_separator = 0x7f100163;
-=======
-		public static final int place_autocomplete_clear_button = 0x7f100160;
-		public static final int place_autocomplete_powered_by_google = 0x7f100162;
-		public static final int place_autocomplete_prediction_primary_text = 0x7f100164;
-		public static final int place_autocomplete_prediction_secondary_text = 0x7f100165;
-		public static final int place_autocomplete_progress = 0x7f100163;
-		public static final int place_autocomplete_search_button = 0x7f10015e;
-		public static final int place_autocomplete_search_input = 0x7f10015f;
-		public static final int place_autocomplete_separator = 0x7f100161;
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
+		public static final int place_autocomplete_clear_button = 0x7f100163;
+		public static final int place_autocomplete_powered_by_google = 0x7f100165;
+		public static final int place_autocomplete_prediction_primary_text = 0x7f100167;
+		public static final int place_autocomplete_prediction_secondary_text = 0x7f100168;
+		public static final int place_autocomplete_progress = 0x7f100166;
+		public static final int place_autocomplete_search_button = 0x7f100161;
+		public static final int place_autocomplete_search_input = 0x7f100162;
+		public static final int place_autocomplete_separator = 0x7f100164;
 		public static final int plain = 0x7f100066;
 		public static final int production = 0x7f100076;
 		public static final int progressBar = 0x7f1000fd;
@@ -539,17 +474,10 @@ public final class R {
 		public static final int cast_mini_controller = 0x7f040025;
 		public static final int cast_tracks_chooser_dialog_layout = 0x7f040026;
 		public static final int cast_tracks_chooser_dialog_row_layout = 0x7f040027;
-<<<<<<< HEAD
 		public static final int place_autocomplete_fragment = 0x7f040057;
 		public static final int place_autocomplete_item_powered_by_google = 0x7f040058;
 		public static final int place_autocomplete_item_prediction = 0x7f040059;
 		public static final int place_autocomplete_progress = 0x7f04005a;
-=======
-		public static final int place_autocomplete_fragment = 0x7f040056;
-		public static final int place_autocomplete_item_powered_by_google = 0x7f040057;
-		public static final int place_autocomplete_item_prediction = 0x7f040058;
-		public static final int place_autocomplete_progress = 0x7f040059;
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
 	}
 	public static final class string {
 		public static final int accept = 0x7f090013;

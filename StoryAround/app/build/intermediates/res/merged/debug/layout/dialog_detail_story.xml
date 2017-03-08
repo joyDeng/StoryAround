@@ -4,10 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="500dp">
     <ScrollView
-<<<<<<< HEAD
-=======
         android:id="@+id/scrollView"
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
         android:layout_width="match_parent"
         android:layout_height="500dp">
 
@@ -134,11 +131,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/text_view_padding"/>
-<<<<<<< HEAD
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
-=======
  </LinearLayout>
     </ScrollView>
 
@@ -159,4 +151,3 @@
     </LinearLayout>
 
 </RelativeLayout>
->>>>>>> bec18bf232053cf8dfd03e28cf33539452daf52e
