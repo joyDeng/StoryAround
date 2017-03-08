@@ -72,11 +72,6 @@ public class NewStoryActivity extends AppCompatActivity {
     public static final String STORY_LNG = "lng";
     public static final String STORY_IMAGE = "image";
 
-    private final int MY_PERMISSIONS_REQUEST_LOCATION = 0;
-    private final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
-
-    public static final int CAMERA_REQUEST_CODE = 1;
-    public static final int GALLERY_REQUEST_CODE = 2;
     private static final String URI_INSTANCE_STATE_KEY = "saved_uri";
     private Uri tempImgUri;
     private Uri firebaseUri;
@@ -251,19 +246,19 @@ public class NewStoryActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         if(resultCode != Activity.RESULT_OK) return;
-        if(requestCode == CAMERA_REQUEST_CODE){
+        if(requestCode == Global.CAMERA_REQUEST_CODE){
             Crop.of(tempImgUri, tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).start(this);
         }
-        else if(requestCode == GALLERY_REQUEST_CODE){
-            Log.d("test uri", data.getData() + "");
+        else if(requestCode == Global.GALLERY_REQUEST_CODE){
             Crop.of(data.getData(), tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).
                     start(this);
         }
         else if(requestCode == Crop.REQUEST_CROP){
+            Log.d("******", Crop.getOutput(data) + "");
             Uri selectedImgUri = Crop.getOutput(data);
             storyImageView.setImageURI(null);
             storyImageView.setPadding(0,0,0,0);
@@ -278,7 +273,7 @@ public class NewStoryActivity extends AppCompatActivity {
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
         tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, tempImgUri);
-        startActivityForResult(intent, CAMERA_REQUEST_CODE);
+        startActivityForResult(intent, Global.CAMERA_REQUEST_CODE);
     }
 
     private void loadFromGallery() {
@@ -287,7 +282,7 @@ public class NewStoryActivity extends AppCompatActivity {
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
         tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, tempImgUri);
-        startActivityForResult(intent, GALLERY_REQUEST_CODE);
+        startActivityForResult(intent, Global.GALLERY_REQUEST_CODE);
     }
 
     private void loadSnap() {
@@ -385,7 +380,7 @@ public class NewStoryActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
+            case Global.MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -395,7 +390,7 @@ public class NewStoryActivity extends AppCompatActivity {
                 }
                 return;
             }
-            case MY_PERMISSIONS_REQUEST_CAMERA: {
+            case Global.MY_PERMISSIONS_REQUEST_CAMERA: {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     loadFromCamera();
@@ -410,8 +405,12 @@ public class NewStoryActivity extends AppCompatActivity {
     public void checkPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
+        if(ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    Global.MY_PERMISSIONS_REQUEST_LOCATION);
         }
         else {
             setCurrentLocationText();
@@ -421,9 +420,15 @@ public class NewStoryActivity extends AppCompatActivity {
     public void checkCameraPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
+        if (ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            android.Manifest.permission.CAMERA},
+                    Global.MY_PERMISSIONS_REQUEST_CAMERA);
         }
         else {
             loadFromCamera();
