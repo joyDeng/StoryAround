@@ -2,9 +2,12 @@
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+<<<<<<< HEAD
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+=======
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
     }
 ]

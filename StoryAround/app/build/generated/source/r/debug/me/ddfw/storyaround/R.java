@@ -3785,13 +3785,13 @@ containing a value of this type.
         public static final int amu_bubble_mask=0x7f020053;
         public static final int amu_bubble_shadow=0x7f020054;
         public static final int avd_hide_password=0x7f020055;
-        public static final int avd_hide_password_1=0x7f0201a7;
-        public static final int avd_hide_password_2=0x7f0201a8;
-        public static final int avd_hide_password_3=0x7f0201a9;
+        public static final int avd_hide_password_1=0x7f0201ab;
+        public static final int avd_hide_password_2=0x7f0201ac;
+        public static final int avd_hide_password_3=0x7f0201ad;
         public static final int avd_show_password=0x7f020056;
-        public static final int avd_show_password_1=0x7f0201aa;
-        public static final int avd_show_password_2=0x7f0201ab;
-        public static final int avd_show_password_3=0x7f0201ac;
+        public static final int avd_show_password_1=0x7f0201ae;
+        public static final int avd_show_password_2=0x7f0201af;
+        public static final int avd_show_password_3=0x7f0201b0;
         public static final int book=0x7f020057;
         public static final int cast_abc_scrubber_control_off_mtrl_alpha=0x7f020058;
         public static final int cast_abc_scrubber_control_to_pressed_mtrl_000=0x7f020059;
@@ -4073,8 +4073,8 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f02016d;
         public static final int notification_bg_normal_pressed=0x7f02016e;
         public static final int notification_icon_background=0x7f02016f;
-        public static final int notification_template_icon_bg=0x7f0201a5;
-        public static final int notification_template_icon_low_bg=0x7f0201a6;
+        public static final int notification_template_icon_bg=0x7f0201a9;
+        public static final int notification_template_icon_low_bg=0x7f0201aa;
         public static final int notification_tile_bg=0x7f020170;
         public static final int notify_panel_notification_icon_bg=0x7f020171;
         public static final int places_ic_clear=0x7f020172;
@@ -4126,8 +4126,12 @@ containing a value of this type.
         public static final int quantum_ic_volume_up_white_36=0x7f0201a0;
         public static final int staticmap=0x7f0201a1;
         public static final int tab_background=0x7f0201a2;
-        public static final int world_location=0x7f0201a3;
-        public static final int write=0x7f0201a4;
+        public static final int tag=0x7f0201a3;
+        public static final int tag1=0x7f0201a4;
+        public static final int user=0x7f0201a5;
+        public static final int user1=0x7f0201a6;
+        public static final int world_location=0x7f0201a7;
+        public static final int write=0x7f0201a8;
     }
     public static final class id {
         public static final int action0=0x7f10014b;

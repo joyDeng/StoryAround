@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -388,6 +389,8 @@
     },
     {
         "outputFile": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
         "map": [
             {
                 "to": {
@@ -398,7 +401,7 @@
                     "endOffset": 119
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -417,7 +420,7 @@
                     "endOffset": 188
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -436,7 +439,7 @@
                     "endOffset": 258
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -455,7 +458,7 @@
                     "endOffset": 332
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -474,7 +477,7 @@
                     "endOffset": 408
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -493,7 +496,7 @@
                     "endOffset": 467
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -512,7 +515,7 @@
                     "endOffset": 538
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -531,7 +534,7 @@
                     "endOffset": 606
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -550,7 +553,7 @@
                     "endOffset": 666
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -569,7 +572,7 @@
                     "endOffset": 736
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -588,7 +591,7 @@
                     "endOffset": 807
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -607,7 +610,7 @@
                     "endOffset": 879
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -626,7 +629,7 @@
                     "endOffset": 937
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -645,7 +648,7 @@
                     "endOffset": 995
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -664,7 +667,7 @@
                     "endOffset": 1101
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -683,7 +686,7 @@
                     "endOffset": 1165
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -702,7 +705,7 @@
                     "endOffset": 1234
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -721,7 +724,7 @@
                     "endOffset": 1303
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -740,7 +743,7 @@
                     "endOffset": 1366
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -760,7 +763,7 @@
                     "endOffset": 1548
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,

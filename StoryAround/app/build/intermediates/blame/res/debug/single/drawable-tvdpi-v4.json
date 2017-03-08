@@ -1,13 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\10.2.0\\res\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png"
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3f76f3e09e695d949f955a2930a46f30cdad9cc1\\output\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
     },
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\10.2.0\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3f76f3e09e695d949f955a2930a46f30cdad9cc1\\output\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
         "source": "C:\\Users\\apple\\.android\\build-cache\\3f76f3e09e695d949f955a2930a46f30cdad9cc1\\output\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
     },
@@ -22,13 +23,20 @@
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\10.2.0\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
+=======
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png",
+        "source": "C:\\Users\\apple\\.android\\build-cache\\3f76f3e09e695d949f955a2930a46f30cdad9cc1\\output\\res\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png"
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
     },
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
         "source": "C:\\Users\\apple\\.android\\build-cache\\3f76f3e09e695d949f955a2930a46f30cdad9cc1\\output\\res\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png"
+<<<<<<< HEAD
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\10.2.0\\res\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png"
+=======
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
     }
 ]

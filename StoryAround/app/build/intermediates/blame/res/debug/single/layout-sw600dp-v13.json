@@ -2,9 +2,12 @@
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "C:\\Users\\apple\\.android\\build-cache\\8e3d3f2d401edf88120c3389e8a4dae5d6692ff1\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+<<<<<<< HEAD
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+=======
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
     }
 ]

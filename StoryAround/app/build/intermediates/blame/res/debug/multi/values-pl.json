@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -2020,6 +2021,8 @@
     },
     {
         "outputFile": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
+=======
+>>>>>>> 0e332f7273622a5cf2c1eee1cc325be62eb1870c
         "map": [
             {
                 "to": {
@@ -2030,7 +2033,7 @@
                     "endOffset": 216
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -2049,7 +2052,7 @@
                     "endOffset": 324
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -2068,7 +2071,7 @@
                     "endOffset": 447
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -2087,7 +2090,7 @@
                     "endOffset": 549
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -2106,7 +2109,7 @@
                     "endOffset": 657
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -2125,7 +2128,7 @@
                     "endOffset": 743
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -2144,7 +2147,7 @@
                     "endOffset": 852
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -2163,7 +2166,7 @@
                     "endOffset": 971
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -2182,7 +2185,7 @@
                     "endOffset": 1049
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -2201,7 +2204,7 @@
                     "endOffset": 1126
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -2220,7 +2223,7 @@
                     "endOffset": 1208
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -2239,7 +2242,7 @@
                     "endOffset": 1317
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -2258,7 +2261,7 @@
                     "endOffset": 1426
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -2277,7 +2280,7 @@
                     "endOffset": 1525
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -2296,7 +2299,7 @@
                     "endOffset": 1634
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -2315,7 +2318,7 @@
                     "endOffset": 1745
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -2334,7 +2337,7 @@
                     "endOffset": 1853
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -2353,7 +2356,7 @@
                     "endOffset": 1976
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -2372,7 +2375,7 @@
                     "endOffset": 2072
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -2391,7 +2394,7 @@
                     "endOffset": 2146
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -2410,7 +2413,7 @@
                     "endOffset": 2226
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -2429,7 +2432,7 @@
                     "endOffset": 2325
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -2448,7 +2451,7 @@
                     "endOffset": 2411
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -2467,7 +2470,7 @@
                     "endOffset": 2524
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -2486,7 +2489,7 @@
                     "endOffset": 2605
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -2505,7 +2508,7 @@
                     "endOffset": 2779
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -2524,7 +2527,7 @@
                     "endOffset": 2904
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -2543,7 +2546,7 @@
                     "endOffset": 3019
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -2562,7 +2565,7 @@
                     "endOffset": 3143
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -2581,7 +2584,7 @@
                     "endOffset": 3242
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -2600,7 +2603,7 @@
                     "endOffset": 3345
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -2619,7 +2622,7 @@
                     "endOffset": 3434
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -2638,7 +2641,7 @@
                     "endOffset": 3538
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -2657,7 +2660,7 @@
                     "endOffset": 3642
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -2676,7 +2679,7 @@
                     "endOffset": 3750
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -2695,7 +2698,7 @@
                     "endOffset": 3825
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -2714,7 +2717,7 @@
                     "endOffset": 3961
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\ca8135eada813bca24a76ac04af8f5f42b2c10eb\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -2733,7 +2736,7 @@
                     "endOffset": 4094
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\ca8135eada813bca24a76ac04af8f5f42b2c10eb\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -2752,7 +2755,7 @@
                     "endOffset": 4188
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\ca8135eada813bca24a76ac04af8f5f42b2c10eb\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -2771,7 +2774,7 @@
                     "endOffset": 4267
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 0,
@@ -2790,7 +2793,7 @@
                     "endOffset": 4343
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 0,
@@ -2809,7 +2812,7 @@
                     "endOffset": 4429
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 0,
@@ -2828,7 +2831,7 @@
                     "endOffset": 4530
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 0,
@@ -2847,7 +2850,7 @@
                     "endOffset": 4631
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 0,
@@ -2866,7 +2869,7 @@
                     "endOffset": 4745
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 0,
@@ -2885,7 +2888,7 @@
                     "endOffset": 4851
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 0,
@@ -2904,7 +2907,7 @@
                     "endOffset": 4959
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 0,
@@ -2923,7 +2926,7 @@
                     "endOffset": 5037
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 0,
@@ -2942,7 +2945,7 @@
                     "endOffset": 5146
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 0,
@@ -2961,7 +2964,7 @@
                     "endOffset": 5244
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 0,
@@ -2980,7 +2983,7 @@
                     "endOffset": 5343
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 0,
@@ -2999,7 +3002,7 @@
                     "endOffset": 5451
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 0,
@@ -3018,7 +3021,7 @@
                     "endOffset": 5601
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 33,
                         "startColumn": 0,
@@ -3037,7 +3040,7 @@
                     "endOffset": 5732
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 0,
@@ -3056,7 +3059,7 @@
                     "endOffset": 5867
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 0,
@@ -3075,7 +3078,7 @@
                     "endOffset": 5962
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 0,
@@ -3094,7 +3097,7 @@
                     "endOffset": 6053
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 0,
@@ -3113,7 +3116,7 @@
                     "endOffset": 6155
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 0,
@@ -3132,7 +3135,7 @@
                     "endOffset": 6243
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\6d32cd748aab4b40b49c67acab17f91d0432280f\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 0,
@@ -3151,7 +3154,7 @@
                     "endOffset": 6349
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -3170,7 +3173,7 @@
                     "endOffset": 6549
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -3189,7 +3192,7 @@
                     "endOffset": 6673
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -3208,7 +3211,7 @@
                     "endOffset": 6785
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -3227,7 +3230,7 @@
                     "endOffset": 6995
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -3246,7 +3249,7 @@
                     "endOffset": 7122
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -3265,7 +3268,7 @@
                     "endOffset": 7250
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -3284,7 +3287,7 @@
                     "endOffset": 7449
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\8ec86db6fde0f22da0b41f750f985f4db5b99fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -3303,7 +3306,7 @@
                     "endOffset": 7679
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -3322,7 +3325,7 @@
                     "endOffset": 7790
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -3341,7 +3344,7 @@
                     "endOffset": 7996
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -3360,7 +3363,7 @@
                     "endOffset": 8126
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -3379,7 +3382,7 @@
                     "endOffset": 8344
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -3398,7 +3401,7 @@
                     "endOffset": 8535
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -3417,7 +3420,7 @@
                     "endOffset": 8634
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -3436,7 +3439,7 @@
                     "endOffset": 8730
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -3455,7 +3458,7 @@
                     "endOffset": 8843
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5cdb35e4e93f269c227a88ff6acebc257e809fd0\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -3474,7 +3477,7 @@
                     "endOffset": 8982
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -3493,7 +3496,7 @@
                     "endOffset": 9093
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -3512,7 +3515,7 @@
                     "endOffset": 9199
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -3531,7 +3534,7 @@
                     "endOffset": 9301
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -3550,7 +3553,7 @@
                     "endOffset": 9401
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -3569,7 +3572,7 @@
                     "endOffset": 9510
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -3588,7 +3591,7 @@
                     "endOffset": 9583
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -3607,7 +3610,7 @@
                     "endOffset": 9685
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -3626,7 +3629,7 @@
                     "endOffset": 9785
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -3645,7 +3648,7 @@
                     "endOffset": 9872
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -3664,7 +3667,7 @@
                     "endOffset": 9969
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -3683,7 +3686,7 @@
                     "endOffset": 10072
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -3702,7 +3705,7 @@
                     "endOffset": 10170
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -3721,7 +3724,7 @@
                     "endOffset": 10262
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -3740,7 +3743,7 @@
                     "endOffset": 10352
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -3759,7 +3762,7 @@
                     "endOffset": 10444
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -3778,7 +3781,7 @@
                     "endOffset": 10550
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -3797,7 +3800,7 @@
                     "endOffset": 10664
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -3816,7 +3819,7 @@
                     "endOffset": 10752
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -3835,7 +3838,7 @@
                     "endOffset": 10836
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -3854,7 +3857,7 @@
                     "endOffset": 10935
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -3873,7 +3876,7 @@
                     "endOffset": 11021
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -3892,7 +3895,7 @@
                     "endOffset": 11118
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\84967e86fe7115a87f75376f35d47a79ce2b41b2\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -3911,7 +3914,7 @@
                     "endOffset": 11229
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\a49fd4665dcd28a028c49d79e792f40c51bed6dd\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -3930,7 +3933,7 @@
                     "endOffset": 11325
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\a49fd4665dcd28a028c49d79e792f40c51bed6dd\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -3949,7 +3952,7 @@
                     "endOffset": 11407
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -3968,7 +3971,7 @@
                     "endOffset": 11508
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-pl\\values-pl.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\3b1cb326ad3d3b54491ca5d349abfbf1abf3a374\\output\\res\\values-pl\\values-pl.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -3987,7 +3990,7 @@
                     "endOffset": 11643
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -4006,7 +4009,7 @@
                     "endOffset": 11734
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-ads\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\64577c0f6b608efb69e56c1172e663841ac2c755\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -4025,7 +4028,7 @@
                     "endOffset": 11838
                 },
                 "from": {
-                    "file": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-wallet\\10.2.0\\res\\values-pl\\values.xml",
+                    "file": "C:\\Users\\apple\\.android\\build-cache\\5eb6f3247fca25fc84e971715d91cf110bdc253e\\output\\res\\values-pl\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,

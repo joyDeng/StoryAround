@@ -370,6 +370,8 @@ public class ChooserActivity extends AppCompatActivity
                     if(LoginMethod.equals(Global.GOOGLE_SIGNIN)){
                         firebaseAuthWithGoogle(mAcct);
                     }
+                }else{
+                    mFirstTime = false;
                 }
                 break;
             default:break;
