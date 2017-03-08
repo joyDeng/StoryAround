@@ -60,9 +60,6 @@ import me.ddfw.storyaround.model.User;
 import static android.content.Context.MODE_PRIVATE;
 
 
-// TODO
-// user information loaded
-
 
 public class ProfileFragment extends Fragment {
 
@@ -79,6 +76,7 @@ public class ProfileFragment extends Fragment {
     private DatabaseReference databaseRef;
 
     private ImageView profileImage;
+    private boolean isEditMode;
 
 
 
@@ -122,13 +120,9 @@ public class ProfileFragment extends Fragment {
                             mUser = snapshot.getValue(User.class);
                             if (mUser != null) {
                                 setProfileContent();
-
-
-
                                 isNewImage = false;
                                 storage = FirebaseStorage.getInstance();
                                 database = new MyDatabase();
-
                                 storageReference = storage.getReference().child("image/profileImage_"
                                         + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
                             }
@@ -182,11 +176,14 @@ public class ProfileFragment extends Fragment {
         final Button btnCancel = (Button) rootView.findViewById(R.id.btnCancel);
         final Button btnEdit = (Button) rootView.findViewById(R.id.btnEdit);
         profileImage = (ImageView) rootView.findViewById(R.id.user_image);
+        editUsername = (EditText) rootView.findViewById(R.id.user_username);
 
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pickImage();
+                if (isEditMode) {
+                    pickImage();
+                }
             }
         });
 
@@ -206,6 +203,7 @@ public class ProfileFragment extends Fragment {
                 getActivity().getWindow().setSoftInputMode(
                         WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
                 );
+                isEditMode = false;
                 btnEdit.setVisibility(View.VISIBLE);
                 btnSave.setVisibility(View.GONE);
                 btnCancel.setVisibility(View.GONE);
@@ -227,6 +225,7 @@ public class ProfileFragment extends Fragment {
                 getActivity().getWindow().setSoftInputMode(
                         WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
                 );
+                isEditMode = false;
                 btnEdit.setVisibility(View.VISIBLE);
                 btnSave.setVisibility(View.GONE);
                 btnCancel.setVisibility(View.GONE);
@@ -245,8 +244,8 @@ public class ProfileFragment extends Fragment {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText editUsername = (EditText) rootView.findViewById(R.id.user_username);
                 // if not in edit mode, -> edit
+                isEditMode = true;
                 btnEdit.setVisibility(View.GONE);
                 btnSave.setVisibility(View.VISIBLE);
                 btnCancel.setVisibility(View.VISIBLE);
@@ -285,12 +284,9 @@ public class ProfileFragment extends Fragment {
             editUsername.setText(mUser.getUserName());
 
         if (mUser.getUserPhoNum() == null)
-            editUsername.getText().clear();
+            editPhone.getText().clear();
         else
             editPhone.setText(mUser.getUserPhoNum());
-
-        if (mUser.getUserPhoNum() == null)
-            editPhone.getText().clear();
 
         if (editGender.getChildAt(mUser.getUserGender()) == null)
             ((RadioButton) editGender.getChildAt(2)).setChecked(true);
@@ -306,7 +302,6 @@ public class ProfileFragment extends Fragment {
             tempImgUri = null;
         else
             setProfileImageFromFirebase();
-
         loadSnap();
     }
 
@@ -360,7 +355,6 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("******", "request code: " + requestCode + " " + Crop.REQUEST_CROP);
         if(resultCode != Activity.RESULT_OK) {
             return;
         }
@@ -371,10 +365,8 @@ public class ProfileFragment extends Fragment {
             Crop.of(data.getData(), tempImgUri).asSquare().start(getActivity());
         }
         else if(requestCode == Crop.REQUEST_CROP){
-            Log.d("******", Crop.getOutput(data) + "");
             Uri selectedImgUri = Crop.getOutput(data);
             profileImage.setImageURI(null);
-            profileImage.setPadding(0,0,0,0);
             profileImage.setImageURI(selectedImgUri);
             isNewImage = true;
         }
@@ -414,7 +406,6 @@ public class ProfileFragment extends Fragment {
                 file.close();
             } catch (IOException e) {
                 // Default story photo if no photo saved before.
-                profileImage.setPadding(50,50,50,50);
                 profileImage.setImageResource(R.drawable.profile);
             }
         }

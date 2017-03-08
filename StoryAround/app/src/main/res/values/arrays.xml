@@ -3,11 +3,11 @@
     <!-- story type  -->
     <string-array name="story_type">
         <item>-- Select your story type --</item>
-        <item>type 0</item>
-        <item>type 1</item>
-        <item>type 2</item>
-        <item>type 3</item>
-        <item>type 4</item>
+        <item>Historical</item>
+        <item>Romantic</item>
+        <item>Horror</item>
+        <item>Fairy tale</item>
+        <item>Others</item>
     </string-array>
 
 

@@ -56,7 +56,6 @@ import me.ddfw.storyaround.model.Story;
 // story privacy
 // rotation
 // image compress
-// don't save default icon
 
 
 public class NewStoryActivity extends AppCompatActivity {
