@@ -28,7 +28,7 @@
             android:layout_marginBottom="15dp"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
                 android:id="@+id/user_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,7 +38,8 @@
                 android:background="@android:color/transparent"
                 android:textSize="25dp"
                 android:textColor="@color/color2"
-                android:text="Username" />
+                android:singleLine="true"
+                android:hint="Username" />
 
             <Button
                 android:id="@+id/btnLogout"
@@ -54,79 +55,80 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="0.8"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:orientation="vertical">
-                <TextView
+                <EditText
                     android:id="@+id/user_email"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@android:color/transparent"
-                    android:text="userEmail@test.com"
+                    android:hint="yourEmailAddress@example.com"
+                    android:inputType="textWebEmailAddress"
+                    android:singleLine="true"
                     android:textColor="@color/color4"
-                    android:textSize="15dp" />
-                <TextView
+                    android:textSize="18dp" />
+                <EditText
                     android:id="@+id/user_phone"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:text="123 456 7890"
+                    android:hint="your phone number"
+                    android:singleLine="true"
+                    android:inputType="phone"
                     android:textColor="@color/color4"
-                    android:textSize="15dp" />
+                    android:textSize="18dp" />
             </LinearLayout>
 
             <!-- profile gender -->
             <RadioGroup
                 android:id="@+id/user_gender"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:layout_marginRight="15dp"
-                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
                 android:orientation="horizontal">
                 <RadioButton
                     android:id="@+id/radioGenderF"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:text="female" />
                 <RadioButton
                     android:id="@+id/radioGenderM"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:text="male" />
                 <RadioButton
                     android:id="@+id/radioNone"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:checked="true"
                     android:text="none" />
             </RadioGroup>
-        </LinearLayout>
 
 
-
-
-        <TextView
+        <EditText
             android:id="@+id/user_bio"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
             android:background="@drawable/editor_background"
             android:textSize="18dp"
             android:textColor="@color/color3"
-            android:text="How will you describe yourself?" />
-
+            android:hint="How will you describe yourself?" />
 
 
 
         <LinearLayout
+            android:id="@+id/editLayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="25dp">
@@ -153,7 +155,24 @@
         </LinearLayout>
 
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="-65dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="23dp"
+        android:layout_above="@id/editLayout">
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/color2"
+            android:textColor="@color/white"
+            android:onClick="onSaveClicked"
+            android:text="Edit" />
+    </LinearLayout>
 
 
     </LinearLayout>
