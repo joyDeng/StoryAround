@@ -50,8 +50,6 @@ import java.util.Locale;
 
 import me.ddfw.storyaround.model.Story;
 
-import static com.google.api.client.http.HttpMethods.HEAD;
-
 
 // list of TODO
 // story type
@@ -84,6 +82,7 @@ public class NewStoryActivity extends AppCompatActivity {
     private Uri firebaseUri;
     private ImageView storyImageView;
 
+    private boolean isNewImage;
 
 
     @Override
@@ -269,6 +268,7 @@ public class NewStoryActivity extends AppCompatActivity {
             storyImageView.setImageURI(null);
             storyImageView.setPadding(0,0,0,0);
             storyImageView.setImageURI(selectedImgUri);
+            isNewImage = true;
         }
     }
 
@@ -292,6 +292,7 @@ public class NewStoryActivity extends AppCompatActivity {
 
     private void loadSnap() {
         if (tempImgUri != null) {
+            isNewImage = false;
             storyImageView.setImageURI(tempImgUri);
         }
         else {
@@ -323,30 +324,37 @@ public class NewStoryActivity extends AppCompatActivity {
 
 
     private void upload2Firebase() {
-        try {
-            storyImageView.buildDrawingCache();
-            Bitmap bmap = storyImageView.getDrawingCache();
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            byte[] data = baos.toByteArray();
-            UploadTask uploadTask = storageReference.putBytes(data);
-            uploadTask.addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception exception) {
-                    Log.d("******", "Firebase upload fail: " + exception);
-                    // TODO
-                    // if fail, pop up dialog
-                }
-            }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    firebaseUri = taskSnapshot.getDownloadUrl();
-                    mStory.setStoryImgURL(firebaseUri+"");
-                    database.createStory(mStory);
-                }
-            });
-        }catch(Exception e) {
-            Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
+        // upload image only if users add their own image
+        if (isNewImage) {
+            try {
+                storyImageView.buildDrawingCache();
+                Bitmap bmap = storyImageView.getDrawingCache();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                byte[] data = baos.toByteArray();
+                UploadTask uploadTask = storageReference.putBytes(data);
+                uploadTask.addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Log.d("******", "Firebase upload fail: " + exception);
+                        // TODO
+                        // if fail, pop up dialog
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        firebaseUri = taskSnapshot.getDownloadUrl();
+                        mStory.setStoryImgURL(firebaseUri + "");
+                        database.createStory(mStory);
+                    }
+                });
+            } catch (Exception e) {
+                Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
+            }
+        }
+        // else only upload story without image
+        else {
+            database.createStory(mStory);
         }
     }
 
