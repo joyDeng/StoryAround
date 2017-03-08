@@ -51,6 +51,8 @@ public class PostFragment extends Fragment{
         setRetainInstance(true);
         Log.d("******","PostFragment onCreateView");
 
+        stories = new ArrayList<>();
+
         mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
         meditor = mprefs.edit();
 

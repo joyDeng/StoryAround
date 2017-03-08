@@ -1,23 +1,11 @@
 [
     {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_diary.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_diary.xml"
-    },
-    {
         "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_diary.xml",
         "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/src/main/res/menu/menu_diary.xml"
     },
     {
         "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/src/main/res/menu/menu_main.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_delete.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_delete.xml"
-    },
-    {
-        "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
-        "source": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
         "merged": "/Users/xinbeifu/Documents/grad courses/smartphone programming/StoryAround/StoryAround/app/build/intermediates/res/merged/debug/menu/menu_delete.xml",

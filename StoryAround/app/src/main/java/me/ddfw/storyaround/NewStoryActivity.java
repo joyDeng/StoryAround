@@ -50,9 +50,6 @@ import java.util.Locale;
 
 import me.ddfw.storyaround.model.Story;
 
-import static com.google.api.client.http.HttpMethods.HEAD;
-
-
 // list of TODO
 // story type
 // story privacy

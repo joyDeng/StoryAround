@@ -81,7 +81,7 @@ public class ProfileFragment extends Fragment {
                             if (mUser != null) {
                                 setProfileContent();
                             }
-                            Log.d("******", "snapshot.getValue: " + mUser.getUserName() );
+//                            Log.d("******", "snapshot.getValue: " + mUser.getUserName() );
                         }
                         @Override
                         public void onCancelled(DatabaseError error) {

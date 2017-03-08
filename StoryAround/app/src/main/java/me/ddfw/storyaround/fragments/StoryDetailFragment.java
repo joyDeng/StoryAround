@@ -7,8 +7,10 @@ import android.app.DialogFragment;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -67,7 +69,7 @@ public class StoryDetailFragment extends DialogFragment {
         final Story story = getArguments().getParcelable(STORY_DATA_KEY);
         final String storyId = story.getStoryId();
         final Activity parent = getActivity();
-        AlertDialog.Builder builder = new AlertDialog.Builder(parent);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(parent);
         LayoutInflater i = parent.getLayoutInflater();
         View v;
         final ViewHolder viewHolder = new ViewHolder();
@@ -175,7 +177,30 @@ public class StoryDetailFragment extends DialogFragment {
             }
         });
 
+        Button btn_delete = (Button) v.findViewById(R.id.btn_delete);
 
+        if(userId != null){
+
+            if(story.getStoryAuthorId().equals(userId)){
+
+                btn_delete.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View view){
+
+                        mdb.deleteStory(storyId);
+
+                        dismiss();
+
+                    }
+
+                });
+
+            }else
+                btn_delete.setVisibility(View.GONE);
+        }else{
+            btn_delete.setVisibility(View.GONE);
+        }
 
 
         //viewHolder.user.setText(story.);
