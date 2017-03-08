@@ -32,11 +32,11 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
@@ -53,6 +53,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
     private LocationManager locationManager;
     private DatabaseReference mDatabase;
     final private HashMap<String, Story> storyMap = new HashMap<>();
+    final private HashMap<String, Marker> markerMap = new HashMap<>();
     private Marker current;
 
     @Override
@@ -147,7 +148,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
             locationManager.requestLocationUpdates(provider, 0, 0, new android.location.LocationListener() {
                 @Override
                 public void onLocationChanged(Location location) {
+                    Log.d("DEBUG","Location changed");
                     if(googleMap!=null){
+
                         if(current!=null)
                             current.remove();
                         current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(location))
@@ -212,7 +215,61 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 R.drawable.logo,opt);
         final Bitmap resized = Bitmap.createScaledBitmap(imageBitmap, 150, 150, true);
 
-        mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).startAt(sLat).endAt(nLat).
+        mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).
+                startAt(sLat).endAt(nLat).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Story story = dataSnapshot.getValue(Story.class);
+                if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
+                    storyMap.put(story.getStoryId(),story);
+                    if(!markerMap.containsKey(story.getStoryId())){
+                        Marker m = googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(
+                                new LatLng(story.getStoryLat(),story.getStoryLng())).
+                                title(story.getStoryId()));
+                        markerMap.put(story.getStoryId(), m);
+                    }
+                }
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                Story story = dataSnapshot.getValue(Story.class);
+                if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
+                    storyMap.put(story.getStoryId(),story);
+                    if(!markerMap.containsKey(story.getStoryId())){
+                        Marker m = googleMap.addMarker(new MarkerOptions().icon(
+                                BitmapDescriptorFactory.fromBitmap(resized)).position(
+                                new LatLng(story.getStoryLat(),story.getStoryLng())).
+                                title(story.getStoryId()));
+                        markerMap.put(story.getStoryId(), m);
+                    }
+                }
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                Story story = dataSnapshot.getValue(Story.class);
+                if(storyMap.containsKey(story.getStoryId())){
+                    storyMap.remove(story.getStoryId());
+                    Marker m = markerMap.get(story.getStoryId());
+                    m = null;
+                    markerMap.remove(story.getStoryId());
+                }
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+       /* mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).startAt(sLat).endAt(nLat).
                 addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -234,10 +291,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                     public void onCancelled(DatabaseError databaseError) {
 
                     }
-                });
+                });*/
     }
 
-    public LatLng locationToLatLng(Location l){
+    public static LatLng locationToLatLng(Location l){
         if (l != null) {
             return new LatLng(l.getLatitude(), l.getLongitude());
         }

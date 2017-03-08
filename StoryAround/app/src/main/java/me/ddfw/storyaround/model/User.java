@@ -62,7 +62,7 @@ public class User implements Parcelable {
 
     public String getUserPhoNum(){return userPhoNum;}
 
-    public void setUserPhoNum(String userName){ this.userPhoNum = userPhoNum;}
+    public void setUserPhoNum(String userPhoNum){ this.userPhoNum = userPhoNum;}
 
     public int getUserGender(){return userGender;}
 

@@ -18,13 +18,8 @@ implements View.OnClickListener{
     private RadioGroup mGender;
     private EditText mEmail;
     private EditText mPassword;
-
-
     private String email;
     private String password;
-
-
-
     private String mLoginMethod;
 
 
@@ -73,19 +68,21 @@ implements View.OnClickListener{
 
         else {
             // START:Create a new account
+            int genderIndex = mGender.indexOfChild(findViewById(mGender.getCheckedRadioButtonId()));
             User newAcc = new User(
                     mName.getText().toString(),
                     null,
                     null,
                     email,
-                    null, mGender.getId());
+                    null,
+                    genderIndex);
             Intent intent = new Intent(this, ChooserActivity.class);
             intent.putExtra(Global.LOGIN_METHOD, mLoginMethod);
             if (mLoginMethod.equals(Global.EMAIL_SIGNIN))
                 intent.putExtra(Global.USER_PASSWORD, password);
             intent.putExtra(Global.USER_EMAIL, email);
             intent.putExtra(Global.USER_NAME, mName.getText().toString());
-            intent.putExtra(Global.USER_GENDER, mGender.getId());
+            intent.putExtra(Global.USER_GENDER, genderIndex);
             intent.putExtra(Global.NEWACCOUNT, newAcc);
             setResult(RESULT_OK, intent);
             finish();

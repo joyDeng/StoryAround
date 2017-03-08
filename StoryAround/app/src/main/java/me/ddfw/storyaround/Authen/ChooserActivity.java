@@ -114,7 +114,7 @@ public class ChooserActivity extends AppCompatActivity
                         mCurrentUser.setUserId(user.getUid());
                         mUserDataSource.createProfile(mCurrentUser);
                     }else{
-                        mUserDataSource.getProfile(user.getUid());
+//                        mUserDataSource.getProfile(user.getUid());
                         mCurrentUser = mUserDataSource.mUser;
                     }
                      InterApp();

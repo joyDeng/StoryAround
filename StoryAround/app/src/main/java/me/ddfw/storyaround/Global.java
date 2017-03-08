@@ -17,4 +17,13 @@ public class Global {
 
     public static final String NEWACCOUNT = "newaccount";
 
+
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 0;
+    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
+
+
+    public static final int CAMERA_REQUEST_CODE = 1;
+    public static final int GALLERY_REQUEST_CODE = 2;
+
+
 }

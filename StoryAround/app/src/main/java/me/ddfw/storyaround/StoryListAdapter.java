@@ -112,6 +112,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
 
             viewHolder.title.setText(story.getStoryTitle());
+            viewHolder.location.setText(story.getStoryAddress());
 
             Log.d("debug", story.getStoryTitle());
 

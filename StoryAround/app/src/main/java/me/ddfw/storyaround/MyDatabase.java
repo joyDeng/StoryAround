@@ -55,28 +55,6 @@ public class MyDatabase {
     }
 
 
-    public void isFirstLogin(String userEmail){
-
-        FirebaseDatabase.getInstance().getReference().child(User.USER_TABLE).orderByChild(User.KEY_USER_EMAIL).equalTo(userEmail).
-                addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        if(dataSnapshot.exists()){
-                            //do something
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-    }
-
-
     //methods concerning Story
     public String createStory(Story story){
         Log.d("DEBUG","create now");
