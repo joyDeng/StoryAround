@@ -49,6 +49,8 @@ public class PostFragment extends Fragment{
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
 
         setRetainInstance(true);
+        savedLocations = new ArrayList<Location>();
+
 
         mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
         meditor = mprefs.edit();
