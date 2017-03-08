@@ -78,8 +78,6 @@ public class ProfileFragment extends Fragment {
     private ImageView profileImage;
     private boolean isEditMode;
 
-
-
     public static final String USER_IMAGE = "image";
     private Uri tempImgUri;
     private Uri firebaseUri;
@@ -268,12 +266,6 @@ public class ProfileFragment extends Fragment {
         btnSave.setVisibility(View.GONE);
         btnCancel.setVisibility(View.GONE);
     }
-
-
-
-
-
-
 
     private void setProfileContent() {
         editEmail.setText(mUser.getUserEmail());

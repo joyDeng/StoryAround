@@ -33,12 +33,10 @@ import static me.ddfw.storyaround.MyDatabase.stories;
 public class LikesFragment extends Fragment {
 
     private StoryListAdapter storyListAdapter; // tester adapter
-//    private ArrayList<String> data;
+
     private ArrayList<Story> stsories;
     private ListView list;
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
-
-//    private Handler handler;
 
     // private ArrayList<Story> data;
     // private static ArrayAdapter<Story> mAdapter; // TODO
