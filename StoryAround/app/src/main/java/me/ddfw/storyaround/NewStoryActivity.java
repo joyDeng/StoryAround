@@ -70,16 +70,17 @@ public class NewStoryActivity extends AppCompatActivity {
     public static final String STORY_LNG = "lng";
     public static final String STORY_IMAGE = "image";
 
-    private final int MY_PERMISSIONS_REQUEST_LOCATION = 0;
-    private final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
-
-    public static final int CAMERA_REQUEST_CODE = 1;
-    public static final int GALLERY_REQUEST_CODE = 2;
     private static final String URI_INSTANCE_STATE_KEY = "saved_uri";
+    private static final String STORY_INSTANCE_STATE_KEY = "saved_story";
     private Uri tempImgUri;
     private Uri firebaseUri;
     private ImageView storyImageView;
+    private String addressText = "";
 
+    private boolean isNewImage;
+    EditText storyTitleEditor;
+    EditText storyContentEditor;
+    Spinner storyTypeSpinner;
 
 
     @Override
@@ -89,20 +90,25 @@ public class NewStoryActivity extends AppCompatActivity {
 
         // create the button listener
         CreateStoryListener();
-        tempImgUri = null;
+        storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
+        storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
+        storyTypeSpinner = (Spinner) findViewById(R.id.story_type);
 
         // set up the database
         database = new MyDatabase();
-        mStory = new Story();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference().child("image/storyImage_"
                 + user.getUid() + Calendar.getInstance().getTimeInMillis());
 
+        if (savedInstanceState == null) {
+            mStory = new Story();
+            isNewImage = false;
+        }
+
         // get the location pass from other activity if exists
-        if (getIntent().getExtras() != null ) {
+        if (getIntent().getExtras() != null) {
             Double lat = getIntent().getExtras().getDouble(STORY_LAT);
             Double lng = getIntent().getExtras().getDouble(STORY_LNG);
             mStory.setStoryLat(lat);
@@ -119,7 +125,20 @@ public class NewStoryActivity extends AppCompatActivity {
 
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
+        mStory.setStoryTitle(storyTitleEditor.getText().toString());
+        mStory.setStoryContent(storyContentEditor.getText().toString());
         outState.putParcelable(URI_INSTANCE_STATE_KEY, this.tempImgUri);
+        outState.putParcelable(STORY_INSTANCE_STATE_KEY, this.mStory);
+        outState.putBoolean("isNewImage", isNewImage);
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mStory = savedInstanceState.getParcelable(STORY_INSTANCE_STATE_KEY);
+        tempImgUri = savedInstanceState.getParcelable(URI_INSTANCE_STATE_KEY);
+        isNewImage = savedInstanceState.getBoolean("isNewImage");
+        loadSnap();
     }
 
 
@@ -127,7 +146,6 @@ public class NewStoryActivity extends AppCompatActivity {
     private void setLocationText(double lat, double lng) {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         TextView locationTextView = (TextView) findViewById(R.id.story_location);
-        String addressText = "  ";
         try {
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
             if (addresses.size() > 0) {
@@ -162,6 +180,8 @@ public class NewStoryActivity extends AppCompatActivity {
         }catch(SecurityException e) {
             checkPermissions();
         }
+        catch (Exception e) {
+        }
     }
 
     // create the button listener, onClick
@@ -174,8 +194,6 @@ public class NewStoryActivity extends AppCompatActivity {
             }
         });
         // mStory type
-        // TODO
-        // mStory privacy
         // TODO
         // save button
         Button btnSave = (Button) findViewById(R.id.btnSave);
@@ -224,19 +242,16 @@ public class NewStoryActivity extends AppCompatActivity {
 
     // save the story when on click
     private void saveStory() {
-        EditText storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
-        EditText storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
-        Spinner storyTypeSpinner = (Spinner) findViewById(R.id.story_type);
         Log.d("******","load to firebase: " + mStory.getStoryImgURL());
         mStory.setStoryAuthorId(user.getUid());
         mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
         mStory.setStoryMode(0);//TODO
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
-        // mStory.setStoryImgURL("" + firebaseUri);
+        //mStory.setStoryImgURL(tempImgUri+"");
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
         mStory.setStoryContent(storyContentEditor.getText().toString());
         mStory.setStoryLikes(0);
-
+        mStory.setStoryAddress(addressText);
         upload2Firebase();
         Toast.makeText(this,"your story will be heard", Toast.LENGTH_SHORT).show();
         finish();
@@ -248,23 +263,24 @@ public class NewStoryActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         if(resultCode != Activity.RESULT_OK) return;
-        if(requestCode == CAMERA_REQUEST_CODE){
+        if(requestCode == Global.CAMERA_REQUEST_CODE){
             Crop.of(tempImgUri, tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).start(this);
         }
-        else if(requestCode == GALLERY_REQUEST_CODE){
-            Log.d("test uri", data.getData() + "");
+        else if(requestCode == Global.GALLERY_REQUEST_CODE){
             Crop.of(data.getData(), tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).
                     start(this);
         }
         else if(requestCode == Crop.REQUEST_CROP){
+            Log.d("******", Crop.getOutput(data) + "");
             Uri selectedImgUri = Crop.getOutput(data);
             storyImageView.setImageURI(null);
             storyImageView.setPadding(0,0,0,0);
             storyImageView.setImageURI(selectedImgUri);
+            isNewImage = true;
         }
     }
 
@@ -274,7 +290,7 @@ public class NewStoryActivity extends AppCompatActivity {
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
         tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, tempImgUri);
-        startActivityForResult(intent, CAMERA_REQUEST_CODE);
+        startActivityForResult(intent, Global.CAMERA_REQUEST_CODE);
     }
 
     private void loadFromGallery() {
@@ -283,11 +299,13 @@ public class NewStoryActivity extends AppCompatActivity {
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
         tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, tempImgUri);
-        startActivityForResult(intent, GALLERY_REQUEST_CODE);
+        startActivityForResult(intent, Global.GALLERY_REQUEST_CODE);
     }
 
     private void loadSnap() {
         if (tempImgUri != null) {
+            storyImageView.setImageURI(null);
+            storyImageView.setPadding(0,0,0,0);
             storyImageView.setImageURI(tempImgUri);
         }
         else {
@@ -319,30 +337,37 @@ public class NewStoryActivity extends AppCompatActivity {
 
 
     private void upload2Firebase() {
-        try {
-            storyImageView.buildDrawingCache();
-            Bitmap bmap = storyImageView.getDrawingCache();
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-            byte[] data = baos.toByteArray();
-            UploadTask uploadTask = storageReference.putBytes(data);
-            uploadTask.addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception exception) {
-                    Log.d("******", "Firebase upload fail: " + exception);
-                    // TODO
-                    // if fail, pop up dialog
-                }
-            }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    firebaseUri = taskSnapshot.getDownloadUrl();
-                    mStory.setStoryImgURL(firebaseUri+"");
-                    database.createStory(mStory);
-                }
-            });
-        }catch(Exception e) {
-            Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
+        // upload image only if users add their own image
+        if (isNewImage) {
+            try {
+                storyImageView.buildDrawingCache();
+                Bitmap bmap = storyImageView.getDrawingCache();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                bmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                byte[] data = baos.toByteArray();
+                UploadTask uploadTask = storageReference.putBytes(data);
+                uploadTask.addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Log.d("******", "Firebase upload fail: " + exception);
+                        // TODO
+                        // if fail, pop up dialog
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        firebaseUri = taskSnapshot.getDownloadUrl();
+                        mStory.setStoryImgURL(firebaseUri + "");
+                        database.createStory(mStory);
+                    }
+                });
+            } catch (Exception e) {
+                Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
+            }
+        }
+        // else only upload story without image
+        else {
+            database.createStory(mStory);
         }
     }
 
@@ -373,7 +398,7 @@ public class NewStoryActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_LOCATION: {
+            case Global.MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -383,7 +408,7 @@ public class NewStoryActivity extends AppCompatActivity {
                 }
                 return;
             }
-            case MY_PERMISSIONS_REQUEST_CAMERA: {
+            case Global.MY_PERMISSIONS_REQUEST_CAMERA: {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     loadFromCamera();
@@ -398,8 +423,12 @@ public class NewStoryActivity extends AppCompatActivity {
     public void checkPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
+        if(ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    Global.MY_PERMISSIONS_REQUEST_LOCATION);
         }
         else {
             setCurrentLocationText();
@@ -409,9 +438,15 @@ public class NewStoryActivity extends AppCompatActivity {
     public void checkCameraPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
+        if (ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            android.Manifest.permission.CAMERA},
+                    Global.MY_PERMISSIONS_REQUEST_CAMERA);
         }
         else {
             loadFromCamera();

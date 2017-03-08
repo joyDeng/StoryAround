@@ -11,11 +11,11 @@
 </array>
     <string-array name="story_type">
         <item>-- Select your story type --</item>
-        <item>type 0</item>
-        <item>type 1</item>
-        <item>type 2</item>
-        <item>type 3</item>
-        <item>type 4</item>
+        <item>Historical</item>
+        <item>Romantic</item>
+        <item>Horror</item>
+        <item>Fairy tale</item>
+        <item>Others</item>
     </string-array>
     <attr format="reference" name="MediaRouteControllerWindowBackground"/>
     <attr format="reference" name="castExpandedControllerToolbarStyle"/>
@@ -1052,7 +1052,7 @@
     <string name="text_email">Email</string>
     <string name="text_password">Password</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
-    <string name="web_client_id">271952514371-1d1k7pcma61lvqvq0k40c8tm3vesdc68.apps.googleusercontent.com</string>
+    <string name="web_client_id">782934398387-2h7hf0g64tbmcg1g5jbq75oo3kojr484.apps.googleusercontent.com</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

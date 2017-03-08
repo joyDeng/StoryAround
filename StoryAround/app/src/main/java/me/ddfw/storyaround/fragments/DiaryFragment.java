@@ -66,7 +66,8 @@ public class DiaryFragment extends Fragment {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                         Story story = dataSnapshot.getValue(Story.class);
-                        storyListAdapter.insert(story,0);
+                        stories.add(story);
+                        //storyListAdapter.insert(story,0);
                         storyListAdapter.notifyDataSetChanged();
                     }
 
