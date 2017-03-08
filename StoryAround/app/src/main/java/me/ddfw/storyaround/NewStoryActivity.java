@@ -75,7 +75,7 @@ public class NewStoryActivity extends AppCompatActivity {
     private Uri tempImgUri;
     private Uri firebaseUri;
     private ImageView storyImageView;
-    private String addressText = "  ";
+    private String addressText = "";
 
     private boolean isNewImage;
 

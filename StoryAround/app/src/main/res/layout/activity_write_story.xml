@@ -61,6 +61,7 @@
                         android:id="@+id/story_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:background="@color/color6"
                         android:hint="location right now"
                         android:textSize="15dp" />
