@@ -392,9 +392,11 @@ public class ProfileFragment extends Fragment {
         }
         else if(requestCode == Crop.REQUEST_CROP){
             Uri selectedImgUri = Crop.getOutput(data);
-            profileImage.setImageURI(null);
-            profileImage.setImageURI(selectedImgUri);
-            isNewImage = true;
+            if (profileImage != null) {
+                profileImage.setImageURI(null);
+                profileImage.setImageURI(selectedImgUri);
+                isNewImage = true;
+            }
         }
     }
 
