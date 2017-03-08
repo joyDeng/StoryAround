@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -82,6 +83,8 @@ public class PostFragment extends Fragment{
 
     public void onSaveClicked() {
         //write test data inside:
+        Toast.makeText(getActivity().getApplicationContext(),
+                "You have saved your location", Toast.LENGTH_SHORT).show();
         checkPermission(getActivity());
     }
 
