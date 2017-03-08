@@ -34,6 +34,11 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
     private List<Story> data;
 
 
+    private String[] storyType = new String[]{"None",
+            "Historical", "Romantic",
+            "Horror", "Fairy tale", "Others"};
+
+
     public StoryListAdapter(Context context, List<Story> data){
         super(context,R.layout.list_item_story,data);
         this.data = data;
@@ -117,7 +122,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
 
             //TODO: need to set the story type as string!!!!
-            viewHolder.tag.setText(String.valueOf(story.getStoryType()));
+            viewHolder.tag.setText("# " + storyType[story.getStoryType()]);
             Log.d("debug", String.valueOf(story.getStoryType()));
 
             SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
@@ -125,6 +130,7 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
             Log.d("debug", dateFormat.format(new Date(story.getStoryDateTime())));
 
+        viewHolder.location.setText(story.getStoryAddress());
 
 
         return convertView;

@@ -89,6 +89,7 @@ public class PostFragment extends Fragment{
 
 
 
+
         return rootView;
     }
 
@@ -142,37 +143,24 @@ public class PostFragment extends Fragment{
     }
 
     private void markLocation(){
-
         meditor.clear();
-
         LocationManager locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
-
         try{
-
             Criteria criteria = new Criteria();
             criteria.setAccuracy(Criteria.ACCURACY_FINE);
             String provider = locationManager.getBestProvider(criteria, true);
             final Location last = locationManager.getLastKnownLocation(provider);
-
             if(last != null){
-
                 savedLocations.add(last);
-
                 JSONArray jsonArray= new JSONArray(savedLocations);
-
                 meditor.putString("locations", jsonArray.toString());
-
                 meditor.commit();
-
                 Toast.makeText(getActivity(), "your location is saved", Toast.LENGTH_SHORT).show();
-            }else{
-
-                Toast.makeText(getActivity(), "your location can not be detected", Toast.LENGTH_SHORT).show();
-
             }
-
+            else{
+                Toast.makeText(getActivity(), "your location can not be detected", Toast.LENGTH_SHORT).show();
+            }
         }catch(SecurityException e){}
-
     }
 
 

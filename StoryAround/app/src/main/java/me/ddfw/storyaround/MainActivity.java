@@ -120,10 +120,15 @@ public class MainActivity extends AppCompatActivity{
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
 
-
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            public void onPageScrolled(int position, float positionOffset,
+                                       int positionOffsetPixels) {
+                InputMethodManager imm = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+                try {
+                    imm.hideSoftInputFromWindow(getWindow().getCurrentFocus().getWindowToken(), 0);
+                }catch (Exception e) {}
             }
             @Override
             public void onPageSelected(int position) {
@@ -222,8 +227,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.add("test");
+        menu.removeItem(0);
         return true;
     }
+
+
 
     // START: set_login_method
     public void setmLoginMethod(String string){
