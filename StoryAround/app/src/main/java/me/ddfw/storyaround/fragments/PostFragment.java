@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,12 +37,22 @@ import static me.ddfw.storyaround.fragments.MapFragment.LOCATION_PERMISSION_REQU
 public class PostFragment extends Fragment{
     List<LatLng> stories = new ArrayList<>();
 
+    public String key = "my_shared_preferences";
+    private SharedPreferences mprefs;
+    private SharedPreferences.Editor meditor;
+
+    private ArrayList<Location> savedLocations;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
 
         setRetainInstance(true);
         Log.d("******","PostFragment onCreateView");
+
+        mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
+        meditor = mprefs.edit();
 
         Button btnStart = (Button) rootView.findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {
@@ -128,11 +140,6 @@ public class PostFragment extends Fragment{
 
     private void markLocation(){
 
-        String key = "my_shared_preferences";
-
-        SharedPreferences mprefs = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor meditor = mprefs.edit();
         meditor.clear();
 
         LocationManager locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
@@ -145,11 +152,12 @@ public class PostFragment extends Fragment{
             final Location last = locationManager.getLastKnownLocation(provider);
 
             if(last != null){
-                double lat = last.getLatitude();
-                double lng = last.getLongitude();
 
-                meditor.putFloat("lat", (float) lat);
-                meditor.putFloat("lng", (float) lng);
+                savedLocations.add(last);
+
+                JSONArray jsonArray= new JSONArray(savedLocations);
+
+                meditor.putString("locations", jsonArray.toString());
 
                 meditor.commit();
 
