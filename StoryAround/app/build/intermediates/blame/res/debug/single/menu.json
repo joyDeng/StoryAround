@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_delete.xml",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_delete.xml"
+    },
+    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
@@ -8,7 +12,15 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_delete.xml"
     },
     {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_diary.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_diary.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_diary.xml",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\menu\\menu_diary.xml"
     }
 ]
