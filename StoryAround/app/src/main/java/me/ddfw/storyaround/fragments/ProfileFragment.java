@@ -181,12 +181,15 @@ public class ProfileFragment extends Fragment {
     }
 
     private void setProfileContent() {
-        Log.d("******","set profile content: " + mUser.getUserGender());
-        editUsername.setText(mUser.getUserName());
         editEmail.setText(mUser.getUserEmail());
-        editPhone.setText(mUser.getUserPhoNum());
-        ((RadioButton) editGender.getChildAt(mUser.getUserGender())).setChecked(true);
-        editBio.setText(mUser.getUserBio());
+        if (mUser.getUserName() != null)
+            editUsername.setText(mUser.getUserName());
+        if (mUser.getUserPhoNum() != null)
+            editPhone.setText(mUser.getUserPhoNum());
+        if (editGender.getChildAt(mUser.getUserGender()) != null)
+            ((RadioButton) editGender.getChildAt(mUser.getUserGender())).setChecked(true);
+        if (mUser.getUserBio() != null)
+            editBio.setText(mUser.getUserBio());
     }
 
     private void onSignOut() {
