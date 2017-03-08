@@ -4,32 +4,32 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\user.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_notification_forward10.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\map.png",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_play_dark.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_notification_rewind30.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_notification_rewind30.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\book.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_dialog_material_background.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_small_icon.xml",
@@ -112,20 +112,20 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_forward30.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_mini_controller_forward30.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_skip_ad_label_border.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_skip_ad_label_border.xml"
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\book.png",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\book.png"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_skip_ad_label_border.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_skip_ad_label_border.xml"
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_close_light.xml",
@@ -216,24 +216,24 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\heart1.png",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\heart1.png"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_play_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\heart1.png",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\heart1.png"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo2.png",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo2.png"
     },
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_pause.xml",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\flag.png",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\flag.png"
+    },
+    {
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_pause.xml",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_dark.xml",
@@ -348,12 +348,12 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_notification_forward.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_background.jpg",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\login_background.jpg"
-    },
-    {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo_s.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo_s.png"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_background.jpg",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\login_background.jpg"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
@@ -372,16 +372,16 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_notification_forward30.xml"
     },
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\likes.png",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\likes.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
@@ -392,24 +392,24 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_disabled.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_pause_light.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_bg_low.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -444,16 +444,16 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_expanded_controller_mute.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_next.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_expanded_controller_skip_next.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_vector_test.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_next.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_expanded_controller_skip_next.xml"
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\profile.png",
@@ -472,12 +472,12 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_mini_controller_play_large.xml"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_on_light.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_media_route_on_light.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_rewind30.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_mini_controller_rewind30.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_on_light.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_media_route_on_light.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
@@ -492,16 +492,16 @@
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\post.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_bg_gradient_light.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_dark.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_media_route_connecting_dark.xml"
     },
     {
         "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\likes.png",
         "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\likes.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_dark.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_media_route_connecting_dark.xml"
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_bg_gradient_light.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
@@ -544,12 +544,12 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\write.png",
-        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\write.png"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\write.png",
+        "source": "C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\write.png"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
@@ -616,12 +616,12 @@
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo.png"
     },
     {
-        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_check_material.xml"
-    },
-    {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
         "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\xinbeifu\\Documents\\grad courses\\smartphone programming\\StoryAround\\StoryAround\\C:\\Users\\SAMSUNG\\Documents\\GitHub\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",

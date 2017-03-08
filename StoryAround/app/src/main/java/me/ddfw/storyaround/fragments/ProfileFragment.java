@@ -64,6 +64,15 @@ import static android.content.Context.MODE_PRIVATE;
 public class ProfileFragment extends Fragment {
 
     private static final String TAG = "ProfileFragment";
+    public static final String USER_IMAGE = "image";
+
+    private static final String URI_INSTANCE_STATE_KEY = "saved_uri";
+    private static final String USER_INSTANCE_STATE_KEY = "saved_user";
+
+    private DatabaseReference databaseRef;
+    FirebaseStorage storage;
+    StorageReference storageReference;
+    private MyDatabase database;
 
     private FirebaseUser mFirebaseUser;
     private User mUser;
@@ -71,22 +80,13 @@ public class ProfileFragment extends Fragment {
     private EditText editEmail;
     private EditText editPhone;
     private RadioGroup editGender;
-
     private EditText editBio;
-    private DatabaseReference databaseRef;
-
     private ImageView profileImage;
     private boolean isEditMode;
-
-
-
-    public static final String USER_IMAGE = "image";
+    private boolean isNewImage;
     private Uri tempImgUri;
     private Uri firebaseUri;
-    private boolean isNewImage;
-    FirebaseStorage storage;
-    StorageReference storageReference;
-    private MyDatabase database;
+
 
 
     @Override
@@ -111,32 +111,62 @@ public class ProfileFragment extends Fragment {
             editBio = (EditText) rootView.findViewById(R.id.user_bio);
             setProfileBtn(rootView);
             databaseRef = FirebaseDatabase.getInstance().getReference();
-            databaseRef.child(User.USER_TABLE).child(mFirebaseUser.getUid())
-                    .addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot snapshot) {
-                            mUser = snapshot.getValue(User.class);
-                            if (mUser != null) {
-                                setProfileContent();
-                                isNewImage = false;
-                                storage = FirebaseStorage.getInstance();
-                                database = new MyDatabase();
-                                storageReference = storage.getReference().child("image/profileImage_"
-                                        + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
+            storage = FirebaseStorage.getInstance();
+            database = new MyDatabase();
+            if (savedInstanceState == null) {
+                databaseRef.child(User.USER_TABLE).child(mFirebaseUser.getUid())
+                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot snapshot) {
+                                mUser = snapshot.getValue(User.class);
+                                if (mUser != null) {
+                                    setProfileContent();
+                                    isNewImage = false;
+                                    storageReference = storage.getReference().child("image/profileImage_"
+                                            + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
+                                }
                             }
-                        }
-                        @Override
-                        public void onCancelled(DatabaseError error) {
-                        }
-                    });
+                            @Override
+                            public void onCancelled(DatabaseError error) {
+                            }
+                        });
+            }
+            else {
+                onRestoreInstanceState(savedInstanceState);
+                setProfileContent();
+                storageReference = storage.getReference().child("image/profileImage_"
+                        + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
+            }
         }
 
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
         );
-        setRetainInstance(true);
+        //setRetainInstance(true);
         return rootView;
     }
+
+
+
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(URI_INSTANCE_STATE_KEY, this.tempImgUri);
+        outState.putParcelable(USER_INSTANCE_STATE_KEY, this.mUser);
+        outState.putBoolean("isNewImage", isNewImage);
+        saveSnap();
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        mUser = savedInstanceState.getParcelable(USER_INSTANCE_STATE_KEY);
+        tempImgUri = savedInstanceState.getParcelable(URI_INSTANCE_STATE_KEY);
+        isNewImage = savedInstanceState.getBoolean("isNewImage");
+        loadSnap();
+    }
+
+
+
+
+
 
 
 
@@ -296,9 +326,7 @@ public class ProfileFragment extends Fragment {
         else
             editBio.setText(mUser.getUserBio());
 
-        if (mUser.getUserImageURL() == null)
-            tempImgUri = null;
-        else
+        if (mUser.getUserImageURL() != null && !isNewImage)
             setProfileImageFromFirebase();
         loadSnap();
     }
@@ -403,7 +431,6 @@ public class ProfileFragment extends Fragment {
                 profileImage.setImageBitmap(bmap);
                 file.close();
             } catch (IOException e) {
-                // Default story photo if no photo saved before.
                 profileImage.setImageResource(R.drawable.profile);
             }
         }
