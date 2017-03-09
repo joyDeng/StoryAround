@@ -46,14 +46,23 @@ import me.ddfw.storyaround.model.Story;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback,
         GoogleMap.OnMarkerClickListener{
+    // request code for permission
     public final static int LOCATION_PERMISSION_REQUEST = 1;
+
+    // some views
     private View rootView;
     private MapView mMapView;
     private GoogleMap googleMap;
     private LocationManager locationManager;
+
+    // firebase database reference
     private DatabaseReference mDatabase;
+
+    // hashmap to manage markers and stories
     final private HashMap<String, Story> storyMap = new HashMap<>();
     final private HashMap<String, Marker> markerMap = new HashMap<>();
+
+    // marker for current location
     private Marker current;
 
     @Override
@@ -65,12 +74,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        // Mapview setup
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
         if (mMapView != null) {
-            Log.d("DEBUG", mMapView.toString());
             mMapView.onCreate(savedInstanceState);
             mMapView.onResume();
             mMapView.getMapAsync(this);
@@ -82,11 +90,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
     }
 
 
+    // overrides functions
+    // for controlling map view
     @Override
     public void onResume() {
         super.onResume();
@@ -111,6 +119,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         mMapView.onLowMemory();
     }
 
+    // check permission, after user permission granted
+    // show current location
     public void checkPermission(Activity activity){
         Log.d("DEBUG","in check permission");
         if(Build.VERSION.SDK_INT < 23){
@@ -127,15 +137,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
     }
 
-    public boolean isLocationPermitted(Activity activity){
-        if(Build.VERSION.SDK_INT < 23) return true;
-        return  ContextCompat.checkSelfPermission(activity,
-                Manifest.permission.ACCESS_FINE_LOCATION) ==
-                PackageManager.PERMISSION_GRANTED;
-    }
-
     public void drawCurrentLocation(){
         try{
+            // get current location
             initLocationManager();
             Criteria criteria = new Criteria();
             criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -145,12 +149,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(last))
                         .icon(BitmapDescriptorFactory.fromResource(R.drawable.flag)));
             }
+
             locationManager.requestLocationUpdates(provider, 0, 0, new android.location.LocationListener() {
                 @Override
                 public void onLocationChanged(Location location) {
-                    Log.d("DEBUG","Location changed");
                     if(googleMap!=null){
-
                         if(current!=null)
                             current.remove();
                         current = googleMap.addMarker(new MarkerOptions().position(locationToLatLng(location))
@@ -165,14 +168,16 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
                 @Override
                 public void onProviderEnabled(String s) {
-
                 }
 
                 @Override
                 public void onProviderDisabled(String s) {
-
                 }
             });
+
+            // load stories
+            // set some listeners to load new stories when map idle
+            // set marker click listener to show story details
             if(googleMap!=null){
                 BitmapFactory.Options opt = new BitmapFactory.Options();
                 opt.inMutable = true;
@@ -205,6 +210,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         }
     }
 
+    // get stories by current visible region from firebase
+    // listen to the data change and update the map in real time
     public void getStoryByLocation(LatLngBounds bounds){
         LatLng northeast = bounds.northeast, southwest = bounds.southwest;
         double nLat = northeast.latitude, sLat = southwest.latitude;
@@ -217,6 +224,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
         mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).
                 startAt(sLat).endAt(nLat).addChildEventListener(new ChildEventListener() {
+            // if new story added, put markers on map
+            // and save them to hashmap for indexing
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Story story = dataSnapshot.getValue(Story.class);
@@ -232,6 +241,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 }
             }
 
+            // if a story changed, update the content,
+            // but no need to redraw the markers
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 Story story = dataSnapshot.getValue(Story.class);
@@ -247,6 +258,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
                 }
             }
 
+            // if stories deleted, remove them from the map
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
                 Story story = dataSnapshot.getValue(Story.class);
@@ -270,6 +282,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         });
     }
 
+    // convert location to lat lng
     public static LatLng locationToLatLng(Location l){
         if (l != null) {
             return new LatLng(l.getLatitude(), l.getLongitude());
@@ -284,6 +297,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
     }
 
+    // handle the location permission requirements
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -308,16 +322,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         }
     }
 
+    // if map is ready, change the map style
+    // and draw location as well as all stories
     @Override
     public void onMapReady(GoogleMap mMap) {
         googleMap = mMap;
-
         try {
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
                             getActivity(), R.raw.style_json));
-
-
 
             if (!success) {
                 Log.e("TAG", "Style parsing failed.");
@@ -327,14 +340,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
         }
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inMutable = true;
-        Bitmap imageBitmap= BitmapFactory.decodeResource(getResources(),
-                R.drawable.logo,opt);
-
-        //mClusterManager = new ClusterManager<MyItem>(getActivity(), googleMap);
-
-
         checkPermission(getActivity());
     }
+
+    // if marker is clicked, show detail fragments
     @Override
     public boolean onMarkerClick(final Marker marker) {
         if(marker == current){

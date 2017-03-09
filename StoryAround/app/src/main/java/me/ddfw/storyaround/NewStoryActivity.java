@@ -319,10 +319,12 @@ public class NewStoryActivity extends AppCompatActivity {
 
     // load the image from gallery and send it to crop 
     private void loadFromGallery() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         ContentValues values = new ContentValues(1);
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg");
-        tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        tempImgUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                values);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, tempImgUri);
         startActivityForResult(intent, Global.GALLERY_REQUEST_CODE);
     }
