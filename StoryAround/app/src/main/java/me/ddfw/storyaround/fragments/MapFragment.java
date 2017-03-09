@@ -268,30 +268,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,
 
             }
         });
-
-       /* mDatabase.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_LAT).startAt(sLat).endAt(nLat).
-                addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for(DataSnapshot child : dataSnapshot.getChildren()){
-                            Story story = child.getValue(Story.class);
-                            if(story.getStoryLng() >= sLng && story.getStoryLng() <= nLng){
-                                if(!storyMap.containsKey(story.getStoryId())){
-                                    storyMap.put(story.getStoryId(),story);
-                                    googleMap.addMarker(new MarkerOptions().icon(
-                                            BitmapDescriptorFactory.fromBitmap(resized)).position(
-                                            new LatLng(story.getStoryLat(),story.getStoryLng())).
-                                            title(story.getStoryId()));
-                                }
-
-                            }
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });*/
     }
 
     public static LatLng locationToLatLng(Location l){
