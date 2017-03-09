@@ -52,41 +52,38 @@ import java.util.Locale;
 import me.ddfw.storyaround.fragments.PostFragment;
 import me.ddfw.storyaround.model.Story;
 
-// list of TODO
-// story type
-// story privacy
-// rotation
-// image compress
-
 
 public class NewStoryActivity extends AppCompatActivity {
-    private Story mStory;
-    private MyDatabase database;
-    private FirebaseAuth mAuth;
-    private FirebaseUser user;
-    FirebaseStorage storage;
-    StorageReference storageReference;
-    private LocationManager locationManager;
-    private SharedPreferences mprefs;
-    private SharedPreferences.Editor meditor;
-
+    
+    // keys 
     public static final String STORY_LAT = "lat";
     public static final String STORY_LNG = "lng";
     public static final String STORY_IMAGE = "image";
-
     private static final String URI_INSTANCE_STATE_KEY = "saved_uri";
     private static final String STORY_INSTANCE_STATE_KEY = "saved_story";
+    
+    // database 
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+    private FirebaseStorage storage;
+    private MyDatabase database;
+    private StorageReference storageReference;
+    
+    // data 
+    private SharedPreferences mprefs;
+    private SharedPreferences.Editor meditor;
+    private Story mStory;
     private Uri tempImgUri;
     private Uri firebaseUri;
-    private ImageView storyImageView;
     private String addressText = "";
-
+    private LocationManager locationManager;
     private boolean isNewImage;
-    EditText storyTitleEditor;
-    EditText storyContentEditor;
-    Spinner storyTypeSpinner;
-
-
+    
+    // views 
+    private ImageView storyImageView;
+    private EditText storyTitleEditor;
+    private EditText storyContentEditor;
+    private Spinner storyTypeSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +106,7 @@ public class NewStoryActivity extends AppCompatActivity {
         storageReference = storage.getReference().child("image/storyImage_"
                 + user.getUid() + Calendar.getInstance().getTimeInMillis());
 
+        // create a data (story) instance 
         if (savedInstanceState == null) {
             mStory = new Story();
             isNewImage = false;
@@ -122,15 +120,17 @@ public class NewStoryActivity extends AppCompatActivity {
             mStory.setStoryLng(lng);
             setLocationText(lat, lng);
         }
+        // if not exists, get the current loctioan after check the permission 
         else {
             checkPermissions();
         }
-
+        
+        // reload the story image after configuration change 
         storyImageView = (ImageView) findViewById(R.id.story_image);
         loadSnap();
     }
 
-
+    // save the instance befreo configuration change 
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
@@ -141,6 +141,7 @@ public class NewStoryActivity extends AppCompatActivity {
         outState.putBoolean("isNewImage", isNewImage);
     }
 
+    // reload the instance after configuration change 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mStory = savedInstanceState.getParcelable(STORY_INSTANCE_STATE_KEY);
@@ -150,11 +151,13 @@ public class NewStoryActivity extends AppCompatActivity {
     }
 
 
-    // set the pre-saved location as the location where you want to write a mStory
+    // set the pre-saved location as the location where you want to write a story
     private void setLocationText(double lat, double lng) {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         TextView locationTextView = (TextView) findViewById(R.id.story_location);
         try {
+            // get the human readable address from the lat, lng
+            // set it to textview if success
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
             if (addresses.size() > 0) {
                 Address address = addresses.get(0);
@@ -165,7 +168,9 @@ public class NewStoryActivity extends AppCompatActivity {
                         addressText += address.getAddressLine(i);
                     }
                 locationTextView.setText(addressText);
-            } else {
+            }
+            // if fail to get the location, show default text 
+            else {
                 locationTextView.setText("Middle of Nowhere");
             }
         } catch (Exception e) {
@@ -174,8 +179,9 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
-    // set the current location as the location where you want to write a mStory
+    // set the current location as the location where you want to write a story
     private void setCurrentLocationText() {
+        // get the current location 
         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -184,15 +190,17 @@ public class NewStoryActivity extends AppCompatActivity {
             Location location = locationManager.getLastKnownLocation(provider);
             mStory.setStoryLat(location.getLatitude());
             mStory.setStoryLng(location.getLongitude());
+            // set it to textview 
             setLocationText(mStory.getStoryLat(), mStory.getStoryLng());
         }catch(SecurityException e) {
             checkPermissions();
         }
         catch (Exception e) {
+            Log.d("******","fail to get current location: " + e);
         }
     }
 
-    // create the button listener, onClick
+    // create the button listener for: change image, save story, cancel 
     private void CreateStoryListener() {
         // pick your image
         findViewById(R.id.story_image).setOnClickListener(new View.OnClickListener() {
@@ -201,8 +209,7 @@ public class NewStoryActivity extends AppCompatActivity {
                 pickImage();
             }
         });
-        // mStory type
-        // TODO
+        
         // save button
         Button btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -211,6 +218,7 @@ public class NewStoryActivity extends AppCompatActivity {
                 saveStory();
             }
         });
+        
         // cancel button
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -220,7 +228,7 @@ public class NewStoryActivity extends AppCompatActivity {
             }
         });
 
-        // some small modified with the UI
+        // change the color of location icon (xml sometimes not working) 
         ImageView iconLocation = (ImageView) findViewById(R.id.location_icon);
         iconLocation.setColorFilter(getResources().getColor(R.color.color3));
     }
@@ -234,9 +242,11 @@ public class NewStoryActivity extends AppCompatActivity {
                         new DialogInterface.OnClickListener() {
                             public void onClick (DialogInterface dialog, int picker) {
                                 switch (picker) {
+                                    // if user select "open camera"
                                     case 0:
                                         checkCameraPermissions();
                                         break;
+                                    // if user selcet "select from gallery"
                                     case 1:
                                         loadFromGallery();
                                         break;
@@ -248,18 +258,18 @@ public class NewStoryActivity extends AppCompatActivity {
     }
 
 
-    // save the story when on click
+    // save the story to firebase when click on the Save btn
     private void saveStory() {
-        Log.d("******","load to firebase: " + mStory.getStoryImgURL());
+        // create the story that will be saved 
         mStory.setStoryAuthorId(user.getUid());
         mStory.setStoryType(storyTypeSpinner.getSelectedItemPosition());
-        mStory.setStoryMode(0);//TODO
+        mStory.setStoryMode(0); 
         mStory.setStoryDateTime(Calendar.getInstance().getTimeInMillis());
-        //mStory.setStoryImgURL(tempImgUri+"");
         mStory.setStoryTitle(storyTitleEditor.getText().toString());
         mStory.setStoryContent(storyContentEditor.getText().toString());
         mStory.setStoryLikes(0);
         mStory.setStoryAddress(addressText);
+        // upload to firebase
         upload2Firebase();
         Toast.makeText(this,"your story will be heard", Toast.LENGTH_SHORT).show();
         setResult(RESULT_OK);
@@ -268,21 +278,25 @@ public class NewStoryActivity extends AppCompatActivity {
 
 
 
-    // ************** Image ************* //
+    // ************** For Image ************* //
+    
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         if(resultCode != Activity.RESULT_OK) return;
+        // open camera for user
         if(requestCode == Global.CAMERA_REQUEST_CODE){
             Crop.of(tempImgUri, tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).start(this);
         }
+        // open gallery for user 
         else if(requestCode == Global.GALLERY_REQUEST_CODE){
             Crop.of(data.getData(), tempImgUri)
                     .withAspect(storyImageView.getMeasuredWidth(),
                             storyImageView.getMeasuredHeight()).
                     start(this);
         }
+        // crop the image for user and set it to the view 
         else if(requestCode == Crop.REQUEST_CROP){
             Log.d("******", Crop.getOutput(data) + "");
             Uri selectedImgUri = Crop.getOutput(data);
@@ -293,6 +307,7 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
+    // load the image from camera and send it to crop 
     private void loadFromCamera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         ContentValues values = new ContentValues(1);
@@ -302,6 +317,7 @@ public class NewStoryActivity extends AppCompatActivity {
         startActivityForResult(intent, Global.CAMERA_REQUEST_CODE);
     }
 
+    // load the image from gallery and send it to crop 
     private void loadFromGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         ContentValues values = new ContentValues(1);
@@ -311,12 +327,15 @@ public class NewStoryActivity extends AppCompatActivity {
         startActivityForResult(intent, Global.GALLERY_REQUEST_CODE);
     }
 
+    // load the image to image view 
     private void loadSnap() {
+        // if image already exists, put in on image view 
         if (tempImgUri != null) {
             storyImageView.setImageURI(null);
             storyImageView.setPadding(0,0,0,0);
             storyImageView.setImageURI(tempImgUri);
         }
+        // else try to see if we have saved it in the phone 
         else {
             try {
                 FileInputStream file = openFileInput(STORY_IMAGE);
@@ -331,6 +350,7 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
+    // save the image to the phone storage  
     private void saveSnap() {
         storyImageView.buildDrawingCache();
         Bitmap bmap = storyImageView.getDrawingCache();
@@ -344,7 +364,7 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
-
+    // upload the stroy to the firebase database, and the image to firebase storage 
     private void upload2Firebase() {
         // upload image only if users add their own image
         if (isNewImage) {
@@ -359,12 +379,12 @@ public class NewStoryActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception exception) {
                         Log.d("******", "Firebase upload fail: " + exception);
-                        // TODO
-                        // if fail, pop up dialog
                     }
                 }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    // if successfully upload the image
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // save the story and update the story image url
                         firebaseUri = taskSnapshot.getDownloadUrl();
                         mStory.setStoryImgURL(firebaseUri + "");
                         database.createStory(mStory);
@@ -374,34 +394,13 @@ public class NewStoryActivity extends AppCompatActivity {
                 Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
             }
         }
-        // else only upload story without image
+        // if user do not insert new image, upload the story without image 
         else {
             database.createStory(mStory);
         }
     }
 
-    private void getImageUriFromFirebase() {
-        //Picasso.with(this).load(firebaseUri).into(storyImageView);
-//        FirebaseStorage storage = FirebaseStorage.getInstance();
-//        StorageReference storageRef = storage.getReference();
-//        StorageReference storageReference = storageRef.child("image/storyImage");
-//        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//            @Override
-//            public void onSuccess(Uri uri) {
-//                firebaseUri = uri;
-//                mStory.setStoryImgURL(firebaseUri+"");
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception exception) {
-//                Log.d("******", "Firebase get URI fail: " + exception);
-//            }
-//        });
-    }
-
-
-
-
+    
     // ************** Permissions ************* //
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -429,6 +428,8 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
+    // check the location permission at the beginning of create new story
+    // if pass, get the current location and set it to text view 
     public void checkPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
@@ -444,6 +445,7 @@ public class NewStoryActivity extends AppCompatActivity {
         }
     }
 
+    // check the camera permission when user click "open camera"
     public void checkCameraPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
@@ -466,6 +468,7 @@ public class NewStoryActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        // pop out dialog to ask users if they really want to exit the editor 
         new AlertDialog.Builder(this)
                 .setTitle("Exit Editor?")
                 .setMessage("Are you sure you want to exit the editor?")
