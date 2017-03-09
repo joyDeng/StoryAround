@@ -40,7 +40,7 @@ Edit your story.
 
 List of stories you liked.
 
-![picture1](https://cloud.githubusercontent.com/assets/23435773/23734550/c2a85460-044d-11e7-945b-04c5ee1613e6.png)
+![screen shot 2017-03-08 at 10 31 30 pm](https://cloud.githubusercontent.com/assets/23435773/23734785/584ed042-044f-11e7-8cb7-c2c7f57df276.png)
 
 List of stories you posted.
 
@@ -55,6 +55,9 @@ Version 1.0
 ## Authors
 
 Annie Dai
+
 Xi Deng
+
 Xinbei Fu
+
 Zhenli Wu
