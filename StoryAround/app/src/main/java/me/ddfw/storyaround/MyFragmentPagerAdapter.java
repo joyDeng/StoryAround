@@ -40,7 +40,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
 
-
+    // set up the title for each tab 
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
@@ -67,6 +67,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
             default:
                 break;
         }
+        // set up the icon for each tab 
         myDrawable.setBounds(0, 0, 80, 80);
         myDrawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
         SpannableString sb = new SpannableString(" \n" + title);
