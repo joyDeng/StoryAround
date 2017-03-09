@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -45,18 +44,31 @@ import static me.ddfw.storyaround.fragments.PostFragment.LOCATION_KEY;
 
 
 public class DiaryFragment extends Fragment {
+    // New story activity request code
     public final static int NEW_STORY_REQUEST = 3;
+
+    // Mode of diary fragment(show your story or saved locations)
     private final static int MODE_DIARY = 1;
     private final static int MODE_SAVED = 2;
+
+    // List adapter for list view
     private StoryListAdapter storyListAdapter;
+
+    // Arrays for stories and saved locations
     private ArrayList<Story> stories;
     private ArrayList<LatLng> locations;
     private ArrayList<String> addrs;
+
+    // Views and mode control
     private ListView list;
     private ListView locationList;
+    private int mode = MODE_DIARY;
+
+    // For user authentication
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
     private String userId;
-    private int mode = 1;
+
+    // SharedPreference for reading the saved locaitons
     private SharedPreferences mprefs;
     private SharedPreferences.Editor meditor;
     private Gson gson = new Gson();
@@ -65,6 +77,7 @@ public class DiaryFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Initialization
         mprefs = getActivity().getSharedPreferences(PostFragment.PREF_KEY, Context.MODE_PRIVATE);
         meditor = mprefs.edit();
         setHasOptionsMenu(true);
@@ -72,6 +85,8 @@ public class DiaryFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Set menu icon by mode of fragment
+        // If user is not logged in, do not show menu
         FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         if(mFirebaseUser != null){
             inflater.inflate(R.menu.menu_diary, menu);
@@ -84,8 +99,8 @@ public class DiaryFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d("menu","selected");
-
+        // Toggle the menu button and show different list view
+        // on click the menu item
         if(mode == MODE_DIARY){
             showSaved();
             item.setIcon(R.drawable.book);
@@ -101,21 +116,28 @@ public class DiaryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        // Check if user logged in
         FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         View rootView;
         if(mFirebaseUser == null){
+            // if not logged in, show log in button
             rootView = inflater.inflate(R.layout.fragment_profile_login, container, false);
             setLoginBtn(rootView);
         }else{
+            // if user logged in
             rootView = inflater.inflate(R.layout.fragment_diary, container, false);
             //get current user id
             if(FirebaseAuth.getInstance().getCurrentUser()!=null){
                 userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
             }
+            // initialize list view and adapter
             list = (ListView) rootView.findViewById(R.id.story_list);
             stories = new ArrayList<>();
             storyListAdapter = new StoryListAdapter(getActivity(), stories);
             list.setAdapter(storyListAdapter);
+
+            // set on item click listener: open a dialog when click it
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -125,14 +147,16 @@ public class DiaryFragment extends Fragment {
                 }
             });
 
+            // load saved location and set it to invisible
+            // because we show user dairy in default
             locationList = (ListView) rootView.findViewById(R.id.location_list);
-
             loadSaved();
-
-
             locationList.setVisibility(View.INVISIBLE);
 
-
+            // listen to the database change on all stories
+            // with the author id = current user id
+            // when new story inserted, add it to the list view
+            // when deleted, remove it from the list view
             if(userId!=null)
                 databaseRef.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_AUTHOR_ID).
                         equalTo(userId).addChildEventListener(new ChildEventListener() {
@@ -190,6 +214,9 @@ public class DiaryFragment extends Fragment {
         locationList.setVisibility(View.VISIBLE);
     }
 
+    // load saved locations
+    // from shared preference
+    // set on click listener for them
     public void loadSaved(){
         String json = mprefs.getString(LOCATION_KEY, null);
         String json2 = mprefs.getString(ADDR_KEY,null);
@@ -216,6 +243,8 @@ public class DiaryFragment extends Fragment {
         });
     }
 
+    // after user post a story by using the save location,
+    // delete the corresponding location
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -225,6 +254,7 @@ public class DiaryFragment extends Fragment {
         }
     }
 
+    // delete a saved location from shared preference
     public void deleteSavedLocation(int item){
         locations.remove(item);
         addrs.remove(item);
@@ -236,6 +266,8 @@ public class DiaryFragment extends Fragment {
         meditor.commit();
     }
 
+    // set login button
+    // if user not logged in
     private void setLoginBtn(View rootView) {
         Button btnLogin = (Button) rootView.findViewById(R.id.btn_switch_to_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -246,6 +278,7 @@ public class DiaryFragment extends Fragment {
         });
     }
 
+    // open login activity
     private void onSwitch() {
         Intent intent = new Intent(getContext(), ChooserActivity.class);
         startActivity(intent);

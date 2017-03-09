@@ -56,12 +56,12 @@
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo2.png"
     },
     {
-        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo_s.png",
-        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo_s.png"
-    },
-    {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_normal.xml",
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.0\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo_s.png",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\src\\main\\res\\drawable\\logo_s.png"
     },
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind10.xml",
@@ -100,12 +100,12 @@
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_mini_controller_gradient_light.xml"
     },
     {
-        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_seekbar_track.xml",
-        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_expanded_controller_seekbar_track.xml"
-    },
-    {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_skip_next.xml",
         "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_ic_mini_controller_skip_next.xml"
+    },
+    {
+        "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_seekbar_track.xml",
+        "source": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\10.2.0\\res\\drawable\\cast_expanded_controller_seekbar_track.xml"
     },
     {
         "merged": "C:\\StoryAround\\StoryAround\\StoryAround\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_forward30.xml",

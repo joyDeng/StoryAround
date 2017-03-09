@@ -44,7 +44,7 @@ public class ChooserActivity extends AppCompatActivity
 
     private static final String TAG = "ChooserActivity";
     private Context mcontext = this;
-    //request code on result
+    //request code for activity result
     private static final int RC_SIGN_IN = 9001;
     private static final int RC_CREATE_NEW = 9002;
 

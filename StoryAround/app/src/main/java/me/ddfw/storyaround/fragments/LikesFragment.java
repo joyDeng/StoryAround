@@ -34,44 +34,35 @@ import static me.ddfw.storyaround.MyDatabase.stories;
 
 public class LikesFragment extends Fragment {
 
-    private StoryListAdapter storyListAdapter; // tester adapter
-//    private ArrayList<String> data;
+    // list adapter and list view
+    private StoryListAdapter storyListAdapter;
     private ListView list;
+    // database reference for query the firebase real time database
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
-
-//    private Handler handler;
-
-    // private ArrayList<Story> data;
-    // private static ArrayAdapter<Story> mAdapter; // TODO
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         View rootView;
+        // Check if user logged in
         if(mFirebaseUser == null){
+            // if not logged in, show log in button
             rootView = inflater.inflate(R.layout.fragment_profile_login, container, false);
             setLoginBtn(rootView);
         }else{
             rootView = inflater.inflate(R.layout.fragment_likes, container, false);
             String userId = null;
-            setHasOptionsMenu(false);
-
-//        handler = null;
-
-            //get current user id
             if(FirebaseAuth.getInstance().getCurrentUser()!=null){
                 userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
             }
-
+            // set the list adapter for displaying all liked stories
             list = (ListView) rootView.findViewById(R.id.story_list);
             list.setAdapter(storyListAdapter);
-
             stories = new ArrayList<>();
-
-//        //initialize adapter
             storyListAdapter = new StoryListAdapter(getActivity(), stories);
             list.setAdapter(storyListAdapter);
 
+            // set on item click listener to display the detail information
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -81,14 +72,14 @@ public class LikesFragment extends Fragment {
                 }
             });
 
-            //query story id
+            // query likes object by user id
             if(userId!=null)
                 databaseRef.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_USER_ID).
                         equalTo(userId).addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                         String storyId = (String)dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
-
+                        // query story object by story id
                         insertStory(storyId);
                     }
 
@@ -97,6 +88,8 @@ public class LikesFragment extends Fragment {
 
                     }
 
+                    // if it is unliked
+                    // remove from the list
                     @Override
                     public void onChildRemoved(DataSnapshot dataSnapshot) {
                         String id = (String) dataSnapshot.child(Likes.KEY_LIKES_STORY_ID).getValue();
@@ -106,9 +99,7 @@ public class LikesFragment extends Fragment {
                                 break;
                             }
                         }
-
                         storyListAdapter.notifyDataSetChanged();
-
                     }
 
                     @Override
@@ -128,6 +119,7 @@ public class LikesFragment extends Fragment {
         return rootView;
     }
 
+    // query the story object by id, and add it into arraylist
     private void insertStory(final String storyId){
         databaseRef.child(Story.STORY_TABLE).child(storyId).
                 addListenerForSingleValueEvent(new ValueEventListener() {
@@ -145,6 +137,8 @@ public class LikesFragment extends Fragment {
                 });
     }
 
+    // set login button
+    // if user not logged in
     private void setLoginBtn(View rootView) {
         Button btnLogin = (Button) rootView.findViewById(R.id.btn_switch_to_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +149,7 @@ public class LikesFragment extends Fragment {
         });
     }
 
+    // open login activity
     private void onSwitch() {
         Intent intent = new Intent(getContext(), ChooserActivity.class);
         startActivity(intent);
