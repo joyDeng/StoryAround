@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.location.Address;
-import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,32 +24,33 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
 import me.ddfw.storyaround.MyDatabase;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.model.Likes;
 import me.ddfw.storyaround.model.Story;
 import me.ddfw.storyaround.model.User;
 
-/**
- * Created by apple on 2017/2/27.
- */
 
+
+    // This dialog fragment is used to show the details of a story object
 public class StoryDetailFragment extends DialogFragment {
-    //public static final int DETAILS_DIALOG = 1;
     private static final String STORY_DATA_KEY = "story";
+
+    // firebase database reference
     private DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
+    // ids for query the story, user and likes object
     private String userId;
     private String storyId;
     private String likeId;
     private boolean liked = false;
+
+    // My database object, used for some firebase database operations
+    // like create and delete
     private MyDatabase mdb = new MyDatabase();
     private ViewHolder viewHolder = new ViewHolder();
 
 
+    // build a dialog by story object
     public static StoryDetailFragment buildDialog(Story story){
         StoryDetailFragment dialog = new StoryDetailFragment();
         Bundle args = new Bundle();
@@ -63,14 +62,17 @@ public class StoryDetailFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
+        // get current user id
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
             userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         }
+        // get story object
         final Story story = getArguments().getParcelable(STORY_DATA_KEY);
+        //
         storyId = story.getStoryId();
-
-
         final Activity parent = getActivity();
+
+        // setup of views
         final AlertDialog.Builder builder = new AlertDialog.Builder(parent);
         LayoutInflater i = parent.getLayoutInflater();
         View v;
@@ -115,49 +117,40 @@ public class StoryDetailFragment extends DialogFragment {
                     }
                 });
 
-        try{
-            Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
-            List<Address> addresses = geocoder.getFromLocation(story.getStoryLat(), story.getStoryLng(), 1);
-            Address address = addresses.get(0);
-            String line = "";
-            for(int c=0; c<address.getMaxAddressLineIndex(); c++){
-                line += address.getAddressLine(c)+",";
-            }
-            line.substring(0,line.length()-1);
-            viewHolder.location.setText(String.valueOf(line));
-        }catch (IOException e){
-        }
+        viewHolder.location.setText(story.getStoryAddress());
 
+        // Check if user liked this story
+        // It also count the number of likes for this story
+        databaseRef.child(Likes.LIKES_TABLE).
+                addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        int count = 0;
+                        for(DataSnapshot child: dataSnapshot.getChildren()){
 
-            databaseRef.child(Likes.LIKES_TABLE).
-                    addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            int count = 0;
-                            for(DataSnapshot child: dataSnapshot.getChildren()){
-
-                                if((child.child(Likes.KEY_LIKES_STORY_ID).getValue().equals(storyId))){
-                                    count++;
-                                    if(userId!=null)
-                                    if( ((String)child.child(Likes.KEY_LIKES_USER_ID).getValue())
-                                            .equals(userId) ){
-                                        liked = true;
-                                        likeId = child.getKey();
-                                        viewHolder.heart.setImageResource(R.drawable.heart1);
-                                    }
+                            if((child.child(Likes.KEY_LIKES_STORY_ID).getValue().equals(storyId))){
+                                count++;
+                                if(userId!=null)
+                                if( ((String)child.child(Likes.KEY_LIKES_USER_ID).getValue())
+                                        .equals(userId) ){
+                                    liked = true;
+                                    likeId = child.getKey();
+                                    viewHolder.heart.setImageResource(R.drawable.heart1);
                                 }
                             }
-                            if(!liked){
-                                viewHolder.heart.setImageResource(R.drawable.heart2);
-                            }
-                            viewHolder.like.setText(String.valueOf(count));
                         }
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-                            liked = false;
+                        if(!liked){
+                            viewHolder.heart.setImageResource(R.drawable.heart2);
                         }
-                    });
+                        viewHolder.like.setText(String.valueOf(count));
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        liked = false;
+                    }
+                });
 
+        // Like and unlike function
         LinearLayout likeLayout = (LinearLayout)v.findViewById(R.id.like_layout);
         likeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,19 +173,17 @@ public class StoryDetailFragment extends DialogFragment {
             }
         });
 
+        // Check if current user is the author of this story
+        // if true, set delete button
+        // and provide delete function
         Button btn_delete = (Button) v.findViewById(R.id.btn_delete);
-
         if(userId != null){
-
             if(story.getStoryAuthorId().equals(userId)){
-
                 btn_delete.setOnClickListener(new View.OnClickListener(){
 
                     @Override
                     public void onClick(View view){
-
                         mdb.deleteStory(storyId);
-
                         databaseRef.child(Likes.LIKES_TABLE).orderByChild(Likes.KEY_LIKES_STORY_ID).equalTo(storyId)
                                 .addValueEventListener(new ValueEventListener() {
                                     @Override
@@ -201,19 +192,14 @@ public class StoryDetailFragment extends DialogFragment {
                                             child.getRef().setValue(null);
                                         }
                                     }
-
                                     @Override
                                     public void onCancelled(DatabaseError databaseError) {
-
                                     }
                                 });
-
                         dismiss();
-
                     }
 
                 });
-
             }else
                 btn_delete.setVisibility(View.GONE);
         }else{
@@ -229,6 +215,7 @@ public class StoryDetailFragment extends DialogFragment {
         return builder.create();
     }
 
+    // view holder for this dialog fragment
     private static class ViewHolder {
         TextView user;
         TextView title;

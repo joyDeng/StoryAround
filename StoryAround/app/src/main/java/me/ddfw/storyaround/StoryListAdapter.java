@@ -22,18 +22,16 @@ import java.util.List;
 import me.ddfw.storyaround.model.Story;
 import me.ddfw.storyaround.model.User;
 
-/**
- * Created by apple on 2017/2/27.
- */
+
 
 public class StoryListAdapter extends ArrayAdapter<Story> {
     private String DATE_FORMAT = "MMM/dd";
     private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-
     private Context context;
     private List<Story> data;
 
 
+    // Some basic setup and override functions
     public StoryListAdapter(Context context, List<Story> data){
         super(context,R.layout.list_item_story,data);
         this.data = data;
@@ -59,13 +57,13 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // get item for selected view
+        // get item from data list
         Story story = getItem(position);
-        Log.d("POSITION", position+story.getStoryTitle());
 
         if(story == null)
             Log.d("msg", "story is null");
 
+        // find view of this list item
         final StoryListAdapter.ViewHolder viewHolder;
         if (convertView == null) {
             viewHolder = new StoryListAdapter.ViewHolder();
@@ -83,55 +81,44 @@ public class StoryListAdapter extends ArrayAdapter<Story> {
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
-            String authorId = story.getStoryAuthorId();
 
-            //according the author id, get user's name in user table
-            database.child(User.USER_TABLE).child(authorId).
-                    addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
+        // set view content for list item
+        String authorId = story.getStoryAuthorId();
 
-                            // check all likes in database
-                            for(DataSnapshot child : dataSnapshot.getChildren()){
+        //according the author id, get user's name in user table
+        database.child(User.USER_TABLE).child(authorId).
+                addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
 
-                                //get user name
-                                String authorName = (String) dataSnapshot.child(User.KEY_USER_NAME).getValue();
+                        // check all likes in database
+                        for(DataSnapshot child : dataSnapshot.getChildren()){
 
-                                //show the user name
-                                viewHolder.user.setText(authorName);
-
-                                Log.d("debug", "" + authorName);
-                            }
+                            //get user name
+                            String authorName = (String) dataSnapshot.child
+                                    (User.KEY_USER_NAME).getValue();
+                            //show the user name
+                            viewHolder.user.setText(authorName);
+                            Log.d("debug", "" + authorName);
                         }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-
-            viewHolder.title.setText(story.getStoryTitle());
-            viewHolder.location.setText(story.getStoryAddress());
-
-            Log.d("debug", story.getStoryTitle());
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
 
 
-            //TODO: need to set the story type as string!!!!
-            viewHolder.tag.setText("# " + Global.STORY_TYPE[story.getStoryType()]);
-            Log.d("debug", String.valueOf(story.getStoryType()));
-
-            SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-            viewHolder.dateText.setText(dateFormat.format(new Date(story.getStoryDateTime())));
-
-            Log.d("debug", dateFormat.format(new Date(story.getStoryDateTime())));
-
+        viewHolder.title.setText(story.getStoryTitle());
         viewHolder.location.setText(story.getStoryAddress());
-
+        viewHolder.tag.setText("# " + Global.STORY_TYPE[story.getStoryType()]);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+        viewHolder.dateText.setText(dateFormat.format(new Date(story.getStoryDateTime())));
+        viewHolder.location.setText(story.getStoryAddress());
 
         return convertView;
     }
 
+    // view holder for this list item
     private class ViewHolder {
         TextView dateText;
         TextView user;

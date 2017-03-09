@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkUser();
+        // check user permissions
         checkPermission(this);
         pageSetup();
     }
 
     public void checkUser(){
-
        mLoginMethod = getIntent().getStringExtra(Global.LOGIN_METHOD);
         // initialize_auth
         mAuth = FirebaseAuth.getInstance();
@@ -85,10 +85,7 @@ public class MainActivity extends AppCompatActivity{
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null || !mLoginMethod.equals("") ){
                     // User signed in
-                    //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
-
                 }else{
-                    //Log.d(TAG, "onAuthStateChanged:signed_out:");
                     startChooser();
                 }
             }
@@ -96,6 +93,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
 
+    // set up all fragments for the view pager
     public void pageSetup(){
         mapFragment = new MapFragment();
         likesFragment = new LikesFragment();
@@ -117,6 +115,7 @@ public class MainActivity extends AppCompatActivity{
         tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
 
+        // hide keyboard for other fragments
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset,
@@ -154,7 +153,6 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.menu_diary, menu);
         return true;
     }
 
@@ -215,18 +213,8 @@ public class MainActivity extends AppCompatActivity{
                 return;
             }
 
-            // other 'case' lines to check for other
-            // permissions this app might request
-
         }
     }
-
-    /*@Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        return true;
-    }*/
-
-
 
     // START: set_login_method
     public void setmLoginMethod(String string){
