@@ -128,7 +128,7 @@ public class StoryDetailFragment extends DialogFragment {
         }catch (IOException e){
         }
 
-        if(userId!=null)
+
             databaseRef.child(Likes.LIKES_TABLE).
                     addValueEventListener(new ValueEventListener() {
                         @Override
@@ -138,6 +138,7 @@ public class StoryDetailFragment extends DialogFragment {
 
                                 if((child.child(Likes.KEY_LIKES_STORY_ID).getValue().equals(storyId))){
                                     count++;
+                                    if(userId!=null)
                                     if( ((String)child.child(Likes.KEY_LIKES_USER_ID).getValue())
                                             .equals(userId) ){
                                         liked = true;

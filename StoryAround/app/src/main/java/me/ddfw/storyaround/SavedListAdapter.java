@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -59,14 +58,8 @@ public class SavedListAdapter extends ArrayAdapter<String> {
             convertView = inflater.inflate(R.layout.list_item_saved, parent, false);
         }
         TextView addr = (TextView) convertView.findViewById(R.id.addr);
-        ImageView delete = (ImageView) convertView.findViewById(R.id.delete);
         addr.setText(s);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
 
 
 

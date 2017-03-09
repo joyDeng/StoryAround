@@ -24,6 +24,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -31,10 +33,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import me.ddfw.storyaround.MyDatabase;
+import me.ddfw.storyaround.Authen.ChooserActivity;
 import me.ddfw.storyaround.NewStoryActivity;
 import me.ddfw.storyaround.R;
-import me.ddfw.storyaround.model.Story;
 
 import static me.ddfw.storyaround.fragments.MapFragment.LOCATION_PERMISSION_REQUEST;
 
@@ -59,57 +60,52 @@ public class PostFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_post, container, false);
+        FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        View rootView;
+        if(mFirebaseUser == null){
+            rootView = inflater.inflate(R.layout.fragment_profile_login, container, false);
+            setLoginBtn(rootView);
+        }else{
+            rootView = inflater.inflate(R.layout.fragment_post, container, false);
 
-        setRetainInstance(true);
+            setRetainInstance(true);
 
-        mprefs = getActivity().getSharedPreferences(PREF_KEY, Context.MODE_PRIVATE);
-        meditor = mprefs.edit();
-        String json = mprefs.getString(LOCATION_KEY, null);
-        String json2 = mprefs.getString(ADDR_KEY, null);
+            mprefs = getActivity().getSharedPreferences(PREF_KEY, Context.MODE_PRIVATE);
+            meditor = mprefs.edit();
+            String json = mprefs.getString(LOCATION_KEY, null);
+            String json2 = mprefs.getString(ADDR_KEY, null);
 
-        savedLocations = new ArrayList<>();
-        savedAddr = new ArrayList<>();
-        if(json != null){
-            savedLocations = gson.fromJson(json, new TypeToken<List<LatLng>>(){}.getType());
+            savedLocations = new ArrayList<>();
+            savedAddr = new ArrayList<>();
+            if(json != null){
+                savedLocations = gson.fromJson(json, new TypeToken<List<LatLng>>(){}.getType());
+            }
+
+            if(json2 != null){
+                savedAddr = gson.fromJson(json2, new TypeToken<List<String>>(){}.getType());
+            }
+
+
+            Button btnStart = (Button) rootView.findViewById(R.id.btnStart);
+            btnStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onStartClicked();
+                }
+            });
+
+            Button btnSave = (Button) rootView.findViewById(R.id.btnSave);
+            btnSave.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onSaveClicked();
+                }
+            });
         }
 
-        if(json2 != null){
-            savedAddr = gson.fromJson(json2, new TypeToken<List<String>>(){}.getType());
-        }
 
 
-        Button btnStart = (Button) rootView.findViewById(R.id.btnStart);
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onStartClicked();
-            }
-        });
 
-        Button btnSave = (Button) rootView.findViewById(R.id.btnSave);
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onSaveClicked();
-            }
-        });
-
-
-        LatLng northeast = new LatLng(43.70894514683601,-72.28166989982128);
-        LatLng southwest = new LatLng(43.704637572959946,-72.28608381003141);
-        LatLng lib = new LatLng(43.70509735633434,-72.28840056806803);
-        LatLng np = new LatLng(43.705882882132016,-72.28292651474476);
-        LatLng sudi = new LatLng(43.70672462667574,-72.28666987270117);
-        LatLng pond = new LatLng(43.70970905267551,-72.28879988193512);
-        LatLng tuck = new LatLng(43.70539426254353,-72.29504104703665);
-        stories.add(northeast);
-        stories.add(southwest);
-        stories.add(lib);
-        stories.add(np);
-        stories.add(sudi);
-        stories.add(pond);
-        stories.add(tuck);
 
 
 
@@ -127,33 +123,15 @@ public class PostFragment extends Fragment{
 
     public void onSaveClicked() {
         //write test data inside:
-        Toast.makeText(getActivity().getApplicationContext(),
-                "You have saved your location", Toast.LENGTH_SHORT).show();
-        markLocation();
-        //checkPermission(getActivity());
+        //markLocation();
+        checkPermission(getActivity());
     }
 
-    public void writeRandomStory(){
-        Log.d("DEBUG","random story written");
-        MyDatabase db = new MyDatabase();
-        for(LatLng location: stories){
-            Story s = new Story();
-            s.setStoryDateTime(System.currentTimeMillis());
-            s.setStoryAuthorId("lily");
-            s.setStoryLat(location.latitude);
-            s.setStoryLng(location.longitude);
-            s.setStoryContent("test");
-            s.setStoryTitle("hi");
-            db.createStory(s);
-        }
-
-
-    }
 
     public void checkPermission(Activity activity){
         Log.d("DEBUG","in check permission");
         if(Build.VERSION.SDK_INT < 23){
-            writeRandomStory();
+            markLocation();
             return;
         }
         if( ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION) !=
@@ -161,7 +139,7 @@ public class PostFragment extends Fragment{
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     LOCATION_PERMISSION_REQUEST);
         }else{
-            writeRandomStory();
+            markLocation();
         }
 
     }
@@ -212,6 +190,22 @@ public class PostFragment extends Fragment{
                 Toast.makeText(getActivity(), "your location can not be detected", Toast.LENGTH_SHORT).show();
             }
         }catch(SecurityException e){}
+    }
+
+    private void setLoginBtn(View rootView) {
+        Button btnLogin = (Button) rootView.findViewById(R.id.btn_switch_to_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSwitch();
+            }
+        });
+    }
+
+    private void onSwitch() {
+        Intent intent = new Intent(getContext(), ChooserActivity.class);
+        startActivity(intent);
+        getActivity().finish();
     }
 
 

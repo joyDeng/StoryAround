@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity{
                 if(user != null || !mLoginMethod.equals("") ){
                     // User signed in
                     //Log.d(TAG, "onAuthStateChanged:signed_in:"+user.getUid());
+
                 }else{
                     //Log.d(TAG, "onAuthStateChanged:signed_out:");
                     startChooser();

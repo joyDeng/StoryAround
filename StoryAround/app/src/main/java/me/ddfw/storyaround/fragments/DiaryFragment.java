@@ -16,10 +16,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,6 +33,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.ddfw.storyaround.Authen.ChooserActivity;
 import me.ddfw.storyaround.NewStoryActivity;
 import me.ddfw.storyaround.R;
 import me.ddfw.storyaround.StoryListAdapter;
@@ -69,17 +72,20 @@ public class DiaryFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_diary, menu);
-        if(mode == MODE_SAVED){
-            menu.getItem(0).setIcon(R.drawable.book);
+        FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(mFirebaseUser != null){
+            inflater.inflate(R.menu.menu_diary, menu);
+            if(mode == MODE_SAVED){
+                menu.getItem(0).setIcon(R.drawable.book);
+            }
         }
-
         super.onCreateOptionsMenu(menu,inflater);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Log.d("menu","selected");
+
         if(mode == MODE_DIARY){
             showSaved();
             item.setIcon(R.drawable.book);
@@ -95,72 +101,80 @@ public class DiaryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_diary, container, false);
-        //get current user id
-        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        }
-        list = (ListView) rootView.findViewById(R.id.story_list);
-        stories = new ArrayList<>();
-        storyListAdapter = new StoryListAdapter(getActivity(), stories);
-        list.setAdapter(storyListAdapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                DialogFragment dialog;
-                dialog = StoryDetailFragment.buildDialog(stories.get(i));
-                dialog.show(getFragmentManager(), "");
+        FirebaseUser mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        View rootView;
+        if(mFirebaseUser == null){
+            rootView = inflater.inflate(R.layout.fragment_profile_login, container, false);
+            setLoginBtn(rootView);
+        }else{
+            rootView = inflater.inflate(R.layout.fragment_diary, container, false);
+            //get current user id
+            if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+                userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
             }
-        });
-
-        locationList = (ListView) rootView.findViewById(R.id.location_list);
-
-        loadSaved();
-
-
-        locationList.setVisibility(View.INVISIBLE);
-
-
-        if(userId!=null)
-            databaseRef.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_AUTHOR_ID).
-                    equalTo(userId).addChildEventListener(new ChildEventListener() {
+            list = (ListView) rootView.findViewById(R.id.story_list);
+            stories = new ArrayList<>();
+            storyListAdapter = new StoryListAdapter(getActivity(), stories);
+            list.setAdapter(storyListAdapter);
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                    Story story = dataSnapshot.getValue(Story.class);
-                    storyListAdapter.insert(story,0);
-                    // stories.add(story);
-                    //storyListAdapter.insert(story,0);
-                    storyListAdapter.notifyDataSetChanged();
-                }
-
-                @Override
-                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                }
-
-                @Override
-                public void onChildRemoved(DataSnapshot dataSnapshot) {
-                    String id = (String) dataSnapshot.getKey();
-                    for (Story s: stories){
-                        if(s.getStoryId().equals(id)){
-                            stories.remove(s);
-                            break;
-                        }
-                    }
-
-                    storyListAdapter.notifyDataSetChanged();
-                }
-
-                @Override
-                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    DialogFragment dialog;
+                    dialog = StoryDetailFragment.buildDialog(stories.get(i));
+                    dialog.show(getFragmentManager(), "");
                 }
             });
+
+            locationList = (ListView) rootView.findViewById(R.id.location_list);
+
+            loadSaved();
+
+
+            locationList.setVisibility(View.INVISIBLE);
+
+
+            if(userId!=null)
+                databaseRef.child(Story.STORY_TABLE).orderByChild(Story.KEY_STORY_AUTHOR_ID).
+                        equalTo(userId).addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                        Story story = dataSnapshot.getValue(Story.class);
+                        storyListAdapter.insert(story,0);
+                        // stories.add(story);
+                        //storyListAdapter.insert(story,0);
+                        storyListAdapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(DataSnapshot dataSnapshot) {
+                        String id = (String) dataSnapshot.getKey();
+                        for (Story s: stories){
+                            if(s.getStoryId().equals(id)){
+                                stories.remove(s);
+                                break;
+                            }
+                        }
+
+                        storyListAdapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+        }
+
 
         return rootView;
     }
@@ -188,7 +202,7 @@ public class DiaryFragment extends Fragment {
             addrs = gson.fromJson(json2, new TypeToken<List<String>>(){}.getType());
         }
         locationList.setAdapter(new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, addrs));
+                R.layout.list_item_saved, R.id.addr, addrs));
         locationList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -220,6 +234,22 @@ public class DiaryFragment extends Fragment {
         meditor.putString(LOCATION_KEY, json);
         meditor.putString(ADDR_KEY, json2);
         meditor.commit();
+    }
+
+    private void setLoginBtn(View rootView) {
+        Button btnLogin = (Button) rootView.findViewById(R.id.btn_switch_to_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSwitch();
+            }
+        });
+    }
+
+    private void onSwitch() {
+        Intent intent = new Intent(getContext(), ChooserActivity.class);
+        startActivity(intent);
+        getActivity().finish();
     }
 
 
