@@ -50,7 +50,7 @@ User profile
 
 ## Web page
 
-[web page](http://cs.dartmouth.edu/~wzl/projectWebpage/)
+[http://cs.dartmouth.edu~wzl/projectWebpage](http://cs.dartmouth.edu/~wzl/projectWebpage/)
 
 ## Version
 
