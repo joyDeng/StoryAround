@@ -92,7 +92,7 @@ public class NewStoryActivity extends AppCompatActivity {
         mprefs = getSharedPreferences(PostFragment.PREF_KEY, Context.MODE_PRIVATE);
         meditor = mprefs.edit();
 
-        // create the button listener
+        // create the button listener and get the Edit view
         CreateStoryListener();
         storyTitleEditor = (EditText)findViewById(R.id.story_title_edit);
         storyContentEditor = (EditText)findViewById(R.id.story_content_edit);
@@ -210,7 +210,7 @@ public class NewStoryActivity extends AppCompatActivity {
             }
         });
         
-        // save button
+        // save button, save the story to firebase database and storage 
         Button btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -219,7 +219,7 @@ public class NewStoryActivity extends AppCompatActivity {
             }
         });
         
-        // cancel button
+        // cancel button, pop out dialog to ask user if they want to exit
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
