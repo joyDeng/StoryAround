@@ -1,6 +1,5 @@
 package me.ddfw.storyaround.fragments;
 
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.ContentValues;
@@ -64,32 +63,33 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class ProfileFragment extends Fragment {
 
+    // keys 
     private static final String TAG = "ProfileFragment";
+    public static final String USER_IMAGE = "image";
 
+    // database and storage 
+    private DatabaseReference databaseRef;
+    private FirebaseStorage storage;
+    private StorageReference storageReference;
+    private MyDatabase database;
+    
+    // data 
     private FirebaseUser mFirebaseUser;
     private User mUser;
+    private Uri tempImgUri;
+    private Uri firebaseUri;
+    private boolean isNewImage;
+    private boolean isEditMode;
+    
+    // views 
     private EditText editUsername;
     private EditText editEmail;
     private EditText editPhone;
     private RadioGroup editGender;
-
     private EditText editBio;
-    private DatabaseReference databaseRef;
-
     private ImageView profileImage;
-    private boolean isEditMode;
 
-
-
-    public static final String USER_IMAGE = "image";
-    private Uri tempImgUri;
-    private Uri firebaseUri;
-    private boolean isNewImage;
-    FirebaseStorage storage;
-    StorageReference storageReference;
-    private MyDatabase database;
-
-
+    
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +99,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView;
+        setRetainInstance(true);
 
         //Get current user;
         mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -109,7 +110,7 @@ public class ProfileFragment extends Fragment {
             rootView = inflater.inflate(R.layout.fragment_profile_login, container, false);
             setLoginBtn(rootView);
         } else {
-            //If User is logged in
+            //If User is logged in, setup the profile views 
             rootView = inflater.inflate(R.layout.fragment_profile, container, false);
             editUsername = (EditText) rootView.findViewById(R.id.user_username);
             editEmail = (EditText) rootView.findViewById(R.id.user_email);
@@ -117,6 +118,7 @@ public class ProfileFragment extends Fragment {
             editGender = (RadioGroup) rootView.findViewById(R.id.user_gender);
             editBio = (EditText) rootView.findViewById(R.id.user_bio);
             setProfileBtn(rootView);
+            // get user information from firebase 
             databaseRef = FirebaseDatabase.getInstance().getReference();
             databaseRef.child(User.USER_TABLE).child(mFirebaseUser.getUid())
                     .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -124,6 +126,7 @@ public class ProfileFragment extends Fragment {
                         public void onDataChange(DataSnapshot snapshot) {
                             mUser = snapshot.getValue(User.class);
                             if (mUser != null) {
+                                // set the information into the views 
                                 setProfileContent();
                                 isNewImage = false;
                                 storage = FirebaseStorage.getInstance();
@@ -131,7 +134,6 @@ public class ProfileFragment extends Fragment {
                                 storageReference = storage.getReference().child("image/profileImage_"
                                         + mUser.getUserId() + Calendar.getInstance().getTimeInMillis());
                             }
-
                         }
                         @Override
                         public void onCancelled(DatabaseError error) {
@@ -139,16 +141,17 @@ public class ProfileFragment extends Fragment {
                     });
         }
 
+        // make sure that the soft keyboard don't pop out
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
         );
-        setRetainInstance(true);
         return rootView;
     }
 
 
 
     // ****** if user not log in ****** //
+    // make a login button for user to login 
     private void setLoginBtn(View rootView) {
         Button btnLogin = (Button) rootView.findViewById(R.id.btn_switch_to_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -158,7 +161,7 @@ public class ProfileFragment extends Fragment {
             }
         });
     }
-
+    // after click on the login button, switch to login activity 
     private void onSwitch() {
         Intent intent = new Intent(getContext(), ChooserActivity.class);
         startActivity(intent);
@@ -166,15 +169,11 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
-
-    // ****** if user log in ****** //
-    private void onSignOut() {
-        ((MainActivity) getActivity()).setmLoginMethod("");
-        FirebaseAuth.getInstance().signOut();
-    }
-
+    // ****** if user already log in ****** //
+    
+    // set up the profile view 
     private void setProfileBtn(final View rootView) {
+        // get the views and buttons 
         final Button btnLogout = (Button) rootView.findViewById(R.id.btnLogout);
         final Button btnSave = (Button) rootView.findViewById(R.id.btnSave);
         final Button btnCancel = (Button) rootView.findViewById(R.id.btnCancel);
@@ -182,6 +181,7 @@ public class ProfileFragment extends Fragment {
         profileImage = (ImageView) rootView.findViewById(R.id.user_image);
         editUsername = (EditText) rootView.findViewById(R.id.user_username);
 
+        // user can change profile image if click on profile image view 
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -191,6 +191,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        // user can logout 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -199,56 +200,13 @@ public class ProfileFragment extends Fragment {
                         "Log out", Toast.LENGTH_SHORT).show();
             }
         });
-
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // if already in edit mode -> save
-                getActivity().getWindow().setSoftInputMode(
-                        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
-                );
-                isEditMode = false;
-                btnEdit.setVisibility(View.VISIBLE);
-                btnSave.setVisibility(View.GONE);
-                btnCancel.setVisibility(View.GONE);
-                editUsername.setEnabled(false);
-                editEmail.setEnabled(false);
-                editPhone.setEnabled(false);
-                for (int i = 0; i < editGender.getChildCount(); i++)
-                    editGender.getChildAt(i).setEnabled(false);
-                editBio.setEnabled(false);
-                onClickSave();
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "You have saved your profile", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().getWindow().setSoftInputMode(
-                        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
-                );
-                isEditMode = false;
-                btnEdit.setVisibility(View.VISIBLE);
-                btnSave.setVisibility(View.GONE);
-                btnCancel.setVisibility(View.GONE);
-                editUsername.setEnabled(false);
-                editEmail.setEnabled(false);
-                editPhone.setEnabled(false);
-                for (int i = 0; i < editGender.getChildCount(); i++)
-                    editGender.getChildAt(i).setEnabled(false);
-                editBio.setEnabled(false);
-                setProfileContent();
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "Canceled", Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        
+        // user can modify the profile after click the "edit" button 
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // if not in edit mode, -> edit
+                // show the save and cancel button if in the edit mode, hide edit button
+                // enable all the EditText view and radio button
                 isEditMode = true;
                 btnEdit.setVisibility(View.GONE);
                 btnSave.setVisibility(View.VISIBLE);
@@ -262,7 +220,62 @@ public class ProfileFragment extends Fragment {
                 Toast.makeText(getActivity().getApplicationContext(), "You can edit your profile", Toast.LENGTH_SHORT).show();
             }
         });
+        
+        
+        // user can modify the profile and save the change 
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getWindow().setSoftInputMode(
+                        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+                );
+                // hide the save and cancel button and exit edit mode, show edit button
+                // disable all the EditText view and radio button
+                isEditMode = false;
+                btnEdit.setVisibility(View.VISIBLE);
+                btnSave.setVisibility(View.GONE);
+                btnCancel.setVisibility(View.GONE);
+                editUsername.setEnabled(false);
+                editEmail.setEnabled(false);
+                editPhone.setEnabled(false);
+                for (int i = 0; i < editGender.getChildCount(); i++)
+                    editGender.getChildAt(i).setEnabled(false);
+                editBio.setEnabled(false);
+                // save the change that user make 
+                onClickSave();
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "You have saved your profile", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        // cancel the modifcation that user make to the profile 
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getWindow().setSoftInputMode(
+                        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+                );
+                // hide the save and cancel button and exit edit mode, show edit button
+                // disable all the EditText view and radio button
+                isEditMode = false;
+                btnEdit.setVisibility(View.VISIBLE);
+                btnSave.setVisibility(View.GONE);
+                btnCancel.setVisibility(View.GONE);
+                editUsername.setEnabled(false);
+                editEmail.setEnabled(false);
+                editPhone.setEnabled(false);
+                for (int i = 0; i < editGender.getChildCount(); i++)
+                    editGender.getChildAt(i).setEnabled(false);
+                editBio.setEnabled(false);
+                // reset the profile content to previous setting 
+                setProfileContent();
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "Canceled", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // initially, disable all the EditText view and radio button
+        // hide the save and cancel button, show edit button 
         editUsername.setEnabled(false);
         editEmail.setEnabled(false);
         editPhone.setEnabled(false);
@@ -275,11 +288,14 @@ public class ProfileFragment extends Fragment {
     }
 
 
+    // sign out of account if user click "signout" button
+    private void onSignOut() {
+        ((MainActivity) getActivity()).setmLoginMethod("");
+        FirebaseAuth.getInstance().signOut();
+    }
 
 
-
-
-
+    // get the profile from firebase and set it to the views 
     private void setProfileContent() {
         editEmail.setText(mUser.getUserEmail());
         if (mUser.getUserName() == null && mUser.getUserName().length() < 1)
@@ -310,9 +326,7 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
-
-
+    // get the user input and update the user profile in firebase 
     private void onClickSave() {
         mUser.setUserName(editUsername.getText().toString());
         mUser.setUserEmail(editEmail.getText().toString());
@@ -321,17 +335,13 @@ public class ProfileFragment extends Fragment {
                 .findViewById(editGender.getCheckedRadioButtonId()));
         mUser.setUserGender(genderIndex);
         mUser.setUserBio(editBio.getText().toString());
-        // TODO
-        //mUser.setUserImageURL();
         upload2Firebase();
     }
 
 
 
-
-
     // ************** Image ************* //
-
+    
     // dialog for picking the image
     private void pickImage() {
         new android.app.AlertDialog.Builder(getActivity())
@@ -341,9 +351,11 @@ public class ProfileFragment extends Fragment {
                             public void onClick (DialogInterface dialog, int picker) {
                                 switch (picker) {
                                     case 0:
+                                        // if user select "open camera"
                                         checkCameraPermissions();
                                         break;
                                     case 1:
+                                        // if user selcet "select from gallery"
                                         loadFromGallery();
                                         break;
                                     default:
@@ -362,12 +374,15 @@ public class ProfileFragment extends Fragment {
         if(resultCode != Activity.RESULT_OK) {
             return;
         }
+        // open camera for user
         if(requestCode == Global.CAMERA_REQUEST_CODE){
             Crop.of(tempImgUri, tempImgUri).asSquare().start(getActivity());
         }
+        // open gallery for user 
         else if(requestCode == Global.GALLERY_REQUEST_CODE){
             Crop.of(data.getData(), tempImgUri).asSquare().start(getActivity());
         }
+        // crop the image for user and set it to the view 
         else if(requestCode == Crop.REQUEST_CROP){
             Uri selectedImgUri = Crop.getOutput(data);
             profileImage.setImageURI(null);
@@ -376,6 +391,7 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+    // load the image from camera and send it to crop 
     private void loadFromCamera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         ContentValues values = new ContentValues(1);
@@ -386,6 +402,7 @@ public class ProfileFragment extends Fragment {
         startActivityForResult(intent, Global.CAMERA_REQUEST_CODE);
     }
 
+    // load the image from gallery and send it to crop 
     private void loadFromGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK,
                 MediaStore.Images.Media.INTERNAL_CONTENT_URI);
@@ -397,11 +414,14 @@ public class ProfileFragment extends Fragment {
         startActivityForResult(intent, Global.GALLERY_REQUEST_CODE);
     }
 
+    // load the image to image view 
     private void loadSnap() {
+        // if image already exists, put in on image view 
         if (tempImgUri != null) {
             isNewImage = false;
             profileImage.setImageURI(tempImgUri);
         }
+        // else try to see if we have saved it in the phone 
         else {
             try {
                 FileInputStream file = getActivity().openFileInput(USER_IMAGE);
@@ -415,6 +435,7 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+    // save the image to the phone storage  
     private void saveSnap() {
         profileImage.buildDrawingCache();
         Bitmap bmap = profileImage.getDrawingCache();
@@ -443,12 +464,12 @@ public class ProfileFragment extends Fragment {
                     @Override
                     public void onFailure(@NonNull Exception exception) {
                         Log.d("******", "Firebase upload fail: " + exception);
-                        // TODO
-                        // if fail, pop up dialog
                     }
                 }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    // if successfully upload the image
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // save the story and update the profile image url
                         firebaseUri = taskSnapshot.getDownloadUrl();
                         mUser.setUserImageURL(firebaseUri + "");
                         database.updateProfile(mUser);
@@ -458,12 +479,13 @@ public class ProfileFragment extends Fragment {
                 Log.d("******", "Firebase upload fail: FileInputStream ------ " + e);
             }
         }
-        // else only upload story without image
+        // else only update profile without changing image
         else {
             database.updateProfile(mUser);
         }
     }
 
+    // set the profile image using the URL provided by firebase 
     private void setProfileImageFromFirebase() {
         StorageReference storageReference = FirebaseStorage.getInstance()
                 .getReferenceFromUrl(mUser.getUserImageURL());
@@ -475,8 +497,7 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
-
+    // check the camera permission when user click "open camera"
     public void checkCameraPermissions(){
         if(Build.VERSION.SDK_INT < 23)
             return;
@@ -495,11 +516,5 @@ public class ProfileFragment extends Fragment {
             loadFromCamera();
         }
     }
-
-
-
-
-
-
 
 }
