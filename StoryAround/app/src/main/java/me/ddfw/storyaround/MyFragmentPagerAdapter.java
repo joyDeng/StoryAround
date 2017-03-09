@@ -15,7 +15,6 @@ import android.view.inputmethod.InputMethodManager;
 import java.util.ArrayList;
 
 
-
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private ArrayList<Fragment> fragments;
@@ -38,7 +37,6 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return fragments.size();
     }
-
 
     // set up the title for each tab 
     @Override
